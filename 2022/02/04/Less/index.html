@@ -18,7 +18,7 @@
 <meta property="og:description" content="CSS的预处理语言">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-04T11:18:31.000Z">
-<meta property="article:modified_time" content="2022-02-05T03:07:34.262Z">
+<meta property="article:modified_time" content="2022-02-07T09:06:14.805Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Html基础">
 <meta name="twitter:card" content="summary">
@@ -347,12 +347,16 @@ less中这样写
 <hr>
 <h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><pre><code>更高级的用法，可以参考Zeal里关于Less的官方文档。
 
+所有长度如果涉及计算，数字和单位必须都写到()里
+
 调试代码时，可以生成地图，直接定位到less文件中，只需要在less文件中修改即可。
 步骤
     打开Easy Less插件，找到`Project-Wide &amp; Global Configuration`,复制下面代码，
     打开设置，点击扩展，找到Easy Less Configuration,点击settings.json,在里面先加英文逗号,，再粘贴。
 </code></pre>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;compress&quot;: false, // true =&gt; remove surplus whitespace   压缩</span><br><span class="line">&quot;sourceMap&quot;: true, // true =&gt; generate source maps (.css.map files)   生成地图</span><br><span class="line">&quot;out&quot;: true // false =&gt; DON&#x27;T output .css files (overridable per-file, see below)   输出</span><br></pre></td></tr></table></figure>
+
+
 
     
 
@@ -491,6 +495,15 @@ less中这样写
 
 
 <nav id="article-nav">
+  
+    <a href="/2022/02/06/Flex/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Flex
+        
+      </div>
+    </a>
   
   
     <a href="/2022/02/04/Animation/" id="article-nav-older" class="article-nav-link-wrap">
@@ -895,16 +908,6 @@ less中这样写
 </script>
 
   
-  
-  <script type="text/javascript" src="/lib/snow.js"></script>
-  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
-  <script>
-    snow.down();
-    $(window).resize(function() {
-      $("canvas").css("z-index","500").remove();
-      snow.down();
-    });
-  </script>
   
 </body>
 
