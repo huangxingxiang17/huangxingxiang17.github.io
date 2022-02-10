@@ -18,7 +18,7 @@
 <meta property="og:description" content="浮动">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-03T01:27:32.000Z">
-<meta property="article:modified_time" content="2022-02-03T12:03:52.340Z">
+<meta property="article:modified_time" content="2022-02-10T02:49:14.038Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Html基础">
 <meta name="twitter:card" content="summary">
@@ -255,7 +255,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">973字</span>
+      <span class="post-count">954字</span>
     </span>
   </span>
 
@@ -275,77 +275,72 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动<span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>通过浮动可以使一个元素向其父元素的左侧或右侧移动
-    使用 float 属性来设置于元素的浮动
-        可选值：
-            none 默认值 ，元素不浮动
-            left 元素向左浮动
-            right 元素向右浮动
-
-    注意，元素设置浮动以后，水平布局的等式便不需要强制成立
-        元素设置浮动以后，会完全从文档流中脱离，不再占用文档流的位置，
-            所以元素下边的还在文档流中的元素会自动向上移动
-
-    浮动的特点：
-        1、浮动元素会完全脱离文档流，不再占据文档流中的位置
-        2、设置浮动以后元素会向父元素的左侧或右侧移动，
-        3、浮动元素默认不会从父元素中移出
-        4、浮动元素向左或向右移动时，不会超过它前边（body中的前后关系）的其他浮动元素
-        5、如果浮动元素的上边是一个没有浮动的块元素，则浮动元素无法上移
-        6、浮动元素不会超过它上边的浮动的兄弟元素，最多最多就是和它一样高
-
-    简单总结：
-        浮动目前来讲它的主要作用就是让页面中的元素可以水平排列，
-            通过浮动可以制作一些水平方向的布局
-</code></pre>
+    <h1 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动<span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>通过浮动可以使一个元素向其父元素的左侧或右侧移动</p>
+<ol>
+<li>使用 float 属性来设置于元素的浮动<ol>
+<li>可选值：  <ul>
+<li>none 默认值 ，元素不浮动</li>
+<li>left 元素向左浮动  </li>
+<li>right 元素向右浮动  </li>
+</ul>
+</li>
+</ol>
+</li>
+<li>注意，元素设置浮动以后，水平布局的等式便不需要强制成立<br>元素设置浮动以后，会完全从文档流中脱离，不再占用文档流的位置，<br>所以元素下边的还在文档流中的元素会自动向上移动</li>
+</ol>
 <hr>
-<h2 id="其他特点"><a href="#其他特点" class="headerlink" title="其他特点"></a>其他特点</h2><pre><code>浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，
-    所以我们可以利用浮动来设置文字环绕图片的效果
-元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素的一些特点也会发生变化
-
-脱离文档流的特点：
-    块元素：
-        1、块元素不再独占页面的一行
-        2、脱离文档流以后，块元素的宽度和高度默认都被内容撑开
-
-    行内元素：
-        行内元素脱离文档流以后会变成块元素，特点和块元素一样
-
-    脱离文档流以后，不需要再区分块和行内了
-</code></pre>
+<h2 id="浮动的特点："><a href="#浮动的特点：" class="headerlink" title="浮动的特点："></a>浮动的特点：</h2><ol>
+<li>浮动元素会完全脱离文档流，不再占据文档流中的位置</li>
+<li>设置浮动以后元素会向父元素的左侧或右侧移动，</li>
+<li>浮动元素默认不会从父元素中移出</li>
+<li>浮动元素向左或向右移动时，不会超过它前边（body中的前关系）的其他浮动元素</li>
+<li>如果浮动元素的上边是一个没有浮动的块元素，则浮动元素无上移</li>
+<li>浮动元素不会超过它上边的浮动的兄弟元素，最多最多就是和一样高<br>简单总结：<br> 浮动目前来讲它的主要作用就是让页面中的元素可以水平排列，<br> 通过浮动可以制作一些水平方向的布局</li>
+</ol>
 <hr>
-<h2 id="高度塌陷问题"><a href="#高度塌陷问题" class="headerlink" title="高度塌陷问题"></a>高度塌陷问题</h2><pre><code>高度塌陷的问题：
-    在浮动布局中，父元素的高度默认是被子元素撑开的，
-    当子元素浮动后，其会完全脱离文档流，子元素从文档流中脱离
-    将会无法撑起父元素的高度，导致父元素的高度丢失
-    父元素高度丢失以后，其下的元素会自动上移，导致页面的布局混乱
-所以高度塌陷是浮动布局中比较常见的一个问题，这个问题我们必须要进行处理！
-
-BFC(Block Formatting Context) 块级格式化环境
-    - BFC是一个CSS中的一个隐含的属性，可以为一个元素开启BFC
-        开启BFC该元素会变成一个独立的布局区域
-    - 元素开启BFC后的特点：
-        1.开启BFC的元素不会被浮动元素所覆盖
-        2.开启BFC的元素子元素和父元素外边距不会重叠
-        3.开启BFC的元素可以包含浮动的子元素
-
-    - 可以通过一些特殊方式来开启元素的BFC：
-        1、设置元素的浮动（不推荐）
-        2、将元素设置为行内块元素（不推荐）
-        3、将元素的overflow设置为一个非visible的值
-            - 常用的方式 为元素设置 overflow:hidden 开启其BFC 以使其可以包含浮动元素
-</code></pre>
+<h2 id="其他特点"><a href="#其他特点" class="headerlink" title="其他特点"></a>其他特点</h2><ol>
+<li>浮动元素不会盖住文字，文字会自动环绕在浮动元素的周围，<br>所以我们可以利用浮动来设置文字环绕图片的效果</li>
+<li>元素设置浮动以后，将会从文档流中脱离，从文档流中脱离后，元素一些特点也会发生变化</li>
+<li>脱离文档流的特点：<ol>
+<li>块元素：<ul>
+<li>块元素不再独占页面的一行</li>
+<li>脱离文档流以后，块元素的宽度和高度默认都被内容撑开</li>
+</ul>
+</li>
+<li>行内元素：<ul>
+<li>行内元素脱离文档流以后会变成块元素，特点和块元素一样</li>
+</ul>
+</li>
+<li>脱离文档流以后，不需要再区分块和行内了</li>
+</ol>
+</li>
+</ol>
 <hr>
-<h2 id="最终解决方案"><a href="#最终解决方案" class="headerlink" title="最终解决方案"></a>最终解决方案</h2><pre><code>clearfix 这个样式可以同时解决高度塌陷和外边距重叠的问题，
-当你在遇到这些问题时，直接使用clearfix这个类即可。
-.clearfix::before,
-.clearfix::after&#123;
-    content: &#39;&#39;;
-    display: table;
-    clear: both;
-&#125;
-使用方法：先定义这个类，再在产生高度塌陷的父类中增加clearfix类。
-</code></pre>
+<h2 id="高度塌陷问题"><a href="#高度塌陷问题" class="headerlink" title="高度塌陷问题"></a>高度塌陷问题</h2><ol>
+<li>高度塌陷的问题：<br>在浮动布局中，父元素的高度默认是被子元素撑开的，<br>当子元素浮动后，其会完全脱离文档流，子元素从文档流中脱离<br>将会无法撑起父元素的高度，导致父元素的高度丢失<br>父元素高度丢失以后，其下的元素会自动上移，导致页面的布局混乱  </li>
+<li>所以高度塌陷是浮动布局中比较常见的一个问题，这个问题我们必须进行处理！</li>
+<li>BFC(Block Formatting Context) 块级格式化环境<ol>
+<li>BFC是一个CSS中的一个隐含的属性，可以为一个元素开启BFC<br>开启BFC该元素会变成一个独立的布局区域</li>
+<li>元素开启BFC后的特点：<ul>
+<li>开启BFC的元素不会被浮动元素所覆盖</li>
+<li>开启BFC的元素子元素和父元素外边距不会重叠</li>
+<li>开启BFC的元素可以包含浮动的子元素</li>
+</ul>
+</li>
+<li>可以通过一些特殊方式来开启元素的BFC：<ul>
+<li>设置元素的浮动（不推荐）</li>
+<li>将元素设置为行内块元素（不推荐）</li>
+<li>将元素的overflow设置为一个非visible的值</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>常用的方式 为元素设置 overflow:hidden 开启其BFC 以使其可以包含浮动元素</li>
+</ol>
+<hr>
+<h2 id="最终解决方案"><a href="#最终解决方案" class="headerlink" title="最终解决方案"></a>最终解决方案</h2><p>clearfix 这个样式可以同时解决高度塌陷和外边距重叠的问题，<br>当你在遇到这些问题时，直接使用clearfix这个类即可。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::before</span>,</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">::after</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">    <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用方法：先定义这个类，再在产生高度塌陷的父类中增加clearfix类。</p>
 
     
 
@@ -523,7 +518,7 @@ BFC(Block Formatting Context) 块级格式化环境
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%AE%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text">浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">其他特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">高度塌陷问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.4.</span> <span class="toc-text">最终解决方案</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%AE%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text">浮动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%AE%E5%8A%A8%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9A"><span class="toc-number">1.2.</span> <span class="toc-text">浮动的特点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%89%B9%E7%82%B9"><span class="toc-number">1.3.</span> <span class="toc-text">其他特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%BA%A6%E5%A1%8C%E9%99%B7%E9%97%AE%E9%A2%98"><span class="toc-number">1.4.</span> <span class="toc-text">高度塌陷问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.5.</span> <span class="toc-text">最终解决方案</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -672,6 +667,10 @@ BFC(Block Formatting Context) 块级格式化环境
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
               </li>
              
               <li class="article-tag-list-item">

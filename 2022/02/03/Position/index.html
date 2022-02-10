@@ -18,7 +18,7 @@
 <meta property="og:description" content="定位">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-03T11:45:37.000Z">
-<meta property="article:modified_time" content="2022-02-03T12:09:28.778Z">
+<meta property="article:modified_time" content="2022-02-10T06:49:16.990Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Html基础">
 <meta name="twitter:card" content="summary">
@@ -275,108 +275,100 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位<span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><pre><code>定位（position）
-    - 定位是一种更加高级的布局手段
-    - 通过定位可以将元素摆放到页面的任意位置
-    - 使用position属性来设置定位
-        可选值：
-            static 默认值，元素是静止的，没有开启定位
-            relative 开启元素的相对定位
-            absolute 开启元素的绝对定位
-            fixed 开启元素的固定定位
-            sticky 开启元素的粘滞定位
-</code></pre>
+    <h1 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位<span id="more"></span></h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><ul>
+<li>定位是一种更加高级的布局手段</li>
+<li>通过定位可以将元素摆放到页面的任意位置</li>
+<li>使用position属性来设置定位<br>可选值：<ul>
+<li>static 默认值，元素是静止的，没有开启定位</li>
+<li>relative 开启元素的相对定位</li>
+<li>absolute 开启元素的绝对定位</li>
+<li>fixed 开启元素的固定定位</li>
+<li>sticky 开启元素的粘滞定位</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h2 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h2><pre><code>- 相对定位：
-    - 当元素的position属性值设置为relative时则开启了元素的相对定位
-    - 相对定位的特点：
-        1.元素开启相对定位以后，如果不设置偏移量，元素不会发生任何的变化
-        2.相对定位是参照于元素在文档流中的位置进行定位的
-        3.相对定位会提升元素的层级
-        4.相对定位不会使元素脱离文档流
-        5.相对定位不会改变元素的性质块还是块，行内还是行内
-</code></pre>
+<h2 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h2><ul>
+<li>当元素的position属性值设置为relative时则开启了元素的对定位</li>
+<li>相对定位的特点：<ol>
+<li>元素开启相对定位以后，如果不设置偏移量，元素不会发生任何的变化</li>
+<li>相对定位是参照于元素在文档流中的位置进行定位的</li>
+<li>相对定位会提升元素的层级</li>
+<li>相对定位不会使元素脱离文档流</li>
+<li>相对定位不会改变元素的性质块还是块，行内还是行内</li>
+</ol>
+</li>
+</ul>
 <hr>
-<h2 id="偏移量（offset）"><a href="#偏移量（offset）" class="headerlink" title="偏移量（offset）"></a>偏移量（offset）</h2><pre><code>- 当元素开启了定位以后，可以通过偏移量来设置元素的位置
-    top
-        - 定位元素和定位位置上边的距离
-    bottom
-        - 定位元素和定位位置下边的距离
-        - 定位元素垂直方向的位置由top和bottom两个属性来控制
-            通常情况下我们只会使用其中一个
-        - top值越大，定位元素越向下移动
-        - bottom值越大，定位元素越向上移动
-    left
-        - 定位元素和定位位置的左侧距离
-    right
-        - 定位元素和定位位置的右侧距离
-        - 定位元素水平方向的位置由left和right两个属性控制
-            通常情况下只会使用一个
-        - left越大，元素越靠右
-        - right越大，元素越靠左
-</code></pre>
+<h2 id="偏移量（offset）"><a href="#偏移量（offset）" class="headerlink" title="偏移量（offset）"></a>偏移量（offset）</h2><ul>
+<li>当元素开启了定位以后，可以通过偏移量来设置元素的位置<ul>
+<li>top<ul>
+<li>定位元素和定位位置上边的距离</li>
+</ul>
+</li>
+<li>bottom<ul>
+<li>定位元素和定位位置下边的距离</li>
+<li>定位元素垂直方向的位置由top和bottom两个属性来控制<br>  通常情况下我们只会使用其中一个</li>
+<li>top值越大，定位元素越向下移动</li>
+<li>bottom值越大，定位元素越向上移动</li>
+</ul>
+</li>
+<li>left<ul>
+<li>定位元素和定位位置的左侧距离</li>
+</ul>
+</li>
+<li>right<ul>
+<li>定位元素和定位位置的右侧距离</li>
+<li>定位元素水平方向的位置由left和right两个属性控制<br>通常情况下只会使用一个</li>
+<li>left越大，元素越靠右</li>
+<li>right越大，元素越靠左</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <hr>
-<h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><pre><code>- 当元素的position属性值设置为absolute时，则开了元素的绝对定位
-- 绝对定位的特点：
-    1.开启绝对定位后，如果不设置偏移量，元素的位置不会发生变化
-    2.开启绝对定位后，元素会从文档流中脱离
-    3.绝对定位会改变元素的性质，行内变成块，块的宽高被内容撑开
-    4.绝对定位会使元素提升一个层级
-    5.绝对定位元素是相对于其包含块进行定位的
-
-    包含块( containing block )
-        - 正常情况下：
-            包含块就是离当前元素最近的祖先块元素
-            &lt;div&gt; &lt;div&gt;&lt;/div&gt; &lt;/div&gt;
-            &lt;div&gt;&lt;span&gt;&lt;em&gt;hello&lt;/em&gt;&lt;/span&gt;&lt;/div&gt;
-
-        - 绝对定位的包含块:
-            包含块就是离它最近的开启了定位的祖先元素，
-                如果所有的祖先元素都没有开启定位则根元素就是它的包含块
-
-        - html（根元素、初始包含块）
-</code></pre>
+<h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><ul>
+<li>当元素的position属性值设置为absolute时，则开了元素的绝对定位</li>
+<li>绝对定位的特点：<ol>
+<li>开启绝对定位后，如果不设置偏移量，元素的位置不会发生变化</li>
+<li>开启绝对定位后，元素会从文档流中脱离</li>
+<li>绝对定位会改变元素的性质，行内变成块，块的宽高被内容撑开</li>
+<li>绝对定位会使元素提升一个层级</li>
+<li>绝对定位元素是相对于其包含块进行定位的<br>包含块( containing block )<ul>
+<li>正常情况下：<br>  包含块就是离当前元素最近的祖先块元素<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span>&gt; </span><br><span class="line">    &lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">span</span>&gt;&lt;<span class="selector-tag">em</span>&gt;hello&lt;/<span class="selector-tag">em</span>&gt;&lt;/<span class="selector-tag">span</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure></li>
+<li>绝对定位的包含块:<br>包含块就是离它最近的开启了定位的祖先元素，<br>如果所有的祖先元素都没有开启定位，则根元素就是它的包含块</li>
+<li>html（根元素、初始包含块）</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
 <hr>
-<h2 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h2><pre><code>- 将元素的position属性设置为fixed则开启了素的固定定位
-- 固定定位也是一种绝对定位，所以固定定位的部分特点都和绝对定位一样
-    唯一不同的是固定定位永远参照于浏览器的视口进行定位
-    固定定位的元素不会随网页的滚动条滚动
-</code></pre>
+<h2 id="固定定位"><a href="#固定定位" class="headerlink" title="固定定位"></a>固定定位</h2><ul>
+<li>将元素的position属性设置为fixed则开启了素的固定定位</li>
+<li>固定定位也是一种绝对定位，所以固定定位的部分特点都和绝对定位一样<br>唯一不同的是固定定位永远参照于浏览器的视口进行定位<br>固定定位的元素不会随网页的滚动条滚动</li>
+</ul>
 <hr>
-<h2 id="粘滞定位"><a href="#粘滞定位" class="headerlink" title="粘滞定位"></a>粘滞定位</h2><pre><code>- 当元素的position属性设置为sticky时则开启元素的粘滞定位
-- 粘滞定位和相对定位的特点基本一致，
-    不同的是粘滞定位可以在元素到达某个位置时将其固定
-</code></pre>
+<h2 id="粘滞定位"><a href="#粘滞定位" class="headerlink" title="粘滞定位"></a>粘滞定位</h2><ul>
+<li>当元素的position属性设置为sticky时则开启元素的粘滞定位</li>
+<li>粘滞定位和相对定位的特点基本一致，<br>不同的是粘滞定位可以在元素到达某个位置时将其固定</li>
+</ul>
 <hr>
-<h2 id="绝对定位，元素的布局"><a href="#绝对定位，元素的布局" class="headerlink" title="绝对定位，元素的布局"></a>绝对定位，元素的布局</h2><pre><code>水平布局
-    left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 包含块的内容区的宽度
-
-- 当我们开启了绝对定位后:
-    水平方向的布局等式就需要添加left 和 right 两个值
-        此时规则和之前一样只是多添加了两个值：
-            当发生过度约束：
-                如果9个值中没有 auto 则自动调整right值以使等式满足
-                如果有auto，则自动调整auto的值以使等式满足
-
-        - 可设置auto的值
-            margin width left right
-
-        - 因为left 和 right的值默认是auto，所以如果不指定left和right
-            则等式不满足时，会自动调整这两个值
-
-    垂直方向布局的等式的也必须要满足
-        top + margin-top/bottom + padding-top/bottom + border-top/bottom + height = 包含块的高度
-</code></pre>
+<h2 id="绝对定位，元素的布局"><a href="#绝对定位，元素的布局" class="headerlink" title="绝对定位，元素的布局"></a>绝对定位，元素的布局</h2><p>水平布局<br>left + margin-left + border-left + padding-left + width + padding-right + border-right + margin-right + right = 包含块的内容区的宽度</p>
+<ul>
+<li>当我们开启了绝对定位后:<br>水平方向的布局等式就需要添加left 和 right 两个值<br>此时规则和之前一样只是多添加了两个值。<br>当发生过度约束：<br>如果9个值中没有 auto 则自动调整right值以使等式满足<br>如果有auto，则自动调整auto的值以使等式满足</li>
+<li>可设置auto的值<br>margin width left right</li>
+<li>因为left 和 right的值默认是auto，所以如果不指定left和right，则等式不满足时，会自动调整这两个值。<br>垂直方向布局的等式的也必须要满足下面等式<br>top + margin-top/bottom + padding-top/bottom + border-top/bottom + height = 包含块的高度</li>
+</ul>
 <hr>
-<h2 id="元素的层级"><a href="#元素的层级" class="headerlink" title="元素的层级"></a>元素的层级</h2><pre><code>对于开启了定位元素，可以通过z-index属性来指定元素的层级
-z-index需要一个整数作为参数，值越大元素的层越高
-    元素的层级越高越优先显示
-
-如果元素的层级一样，则优先显示（body里，即结构）靠下的元素
-
-祖先的元素的层级再高也不会盖住后代元素
-</code></pre>
-<hr>
+<h2 id="元素的层级"><a href="#元素的层级" class="headerlink" title="元素的层级"></a>元素的层级</h2><ol>
+<li>对于开启了定位元素，可以通过z-index属性来指定元素的层级</li>
+<li>z-index需要一个整数作为参数，值越大元素的层越高<br>元素的层级越高越优先显示</li>
+<li>如果元素的层级一样，则优先显示（body里，即结构）靠下的元素</li>
+<li>祖先的元素的层级再高也不会盖住后代元素</li>
+</ol>
 
     
 
@@ -703,6 +695,10 @@ z-index需要一个整数作为参数，值越大元素的层越高
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
               </li>
              
               <li class="article-tag-list-item">

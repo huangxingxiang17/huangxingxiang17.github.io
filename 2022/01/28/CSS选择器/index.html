@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>CSS | 黄兴祥的Blog</title>
+  <title>CSS选择器 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="选择器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS">
+<meta property="og:title" content="CSS选择器">
 <meta property="og:url" content="http://huangxingxiang17.github.io/2022/01/28/CSS%E9%80%89%E6%8B%A9%E5%99%A8/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="选择器">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-28T09:22:36.000Z">
-<meta property="article:modified_time" content="2022-02-03T12:03:19.884Z">
+<meta property="article:modified_time" content="2022-02-10T02:22:47.391Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Html基础">
 <meta name="twitter:card" content="summary">
@@ -229,7 +229,7 @@
   
   
     <h1 class="article-title" itemprop="name">
-      CSS
+      CSS选择器
     </h1>
   
 
@@ -275,182 +275,165 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器<span id="more"></span></h1><h2 id="常用选择器"><a href="#常用选择器" class="headerlink" title="常用选择器"></a>常用选择器</h2><pre><code>1.元素选择器
-    语法：标签名&#123;属性值&#125;
-    例子：p&#123;&#125;  h1&#123;&#125;  div&#123;&#125;
-2.id选择器
-    语法：#id&#123;属性值&#125;
-    例子：#box&#123;&#125; #red&#123;&#125;
-3.类选择器
-    语法：.class&#123;属性值&#125;
-4.通配选择器
-    语法: *&#123;&#125;
-    例子：*&#123;margin:0;padding:0&#125;
-</code></pre>
+    <h1 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器<span id="more"></span></h1><h2 id="常用选择器"><a href="#常用选择器" class="headerlink" title="常用选择器"></a>常用选择器</h2><ol>
+<li><strong>元素选择器</strong><br> 语法：标签名{属性值}<br> 例子：p{}  h1{}  div{}</li>
+<li><strong>id选择器</strong><br> 语法：#id{属性值}<br> 例子：#box{} #red{}</li>
+<li><strong>类选择器</strong><br> 语法：.class{属性值}</li>
+<li><strong>通配选择器</strong><br> 语法: <em>{}<br> 例子：</em>{margin:0;padding:0}</li>
+</ol>
 <hr>
-<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><pre><code>1.交集选择器
-    语法：选择器1选择器2选择器3选择器n&#123;&#125;
-    注意点：
-    交集选择器中如果有元素选择器，必须使用元素选择器开头
-    例子：div.red&#123;&#125;
-2.选择器分组（并集选择器）
-    作用：同时选择多个选择器对应的元素
-    语法：选择器1,选择器2,选择器3,选择器n&#123;&#125;
-    例子：#b1,.p1,h1,span,div.red&#123;&#125;
-</code></pre>
+<h2 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h2><ol>
+<li><strong>交集选择器</strong><br> 语法：选择器1选择器2选择器3选择器n{}<br> 注意点：<br> 交集选择器中如果有元素选择器，必须使用元素选择器开头<br> 例子：div.red{}</li>
+<li><strong>选择器分组（并集选择器）</strong><br> 作用：同时选择多个选择器对应的元素<br> 语法：选择器1,选择器2,选择器3,选择器n{}<br> 例子：#b1,.p1,h1,span,div.red{}</li>
+</ol>
 <hr>
-<h2 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h2><pre><code>父元素
-    - 直接包含子元素的元素叫做父元素
-子元素
-    - 直接被父元素包含的元素是子元素
-祖先元素
-    - 直接或间接包含后代元素的元素叫做祖先元素
-    - 一个元素的父元素也是它的祖先元素
-后代元素
-    - 直接或间接被祖先元素包含的元素叫做后代元素
-    - 子元素也是后代元素
-兄弟元素
-    - 拥有相同父元素的元素是兄弟元素
-
-1.子元素选择器
-    作用：选中指定父元素的指定子元素
-    语法：父元素 &gt; 子元素
-    例子：div.box &gt; span&#123;&#125;
-2.后代元素选择器
-    作用：选中指定元素内的指定后代元素
-    语法：祖先 后代
-    例子：div span&#123;&#125;
-3.兄弟元素选择器
-    作用：选择下一个兄弟
-    语法：前一个 + 下一个
-    作用：选择下边所有的兄弟
-    语法：兄 ~ 弟
-</code></pre>
+<h2 id="关系选择器"><a href="#关系选择器" class="headerlink" title="关系选择器"></a>关系选择器</h2><ol>
+<li>定义<ol>
+<li><strong>父元素</strong><ul>
+<li>直接包含子元素的元素叫做父元素</li>
+</ul>
+</li>
+<li><strong>子元素</strong><ul>
+<li>直接被父元素包含的元素是子元素</li>
+</ul>
+</li>
+<li><strong>祖先元素</strong><ul>
+<li>直接或间接包含后代元素的元素叫做祖先元素</li>
+<li>一个元素的父元素也是它的祖先元素</li>
+</ul>
+</li>
+<li><strong>后代元素</strong><ul>
+<li>直接或间接被祖先元素包含的元素叫做后代元素</li>
+<li>子元素也是后代元素</li>
+</ul>
+</li>
+<li><strong>兄弟元素</strong><ul>
+<li>拥有相同父元素的元素是兄弟元素</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>子元素选择器<br> 作用：选中指定父元素的指定子元素<br> 语法：父元素 &gt; 子元素<br> 例子：div.box &gt; span{}  </li>
+<li>后代元素选择器<br> 作用：选中指定元素内的指定后代元素<br> 语法：祖先 后代<br> 例子：div span{}  </li>
+<li>兄弟元素选择器<br> 作用：选择下一个兄弟<br> 语法：前一个 + 下一个<br> 作用：选择下边所有的兄弟<br> 语法：兄 ~ 弟  </li>
+</ol>
 <hr>
-<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><pre><code>[属性名] 选择含有指定属性的元素
-[属性名=属性值] 选择含有指定属性和属性值的元素
-[属性名^=属性值] 选择属性值以指定值开头的元素
-[属性名$=属性值] 选择属性值以指定值结尾的元素
-[属性名*=属性值] 选择属性值中含有某值的元素
-例子：p[title*=e]&#123;&#125;
-</code></pre>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><ol>
+<li>[属性名] 选择含有指定属性的元素  </li>
+<li>[属性名=属性值] 选择含有指定属性和属性值的元素  </li>
+<li>[属性名^=属性值] 选择属性值以指定值开头的元素  </li>
+<li>[属性名$=属性值] 选择属性值以指定值结尾的元素  </li>
+<li>[属性名*=属性值] 选择属性值中含有某值的元素<br>例子：p[title*=e]{}</li>
+</ol>
 <hr>
-<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><pre><code>伪类（不存在的类，特殊的类）
-- 伪类用来描述一个元素的特殊状态
-    比如：第一个子元素、被点击的元素、鼠标移入的元素...
-- 伪类一般情况下都是使用:开头
-    :first-child 第一个子元素
-    :last-child 最后一个子元素
-    :nth-child() 选中第n个子元素
-        特殊值：
-            n 第n个 n的范围0到正无穷
-            2n 或 even 表示选中偶数位的元素
-            2n+1 或 odd 表示选中奇数位的元素
-    - 以上这些伪类都是根据所有的子元素进行排序
-
-    :first-of-type
-    :last-of-type
-    :nth-of-type()
-    - 这几个伪类的功能和上述的类似，不通点是他们是在同类型元素中进行排序
-
-- :not() 否定伪类
-    将符合条件的元素从选择器中去除
-</code></pre>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><p>伪类（不存在的类，特殊的类）</p>
+<ol>
+<li><p>伪类用来描述一个元素的特殊状态<br> 比如：第一个子元素、被点击的元素、鼠标移入的元素…</p>
+</li>
+<li><p>伪类一般情况下都是使用:开头  </p>
+<ol>
+<li>:first-child 第一个子元素  </li>
+<li>:last-child 最后一个子元素  </li>
+<li>:nth-child() 选中第n个子元素  <ul>
+<li>特殊值：<br>n 第n个 n的范围0到正无穷<br>2n 或 even 表示选中偶数位的元素<br>2n+1 或 odd 表示选中奇数位的元素</li>
+</ul>
+</li>
+<li>以上这些伪类都是根据所有的子元素进行排序</li>
+</ol>
+</li>
+<li><p> 这几个伪类的功能和上述的类似，不通点是他们是在同类型元素中进行排序<br>:first-of-type<br>:last-of-type<br>:nth-of-type()  </p>
+</li>
+<li><p>:not() 否定伪类<br>将符合条件的元素从选择器中去除</p>
+</li>
+</ol>
 <hr>
-<h2 id="a元素的伪类选择器"><a href="#a元素的伪类选择器" class="headerlink" title="a元素的伪类选择器"></a>a元素的伪类选择器</h2><pre><code>:link 用来表示没访问过的链接（正常的链接）
-:visited 用来表示访问过的链接
-    由于隐私的原因，所以visited这个伪类只能修改链接的颜色
-:hover 用来表示鼠标移入的状态
-:active 用来表示鼠标点击
-例子：a:hover&#123;&#125;
-</code></pre>
+<h2 id="a元素的伪类选择器"><a href="#a元素的伪类选择器" class="headerlink" title="a元素的伪类选择器"></a>a元素的伪类选择器</h2><ol>
+<li>:link 用来表示没访问过的链接（正常的链接）</li>
+<li>:visited 用来表示访问过的链接<br> 由于隐私的原因，所以visited这个伪类只能修改链接的颜色</li>
+<li>:hover 用来表示鼠标移入的状态</li>
+<li>:active 用来表示鼠标点击<br>例子：a:hover{}</li>
+</ol>
 <hr>
-<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h2><pre><code>伪元素，表示页面中一些特殊的并不真实的存在的元素（特殊的位置）
-伪元素使用 :: 开头
-::first-letter 表示第一个字母
-::first-line 表示第一行
-::selection 表示选中的内容
-::before 元素的开始 
-::after 元素的最后
-- before 和 after 必须结合content属性来使用，没有办法在浏览器窗口中选中
-- 例子：div::before&#123;content: &#39;『&#39;; &#125;
-        div::after&#123;content: &#39;』&#39;;&#125;
-</code></pre>
+<h2 id="伪元素选择器"><a href="#伪元素选择器" class="headerlink" title="伪元素选择器"></a>伪元素选择器</h2><p>伪元素，表示页面中一些特殊的并不真实的存在的元素（特殊的位置）<br>伪元素使用 :: 开头</p>
+<ol>
+<li>::first-letter 表示第一个字母</li>
+<li>::first-line 表示第一行</li>
+<li>::selection 表示选中的内容</li>
+<li>::before 元素的开始 </li>
+<li>::after 元素的最后</li>
+<li>before 和 after 必须结合content属性来使用，没有办法在浏览器窗口中选中<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">::before</span>&#123;<span class="attribute">content</span>: <span class="string">&#x27;『&#x27;</span>; &#125;</span><br><span class="line"><span class="selector-tag">div</span><span class="selector-pseudo">::after</span>&#123;<span class="attribute">content</span>: <span class="string">&#x27;』&#x27;</span>;&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <hr>
-<h2 id="样式的继承"><a href="#样式的继承" class="headerlink" title="样式的继承"></a>样式的继承</h2><pre><code>样式的继承，我们为一个元素设置的样式同时也会应用到它的后代元素上
-继承是发生在祖先与后代之间的
-
-继承的设计是为了方便我们的开发，
-    利用继承我们可以将一些通用的样式统一设置到共同的祖先元素上，
-    这样只需设置一次即可让所有的元素都具有该样式
-
-注意：并不是所有的样式都会被继承：
-    比如 背景相关的，布局相关等的这些样式都不会被继承。
-</code></pre>
+<h2 id="样式的继承"><a href="#样式的继承" class="headerlink" title="样式的继承"></a>样式的继承</h2><p>样式的继承，我们为一个元素设置的样式同时也会应用到它的后代元素上<br>继承是发生在祖先与后代之间的<br>继承的设计是为了方便我们的开发，<br>利用继承我们可以将一些通用的样式统一设置到共同的祖先元素上，<br>这样只需设置一次即可让所有的元素都具有该样式<br><strong>注意</strong>：并不是所有的样式都会被继承：<br>比如背景相关的，布局相关等的这些样式都不会被继承。</p>
 <hr>
-<h2 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h2><pre><code>样式的冲突
-- 当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时，此时就发生了样式的冲突。
-
-- 发生样式冲突时，应用哪个样式由选择器的权重（优先级）决定
-
-- 选择器的权重
-    内联样式        1,0,0,0
-    id选择器        0,1,0,0
-    类和伪类选择器   0,0,1,0
-    元素选择器       0,0,0,1
-    通配选择器       0,0,0,0  即*&#123;&#125;
-    继承的样式       没有优先级
-
-- 比较优先级时，需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示（分组选择器是单独计算的）,
-    选择器的累加不会超过其最大的数量级，类选择器再高也不会超过id选择器
-    如果优先级计算后相同，此时则优先使用靠下的样式
-
-- 可以在某一个样式的后边添加 !important ，则此时该样式会获取到最高的优先级，甚至超过内联样式，
-    注意：在开发中这个玩意一定要慎用！
-</code></pre>
+<h2 id="选择器的权重"><a href="#选择器的权重" class="headerlink" title="选择器的权重"></a>选择器的权重</h2><p>样式的冲突</p>
+<ol>
+<li><p>当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值时，此时就发生了样式的冲突。</p>
+</li>
+<li><p>发生样式冲突时，应用哪个样式由选择器的权重（优先级）决定</p>
+</li>
+<li><p>选择器的权重</p>
+<ul>
+<li>内联样式        1,0,0,0</li>
+<li>id选择器        0,1,0,0</li>
+<li>类和伪类选择器   0,0,1,0</li>
+<li>元素选择器       0,0,0,1</li>
+<li>通配选择器       0,0,0,0  即*{}</li>
+<li>继承的样式       没有优先级</li>
+</ul>
+</li>
+<li><p>比较优先级时，需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示（分组选择器是单独计算的）,<br>选择器的累加不会超过其最大的数量级，类选择器再高也不会超过id选择器<br>如果优先级计算后相同，此时则优先使用靠下的样式</p>
+</li>
+<li><p>可以在某一个样式的后边添加 !important ，则此时该样式会获取到最高的优先级，甚至超过内联样式，<br>注意：在开发中这个玩意一定要慎用！</p>
+</li>
+</ol>
 <hr>
-<h2 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h2><pre><code>长度单位：
-    像素
-        - 屏幕（显示器）实际上是由一个一个的小点点构成的
-        - 不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰
-        - 所以同样的200px在不同的设备下显示效果不一样
-
-    百分比
-        - 也可以将属性值设置为相对于其父元素属性的百分比
-        - 设置百分比可以使子元素跟随父元素的改变而改变
-
-    em
-        - em是相对于元素的字体大小来计算的
-        - 1em = 1font-size
-        - em会根据字体大小的改变而改变
-
-    rem
-        - rem是相对于根元素的字体大小来计算
-</code></pre>
+<h2 id="单位"><a href="#单位" class="headerlink" title="单位"></a>单位</h2><ol>
+<li><strong>像素</strong><ul>
+<li>屏幕（显示器）实际上是由一个一个的小点点构成的</li>
+<li>不同屏幕的像素大小是不同的，像素越小的屏幕显示的效果越清晰</li>
+<li>所以同样的200px在不同的设备下显示效果不一样</li>
+</ul>
+</li>
+<li><strong>百分比</strong><ul>
+<li>也可以将属性值设置为相对于其父元素属性的百分比</li>
+<li>设置百分比可以使子元素跟随父元素的改变而改变</li>
+</ul>
+</li>
+<li><strong>em</strong><ul>
+<li>em是相对于元素的字体大小来计算的</li>
+<li>1em = 1font-size</li>
+<li>em会根据字体大小的改变而改变</li>
+</ul>
+</li>
+<li><strong>rem</strong><ul>
+<li>rem是相对于根元素的字体大小来计算</li>
+</ul>
+</li>
+</ol>
 <hr>
-<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>颜色单位：<br>    在CSS中可以直接使用颜色名来设置各种颜色<br>        比如：red、orange、yellow、blue、green … …<br>        但是在css中直接使用颜色名是非常的不方便</p>
-<pre><code>    RGB值：
-        - RGB通过三种颜色的不同浓度来调配出不同的颜色
-        - R red，G green ，B blue
-        - 每一种颜色的范围在 0 - 255 (0% - 100%) 之间
-        - 语法：RGB(红色,绿色,蓝色)
-
-    RGBA:
-        - 就是在rgb的基础上增加了一个a表示不透明度
-        - 需要四个值，前三个和rgb一样，第四个表示不透明度
-            1表示完全不透明   0表示完全透明  .5半透明
-
-    十六进制的RGB值：
-        - 语法：#红色绿色蓝色
-        - 颜色浓度通过 00-ff
-        - 如果颜色两位两位重复可以进行简写  
-            #aabbcc --&gt; #abc
-                
-    HSL值 HSLA值
-        H 色相(0 - 360)
-        S 饱和度，颜色的浓度 0% - 100%
-        L 亮度，颜色的亮度 0% - 100%
-</code></pre>
+<h2 id="颜色"><a href="#颜色" class="headerlink" title="颜色"></a>颜色</h2><p>在CSS中可以直接使用颜色名来设置各种颜色<br>比如：red、orange、yellow、blue、green … …<br>但是在css中直接使用颜色名是非常的不方便  </p>
+<ol>
+<li>RGB值：<ul>
+<li>RGB通过三种颜色的不同浓度来调配出不同的颜色</li>
+<li>R red，G green ，B blue</li>
+<li>每一种颜色的范围在 0 - 255 (0% - 100%) 之间</li>
+<li>语法：RGB(红色,绿色,蓝色)</li>
+</ul>
+</li>
+<li>RGBA:<ul>
+<li>就是在rgb的基础上增加了一个a表示不透明度</li>
+<li>需要四个值，前三个和rgb一样，第四个表示不透明度<br>  1表示完全不透明   0表示完全透明  .5半透明</li>
+</ul>
+</li>
+<li>十六进制的RGB值：<ul>
+<li>语法：#红色绿色蓝色</li>
+<li>颜色浓度通过 00-ff</li>
+<li>如果颜色两位两位重复可以进行简写<br>  #aabbcc –&gt; #abc</li>
+</ul>
+</li>
+<li>HSL值 HSLA值<br> H 色相(0 - 360)<br> S 饱和度，颜色的浓度 0% - 100%<br> L 亮度，颜色的亮度 0% - 100%  </li>
+</ol>
 
     
 
@@ -497,7 +480,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://huangxingxiang17.github.io/2022/01/28/CSS选择器/" title="CSS" target="_blank">http://huangxingxiang17.github.io/2022/01/28/CSS选择器/</a>
+          <a href="http://huangxingxiang17.github.io/2022/01/28/CSS选择器/" title="CSS选择器" target="_blank">http://huangxingxiang17.github.io/2022/01/28/CSS选择器/</a>
         </li>
         
         <li>
@@ -777,6 +760,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">游戏</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
               </li>
              
               <li class="article-tag-list-item">
