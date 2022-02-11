@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>Category: Html+CSS | 黄兴祥的Blog</title>
+  <title>JS逻辑运算符 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄兴祥的Blog">
-<meta property="og:url" content="http://huangxingxiang17.github.io/categories/Html-CSS/index.html">
+  <meta name="description" content="逻辑运算符JS中为我们提供了三种逻辑运算符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS逻辑运算符">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/11/JS%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
+<meta property="og:description" content="逻辑运算符JS中为我们提供了三种逻辑运算符">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-11T10:02:41.000Z">
+<meta property="article:modified_time" content="2022-02-11T13:36:43.059Z">
 <meta property="article:author" content="黄兴祥">
+<meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
@@ -203,566 +208,280 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JS逻辑运算符" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/08/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="archive-article-date">
-        <time datetime="2022-02-08T02:44:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-08</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/08/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" target="_blank">响应式布局</a>
   
+    <h1 class="article-title" itemprop="name">
+      JS逻辑运算符
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/02/11/JS%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
+        <time datetime="2022-02-11T10:02:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-11</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">508字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>JS中为我们提供了三种逻辑运算符<span id="more"></span><br>! 非  </p>
+<ul>
+<li>!可以用来对一个值进行非运算</li>
+<li>所谓非运算就是值对一个布尔值进行取反操作，<br>true变false，false变true</li>
+<li>如果对一个值进行两次取反，它不会变化</li>
+<li>如果对非布尔值进行元素，则会将其转换为布尔值，然后再取反<br>所以我们可以利用该特点，来将一个其他的数据类型转换为布尔值<br>可以为一个任意数据类型取两次反，来将其转换为布尔值，<br>原理和Boolean()函数一样<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b = <span class="number">10</span>;</span><br><span class="line">b = !!b;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;b = &quot;</span>+b);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);</span><br></pre></td></tr></table></figure>
+&amp;&amp; 与</li>
+<li>&amp;&amp;可以对符号两侧的值进行与运算并返回结果</li>
+<li>运算规则<ul>
+<li>两个值中只要有一个值为false就返回false，<br>只有两个值都为true时，才会返回true</li>
+<li>JS中的“与”属于短路的与，<br>如果第一个值为false，则不会看第二个值<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果两个值都是true则返回true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="literal">true</span> &amp;&amp; <span class="literal">true</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//只要有一个false，就返回false</span></span><br><span class="line">result = <span class="literal">true</span> &amp;&amp; <span class="literal">false</span>;</span><br><span class="line">result = <span class="literal">false</span> &amp;&amp; <span class="literal">true</span>;</span><br><span class="line">result = <span class="literal">false</span> &amp;&amp; <span class="literal">false</span>;</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;result = &quot;</span>+result);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第一个值为true，会检查第二个值</span></span><br><span class="line"><span class="literal">true</span> &amp;&amp; alert(<span class="string">&quot;看我出不出来！！&quot;</span>);</span><br><span class="line">			</span><br><span class="line"><span class="comment">//第一个值为false，不会检查第二个值</span></span><br><span class="line"><span class="comment">//false &amp;&amp; alert(&quot;看我出不出来！！&quot;);</span></span><br></pre></td></tr></table></figure>
+|| 或</li>
+</ul>
+</li>
+<li>||可以对符号两侧的值进行或运算并返回结果</li>
+<li>运算规则：<ul>
+<li>两个值中只要有一个true，就返回true<br>如果两个值都为false，才返回false</li>
+<li>JS中的“或”属于短路的或<br>如果第一个值为true，则不会检查第二个值<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//两个都是false，则返回false</span></span><br><span class="line">result = <span class="literal">false</span> || <span class="literal">false</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//只有有一个true，就返回true</span></span><br><span class="line">result = <span class="literal">true</span> || <span class="literal">false</span>;</span><br><span class="line">result = <span class="literal">false</span> || <span class="literal">true</span> ;</span><br><span class="line">result = <span class="literal">true</span> || <span class="literal">true</span> ;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;result = &quot;</span>+result);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第一个值为false，则会检查第二个值</span></span><br><span class="line"><span class="literal">false</span> || alert(<span class="string">&quot;123&quot;</span>);</span><br><span class="line">			</span><br><span class="line"><span class="comment">//第一个值为true，则不再检查第二个值</span></span><br><span class="line"><span class="literal">true</span> || alert(<span class="string">&quot;123&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          黄兴祥
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://huangxingxiang17.github.io/2022/02/11/JS逻辑运算符/" title="JS逻辑运算符" target="_blank">http://huangxingxiang17.github.io/2022/02/11/JS逻辑运算符/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/11/JS%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/07/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/" class="archive-article-date">
-        <time datetime="2022-02-07T01:53:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-07</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/02/11/JS%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS算数运算符</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/07/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/" target="_blank">移动端页面开发</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.</span> <span class="toc-text">逻辑运算符</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/06/Flex/" class="archive-article-date">
-        <time datetime="2022-02-06T01:00:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/06/Flex/" target="_blank">Flex</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Less/" class="archive-article-date">
-        <time datetime="2022-02-04T11:18:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Less/" target="_blank">Less</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Animation/" class="archive-article-date">
-        <time datetime="2022-02-04T10:36:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Animation/" target="_blank">Animation</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/%E8%A1%A8%E6%A0%BC-%E8%A1%A8%E5%8D%95/" class="archive-article-date">
-        <time datetime="2022-02-04T05:57:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/%E8%A1%A8%E6%A0%BC-%E8%A1%A8%E5%8D%95/" target="_blank">表格&amp;表单</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Font-Background/" class="archive-article-date">
-        <time datetime="2022-02-04T03:01:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Font-Background/" target="_blank">Font&amp;Background</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Position/" class="archive-article-date">
-        <time datetime="2022-02-03T11:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Position/" target="_blank">Position</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Float/" class="archive-article-date">
-        <time datetime="2022-02-03T01:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Float/" target="_blank">Float</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/02/Layout/" class="archive-article-date">
-        <time datetime="2022-02-02T06:41:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/02/Layout/" target="_blank">Layout</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/categories/Html-CSS/page/2/">2</a><a class="extend next" rel="next" href="/categories/Html-CSS/page/2/">下一页</a>
-    </nav>
-  
 
 
           </div>
@@ -799,10 +518,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",

@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>Category: Html+CSS | 黄兴祥的Blog</title>
+  <title>JS数据类型 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄兴祥的Blog">
-<meta property="og:url" content="http://huangxingxiang17.github.io/categories/Html-CSS/index.html">
+  <meta name="description" content="数据类型数据类型指的就是字面量的类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS数据类型">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/11/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
+<meta property="og:description" content="数据类型数据类型指的就是字面量的类型">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-11T01:53:47.000Z">
+<meta property="article:modified_time" content="2022-02-11T08:38:10.822Z">
 <meta property="article:author" content="黄兴祥">
+<meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
@@ -203,566 +208,379 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-JS数据类型" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/08/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" class="archive-article-date">
-        <time datetime="2022-02-08T02:44:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-08</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/08/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/" target="_blank">响应式布局</a>
   
+    <h1 class="article-title" itemprop="name">
+      JS数据类型
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/02/11/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="archive-article-date">
+        <time datetime="2022-02-11T01:53:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-11</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><p>数据类型指的就是字面量的类型<span id="more"></span><br>在JS中一共有六种数据类型(前五种为基本数据类型)  </p>
+<ul>
+<li>String 字符串</li>
+<li>Number 数值</li>
+<li>Boolean 布尔值</li>
+<li>Null 空值</li>
+<li>Undefined 未定义</li>
+<li>Object 对象</li>
+</ul>
+<p>其中String Number Boolean Null Undefined属于基本数据类型<br>而Object属于引用数据类型</p>
+<hr>
+<h2 id="String字符串"><a href="#String字符串" class="headerlink" title="String字符串"></a>String字符串</h2><ul>
+<li>在JS中字符串需要使用引号引起来</li>
+<li>使用双引号或单引号都可以，但是不要混着用</li>
+<li>引号不能嵌套，双引号不能放双引号，单引号不能放单引号<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&#x27;hello&#x27;</span>;<span class="comment">//只有声明变量时才要加var</span></span><br><span class="line">str = <span class="string">&#x27;我说:&quot;今天天气真不错！&quot;&#x27;</span>;</span><br><span class="line">str = <span class="string">&quot;我说:\&quot;今天天气真不错！\&quot;&quot;</span>;</span><br><span class="line">alert(str);</span><br></pre></td></tr></table></figure>
+在字符串中我们可以使用\作为转义字符，<br>当表示一些特殊符号时可以使用\进行转义<br><code>\&quot; 表示 &quot;</code><br><code>\&#39; 表示 &#39;</code><br><code>\n 表示换行</code><br><code>\t 制表符</code><br><code>\\ 表示\ </code> <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出字面量 字符串str</span></span><br><span class="line">alert(<span class="string">&quot;str&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//输出变量str</span></span><br><span class="line">alert(str);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h2 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h2><p>在JS中所有的数值都是Number类型，<br>包括整数和浮点数（小数）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//数字123</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>;</span><br><span class="line"><span class="comment">//字符串123</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="string">&quot;123&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
+<p>输出结果无法区分数字和字符串，<br>可以使用一个运算符 typeof<br>来检查一个变量的类型<br>语法：typeof 变量<br><code>console.log(typeof a);</code><br>检查字符串时，会返回string<br>检查数值时，会返回number</p>
+<p>JS中可以表示的数字的最大值<br>Number.MAX_VALUE<br>1.7976931348623157e+308<br>Number.MIN_VALUE 大于0的最小值<br>5e-324<br>如果使用Number表示的数字超过了最大值，则会返回一个<br>Infinity 表示正无穷<br>-Infinity 表示负无穷<br>使用typeof检查Infinity也会返回number<br>NaN 是一个特殊的数字，表示Not A Number<br>使用typeof检查一个NaN也会返回number</p>
+<p>在JS中整数的运算基本可以保证精确<br>如果使用JS进行浮点运算，可能得到一个不精确的结果<br>所以千万不要使用JS进行对精确度要求比较高的运算</p>
+<hr>
+<h2 id="Boolean-布尔值"><a href="#Boolean-布尔值" class="headerlink" title="Boolean 布尔值"></a>Boolean 布尔值</h2><p>布尔值只有两个，主要用来做逻辑判断  </p>
+<ul>
+<li>true表示真</li>
+<li>false表示假  </li>
+</ul>
+<p>使用typeof检查一个布尔值时，会返回boolean</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> bool = <span class="literal">false</span>;</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> bool);</span><br><span class="line"><span class="built_in">console</span>.log(bool);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="Null-amp-Undefined"><a href="#Null-amp-Undefined" class="headerlink" title="Null&amp;Undefined"></a>Null&amp;Undefined</h2><p>Null（空值）类型的值只有一个，就是null<br>null这个值专门用来表示一个为空的对象<br>使用typeof检查一个null值时，会返回object</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="literal">null</span>;</span><br><span class="line"><span class="comment">//console.log(a);</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br></pre></td></tr></table></figure>
+
+
+<p>Undefined（未定义）类型的值只有一个，就undefind<br>当声明一个变量，但是并不给变量赋值时，它的值就是undefined<br>使用typeof检查一个undefined时也会返回undefined</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b;</span><br><span class="line"><span class="comment">//console.log(b);</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);</span><br></pre></td></tr></table></figure>
+<h2 id="强制类型转换"><a href="#强制类型转换" class="headerlink" title="强制类型转换"></a>强制类型转换</h2><p>强制类型转换</p>
+<ul>
+<li>指将一个数据类型强制转换为其他的数据类型</li>
+<li>类型转换主要指，将其他的数据类型，转换为<br>String Number Boolean</li>
+</ul>
+<p>将其他的数据类型转换为String</p>
+<ol>
+<li>方式一：<ul>
+<li>调用被转换数据类型的toString()方法</li>
+<li>该方法不会影响到原变量，它会将转换的结果返回</li>
+<li>但是注意：null和undefined这两个值没有toString()方法，<br>如果调用他们的方法，会报错<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>;			</span><br><span class="line"><span class="comment">//调用a的toString()方法</span></span><br><span class="line"><span class="comment">//调用xxx的yyy()方法，就是xxx.yyy()</span></span><br><span class="line">a = a.toString();</span><br><span class="line"></span><br><span class="line">a = <span class="literal">null</span>;</span><br><span class="line"><span class="comment">//a = a.toString(); //报错</span></span><br><span class="line">			</span><br><span class="line">a = <span class="literal">undefined</span>;</span><br><span class="line"><span class="comment">//a = a.toString(); //报错</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>方式二：<ul>
+<li>调用String()函数，并将被转换的数据作为参数传递给函数</li>
+<li>使用String()函数做强制类型转换时，<br>对于Number和Boolean实际上就是调用的toString()方法<br>但是对于null和undefined，就不会调用toString()方法<br>它会将 null 直接转换为 “null”<br>将 undefined 直接转换为 “undefined”<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">123</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用String()函数，来将a转换为字符串</span></span><br><span class="line">a = <span class="built_in">String</span>(a);</span><br><span class="line"></span><br><span class="line">a = <span class="literal">null</span>;</span><br><span class="line">a = <span class="built_in">String</span>(a);</span><br><span class="line"></span><br><span class="line">a = <span class="literal">undefined</span>;</span><br><span class="line">a = <span class="built_in">String</span>(a);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="转换为Number"><a href="#转换为Number" class="headerlink" title="转换为Number"></a>转换为Number</h2><p>将其他的数据类型转换为Number  </p>
+<ol>
+<li>转换方式一：<br>使用Number()函数  <ul>
+<li>字符串 –&gt; 数字<ol>
+<li>如果是纯数字的字符串，则直接将其转换为数字</li>
+<li>如果字符串中有非数字的内容，则转换为NaN</li>
+<li>如果字符串是一个空串或者是一个全是空格的字符串，则转换为0</li>
+</ol>
+</li>
+<li>布尔 –&gt; 数字<br>  true 转成 1<br>  false 转成 0</li>
+<li>null –&gt; 数字  0</li>
+<li>undefined –&gt; 数字 NaN<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&quot;123&quot;</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//调用Number()函数来将a转换为Number类型</span></span><br><span class="line">a = <span class="built_in">Number</span>(a);</span><br><span class="line">			</span><br><span class="line">a = <span class="literal">false</span>;</span><br><span class="line">a = <span class="built_in">Number</span>(a);</span><br><span class="line">			</span><br><span class="line">a = <span class="literal">null</span>;</span><br><span class="line">a = <span class="built_in">Number</span>(a);</span><br><span class="line">			</span><br><span class="line">a = <span class="literal">undefined</span>;</span><br><span class="line">a = <span class="built_in">Number</span>(a);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>转换方式二：<ul>
+<li>这种方式专门用来对付字符串</li>
+<li>parseInt() 把一个字符串转换为一个整数<ul>
+<li>parseInt()可以将一个字符串中的有效的整数内容取出来，<br>(即从第一位数字开始取，到非数字处停止截取，即使后面还有数字)<br>然后转换为Number。</li>
+</ul>
+</li>
+<li>parseFloat() 把一个字符串转换为一个浮点数<ul>
+<li>parseFloat()作用和parseInt()类似，不同的是它可以获得有效的小数</li>
+<li>如果对非String使用parseInt()或parseFloat()<br>它会先将其转换为String，然后再操作<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&quot;123px&quot;</span>;<span class="comment">//结果为123</span></span><br><span class="line">a = <span class="string">&quot;123567a567px&quot;</span>;<span class="comment">//结果为123567</span></span><br><span class="line">a = <span class="built_in">parseInt</span>(a);</span><br><span class="line"><span class="comment">//调用parseInt()函数将a转换为Number</span></span><br><span class="line"></span><br><span class="line">a = <span class="string">&quot;123.456.789px&quot;</span>;<span class="comment">//结果为123.456</span></span><br><span class="line">a = <span class="built_in">parseFloat</span>(a);</span><br><span class="line"><span class="comment">//调用parseFloat()函数将a转换为Number</span></span><br><span class="line"></span><br><span class="line">a = <span class="literal">true</span>;<span class="comment">//结果为NaN</span></span><br><span class="line">a = <span class="built_in">parseInt</span>(a);</span><br><span class="line">			</span><br><span class="line">a = <span class="number">198.23</span>;<span class="comment">//结果为198</span></span><br><span class="line">a = <span class="built_in">parseInt</span>(a);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="其他进制的数字"><a href="#其他进制的数字" class="headerlink" title="其他进制的数字"></a>其他进制的数字</h2><p>在js中，如果需要表示16进制的数字，则需要以0x开头<br>如果需要表示8进制的数字，则需要以0开头<br>如果要要表示2进制的数字，则需要以0b开头<br>但是不是所有的浏览器都支持</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//十六进制</span></span><br><span class="line">a = <span class="number">0x10</span>;</span><br><span class="line">a = <span class="number">0xff</span>;</span><br><span class="line">a = <span class="number">0xCafe</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//八进制数字</span></span><br><span class="line">a = <span class="number">070</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//二进制数字</span></span><br><span class="line">a = <span class="number">0b10</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//向&quot;070&quot;这种字符串，有些浏览器会当成8进制解析，有些会当成10进制解析</span></span><br><span class="line">a = <span class="string">&quot;070&quot;</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//可以在parseInt()中传递一个第二个参数，来指定数字的进制</span></span><br><span class="line">a = <span class="built_in">parseInt</span>(a,<span class="number">10</span>);</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="转换为Boolean"><a href="#转换为Boolean" class="headerlink" title="转换为Boolean"></a>转换为Boolean</h2><p>将其他的数据类型转换为Boolean</p>
+<ul>
+<li><p>使用Boolean()函数</p>
+<ul>
+<li><p>数字 —&gt; 布尔</p>
+<ul>
+<li>除了0和NaN，其余的都是true</li>
+</ul>
+</li>
+<li><p>字符串 —&gt; 布尔</p>
+<ul>
+<li>除了空串，其余的都是true</li>
+</ul>
+</li>
+<li><p>null和undefined都会转换为false</p>
+</li>
+<li><p>对象也会转换为true</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">123</span>; <span class="comment">//true</span></span><br><span class="line">a = -<span class="number">123</span>; <span class="comment">//true</span></span><br><span class="line">a = <span class="number">0</span>; <span class="comment">//false</span></span><br><span class="line">a = <span class="literal">Infinity</span>; <span class="comment">//true</span></span><br><span class="line">a = <span class="literal">NaN</span>; <span class="comment">//false</span></span><br><span class="line">			</span><br><span class="line"><span class="comment">//调用Boolean()函数来将a转换为布尔值</span></span><br><span class="line">a = <span class="built_in">Boolean</span>(a);</span><br><span class="line"></span><br><span class="line">a = <span class="string">&quot; &quot;</span>;<span class="comment">//true</span></span><br><span class="line">a = <span class="string">&quot;&quot;</span>;<span class="comment">//false			</span></span><br><span class="line">a = <span class="built_in">Boolean</span>(a);</span><br><span class="line"></span><br><span class="line">a = <span class="literal">null</span>; <span class="comment">//false</span></span><br><span class="line">a = <span class="built_in">Boolean</span>(a);</span><br><span class="line">			</span><br><span class="line">a = <span class="literal">undefined</span>; <span class="comment">//false</span></span><br><span class="line">a = <span class="built_in">Boolean</span>(a);</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);</span><br><span class="line"><span class="built_in">console</span>.log(a);</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          黄兴祥
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://huangxingxiang17.github.io/2022/02/11/JS数据类型/" title="JS数据类型" target="_blank">http://huangxingxiang17.github.io/2022/02/11/JS数据类型/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/11/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/07/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/" class="archive-article-date">
-        <time datetime="2022-02-07T01:53:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-07</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2022/02/11/JS%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          JS算数运算符
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/11/JS%E5%AD%97%E9%9D%A2%E9%87%8F%E5%92%8C%E5%8F%98%E9%87%8F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS字面量和变量</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/07/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%A1%B5%E9%9D%A2%E5%BC%80%E5%8F%91/" target="_blank">移动端页面开发</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#String%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.1.</span> <span class="toc-text">String字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Number"><span class="toc-number">1.2.</span> <span class="toc-text">Number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Boolean-%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">1.3.</span> <span class="toc-text">Boolean 布尔值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Null-amp-Undefined"><span class="toc-number">1.4.</span> <span class="toc-text">Null&amp;Undefined</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.5.</span> <span class="toc-text">强制类型转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E4%B8%BANumber"><span class="toc-number">1.6.</span> <span class="toc-text">转换为Number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E8%BF%9B%E5%88%B6%E7%9A%84%E6%95%B0%E5%AD%97"><span class="toc-number">1.7.</span> <span class="toc-text">其他进制的数字</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2%E4%B8%BABoolean"><span class="toc-number">1.8.</span> <span class="toc-text">转换为Boolean</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/06/Flex/" class="archive-article-date">
-        <time datetime="2022-02-06T01:00:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-06</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/06/Flex/" target="_blank">Flex</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Less/" class="archive-article-date">
-        <time datetime="2022-02-04T11:18:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Less/" target="_blank">Less</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Animation/" class="archive-article-date">
-        <time datetime="2022-02-04T10:36:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Animation/" target="_blank">Animation</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/%E8%A1%A8%E6%A0%BC-%E8%A1%A8%E5%8D%95/" class="archive-article-date">
-        <time datetime="2022-02-04T05:57:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/%E8%A1%A8%E6%A0%BC-%E8%A1%A8%E5%8D%95/" target="_blank">表格&amp;表单</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Font-Background/" class="archive-article-date">
-        <time datetime="2022-02-04T03:01:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Font-Background/" target="_blank">Font&amp;Background</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Position/" class="archive-article-date">
-        <time datetime="2022-02-03T11:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Position/" target="_blank">Position</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Float/" class="archive-article-date">
-        <time datetime="2022-02-03T01:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Float/" target="_blank">Float</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/02/Layout/" class="archive-article-date">
-        <time datetime="2022-02-02T06:41:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/02/Layout/" target="_blank">Layout</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/categories/Html-CSS/page/2/">2</a><a class="extend next" rel="next" href="/categories/Html-CSS/page/2/">下一页</a>
-    </nav>
-  
 
 
           </div>
@@ -799,10 +617,10 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
-		isCategory: true,
+		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
 		root: "/",
