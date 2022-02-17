@@ -18,7 +18,7 @@
 <meta property="og:description" content="原型 prototype我们所创建的每一个函数，解析器都会向函数中添加一个属性prototype">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-16T11:36:11.000Z">
-<meta property="article:modified_time" content="2022-02-16T11:56:57.593Z">
+<meta property="article:modified_time" content="2022-02-17T00:16:55.679Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
@@ -241,7 +241,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">356字</span>
+      <span class="post-count">775字</span>
     </span>
   </span>
 
@@ -250,7 +250,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -261,9 +261,15 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="原型-prototype"><a href="#原型-prototype" class="headerlink" title="原型 prototype"></a>原型 prototype</h1><p>我们所创建的每一个函数，解析器都会向函数中添加一个属性prototype<span id="more"></span><br>这个属性对应着一个对象，这个对象就是我们所谓的原型对象<br>如果函数作为普通函数调用prototype没有任何作用<br>当函数以构造函数的形式调用时，它所创建的对象中都会有一个隐含的属性，<br>指向该构造函数的原型对象，我们可以通过<code>__proto__</code>来访问该属性<br>原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，<br>我们可以将对象中共有的内容，统一设置到原型对象中。<br>当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，<br>如果没有则会去原型对象中寻找，如果找到则直接使用  </p>
+    <h1 id="原型-prototype"><a href="#原型-prototype" class="headerlink" title="原型 prototype"></a>原型 prototype</h1><p>我们所创建的每一个函数，解析器都会向函数中添加一个属性prototype<span id="more"></span><br>这个属性对应着一个对象，这个对象就是我们所谓的原型对象<br>如果函数作为普通函数调用prototype没有任何作用<br>当函数以构造函数的形式调用时，它所创建的对象中都会有一个隐含的属性，<br>指向该构造函数的原型对象，我们可以通过<code>__proto__</code>来访问该属性</p>
+<p>原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，<br>我们可以将对象中共有的内容，统一设置到原型对象中。<br>当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，<br>如果没有则会去原型对象中寻找，如果找到则直接使用  </p>
 <p>以后我们创建构造函数时，可以将这些对象共有的属性和方法，统一添加到构造函数的原型对象中，<br>这样不用分别为每一个对象添加，也不会影响到全局作用域，就可以使每个对象都具有这些属性和方法了</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mc = <span class="keyword">new</span> MyClass();</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> mc2 = <span class="keyword">new</span> MyClass();</span><br><span class="line">			</span><br><span class="line"><span class="comment">//console.log(MyClass.prototype);</span></span><br><span class="line"><span class="comment">//console.log(mc2.__proto__ == MyClass.prototype);</span></span><br><span class="line">			</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyClass</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//向MyClass的原型中添加属性a</span></span><br><span class="line">MyClass.prototype.a = <span class="number">123</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//向MyClass的原型中添加一个方法</span></span><br><span class="line">MyClass.prototype.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&quot;hello&quot;</span>);</span><br><span class="line">&#125;;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> mc = <span class="keyword">new</span> MyClass();</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> mc2 = <span class="keyword">new</span> MyClass();</span><br><span class="line">			</span><br><span class="line"><span class="comment">//console.log(MyClass.prototype);</span></span><br><span class="line"><span class="comment">//console.log(mc2.__proto__ == MyClass.prototype);</span></span><br><span class="line">			</span><br><span class="line"><span class="comment">//向mc中添加a属性</span></span><br><span class="line">mc.a = <span class="string">&quot;我是mc中的a&quot;</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//console.log(mc2.a);</span></span><br><span class="line">			</span><br><span class="line">mc.sayHello();</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="原型的原型-原型链"><a href="#原型的原型-原型链" class="headerlink" title="原型的原型(原型链)"></a>原型的原型(原型链)</h2><p>原型对象也是对象，所以它也有原型，<br>当我们使用一个对象的属性或方法时，会先在自身中寻找，<br>自身中如果有，则直接使用，<br>如果没有则去原型对象中寻找，如果原型对象中有，则使用，<br>如果没有则去原型的原型中寻找,直到找到Object对象的原型，<br>Object对象的原型没有原型，如果在Object的原型中依然没有找到，则返回undefined</p>
+<p>使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true</p>
+<p>可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性<br>使用该方法只有当对象自身中含有属性时，才会返回true</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//向MyClass的原型中添加一个name属性</span></span><br><span class="line">MyClass.prototype.name = <span class="string">&quot;我是原型中的名字&quot;</span>;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> mc = <span class="keyword">new</span> MyClass();</span><br><span class="line">mc.age = <span class="number">18</span>;</span><br><span class="line">			</span><br><span class="line"><span class="comment">//console.log(mc.name);</span></span><br><span class="line">			</span><br><span class="line"><span class="comment">//使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true</span></span><br><span class="line"><span class="comment">//console.log(&quot;name&quot; in mc);</span></span><br><span class="line">			</span><br><span class="line"><span class="comment">//可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性</span></span><br><span class="line"><span class="comment">//使用该方法只有当对象自身中含有属性时，才会返回true</span></span><br><span class="line"><span class="comment">//console.log(mc.hasOwnProperty(&quot;age&quot;));</span></span><br><span class="line">			</span><br><span class="line"><span class="comment">//console.log(mc.hasOwnProperty(&quot;hasOwnProperty&quot;));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Object的原型是null</span></span><br><span class="line"><span class="comment">//console.log(mc.__proto__.__proto__.__proto__)</span></span><br></pre></td></tr></table></figure>
     
 
     
@@ -413,6 +419,15 @@
 
 <nav id="article-nav">
   
+    <a href="/2022/02/17/toString/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          toString()
+        
+      </div>
+    </a>
+  
   
     <a href="/2022/02/16/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">构造函数</div>
@@ -442,7 +457,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B-prototype"><span class="toc-number">1.</span> <span class="toc-text">原型 prototype</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B-prototype"><span class="toc-number">1.</span> <span class="toc-text">原型 prototype</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E7%9A%84%E5%8E%9F%E5%9E%8B-%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">1.1.</span> <span class="toc-text">原型的原型(原型链)</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
