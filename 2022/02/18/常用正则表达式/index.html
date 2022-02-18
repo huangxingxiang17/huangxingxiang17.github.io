@@ -18,7 +18,7 @@
 <meta property="og:description" content="校验数字的表达式">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-18T07:30:38.000Z">
-<meta property="article:modified_time" content="2022-02-18T07:51:30.732Z">
+<meta property="article:modified_time" content="2022-02-18T09:57:58.745Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="备忘录">
 <meta name="twitter:card" content="summary">
@@ -377,9 +377,8 @@
 </li>
 <li><p>7.这样就允许用户只写一位小数.下面我们该考虑数字中的逗号了,我们可以这样：^[0-9]{1,3}(,[0-9]{3})*(.[0-9]{1,2})?$</p>
 </li>
-</ol>
-<p>23 8.1到3个数字,后面跟着任意个 逗号+3个数字,逗号成为可选,而不是必须：^([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(.[0-9]{1,2})?$</p>
-<ol start="24">
+<li><p>8.1到3个数字,后面跟着任意个 逗号+3个数字,逗号成为可选,而不是必须：^([0-9]+|[0-9]{1,3}(,[0-9]{3})*)(.[0-9]{1,2})?$</p>
+</li>
 <li><p>备注：这就是最终结果了,别忘了”+”可以用”*”替代如果你觉得空字符串也可以接受的话(奇怪,为什么?)最后,别忘了在用函数时去掉去掉那个反斜杠,一般的错误都在这里</p>
 </li>
 <li><p>xml文件：^([a-zA-Z]+-?)+[a-zA-Z0-9]+\.[x|X][m|M][l|L]$</p>
@@ -758,11 +757,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
