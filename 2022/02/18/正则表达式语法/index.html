@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>Archives | 黄兴祥的Blog</title>
+  <title>正则表达式语法 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄兴祥的Blog">
-<meta property="og:url" content="http://huangxingxiang17.github.io/archives/page/7/index.html">
+  <meta name="description" content="量词">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则表达式语法">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
+<meta property="og:description" content="量词">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-18T05:07:00.000Z">
+<meta property="article:modified_time" content="2022-02-18T07:48:16.484Z">
 <meta property="article:author" content="黄兴祥">
+<meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
@@ -203,544 +208,337 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-正则表达式语法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/04/Font-Background/" class="archive-article-date">
-        <time datetime="2022-02-04T03:01:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-04</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/04/Font-Background/" target="_blank">Font&amp;Background</a>
   
+    <h1 class="article-title" itemprop="name">
+      正则表达式语法
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/02/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+        <time datetime="2022-02-18T05:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">943字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">4分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词<span id="more"></span></h1><ul>
+<li>通过量词可以设置一个内容出现的次数</li>
+<li>量词只对它前边的一个内容起作用</li>
+<li><code>&#123;n&#125;</code> 正好出现n次</li>
+<li><code>&#123;m,n&#125;</code> 出现m-n次(出现m到n次)</li>
+<li><code>&#123;m,&#125;</code> m次以上</li>
+<li><code>+</code> 至少一个，相当于{1,}</li>
+<li><code>*</code> 0个或多个，相当于{0,}</li>
+<li><code>?</code> 0个或1个，相当于{0,1}<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建一个正则表达式检查一个字符串中是否含有aaa</span></span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/a&#123;3&#125;/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;aaabc&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//ababab</span></span><br><span class="line">reg = <span class="regexp">/(ab)&#123;3&#125;/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;ababab&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//bbb</span></span><br><span class="line">reg = <span class="regexp">/b&#123;3&#125;/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;bbbb&quot;</span>));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line">reg = <span class="regexp">/ab&#123;1,3&#125;c/</span>;</span><br><span class="line">			</span><br><span class="line">reg = <span class="regexp">/ab&#123;3,&#125;c/</span>;</span><br><span class="line"></span><br><span class="line">reg = <span class="regexp">/ab+c/</span>;</span><br><span class="line">			</span><br><span class="line">reg = <span class="regexp">/ab*c/</span>;</span><br><span class="line">			</span><br><span class="line">reg = <span class="regexp">/ab?c/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;ababab&quot;</span>));</span><br></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h1 id="表示开头"><a href="#表示开头" class="headerlink" title="^ 表示开头"></a>^ 表示开头</h1><p>检查一个字符串中是否以a开头</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/^a/</span>; <span class="comment">//匹配开头的a</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;abcabca&quot;</span>));</span><br></pre></td></tr></table></figure>
+<h1 id="表示结尾"><a href="#表示结尾" class="headerlink" title="$ 表示结尾"></a>$ 表示结尾</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/a$/</span>; <span class="comment">//匹配结尾的a			</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;abcabca&quot;</span>));</span><br></pre></td></tr></table></figure>
+<p>如果在正则表达式中同时使用^ $，则要求字符串必须完全符合正则表达式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/^a$/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;a&quot;</span>));</span><br></pre></td></tr></table></figure>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><p>创建一个正则表达式，用来检查一个字符串是否是一个合法手机号</p>
+<p>手机号的规则：<br>1 3 567890123 （11位）</p>
+<ol>
+<li>以1开头</li>
+<li>第二位3-9任意数字</li>
+<li>三位以后任意数字9个  </li>
+</ol>
+<p><code>^1   [3-9]  [0-9]&#123;9&#125;$</code>    </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> phoneStr = <span class="string">&quot;13567890123&quot;</span>;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> phoneReg = <span class="regexp">/^1[3-9][0-9]&#123;9&#125;$/</span>;</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(phoneReg.test(phoneStr));</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h1><p>检查一个字符串中是否含有 <code>.</code><br><code>.</code> 表示任意字符<br>在正则表达式中使用\作为转义字符<br><code>\.</code>  表示<code>.</code><br><code>\\</code>  表示<code>\</code></p>
+<p>注意：使用构造函数时，由于它的参数是一个字符串，而\是字符串中转义字符，<br>如果要使用<code>\</code>则需要使用<code>\\</code>来代替</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用字面量来创建的</span></span><br><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/\./</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//在字符串中，要用两个\\来代表一个\</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;b.\\&quot;</span>));</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;b.\\&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//用构造函数来创建</span></span><br><span class="line">reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&quot;\\.&quot;</span>);</span><br><span class="line">reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">&quot;\\\\&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p><code>\w</code></p>
+<ul>
+<li>任意字母、数字、_  <code>[A-z0-9_]</code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/\w/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;_&quot;</span>));</span><br></pre></td></tr></table></figure>
+<code>\W</code></li>
+<li>除了字母、数字、_  <code>[^A-z0-9_]</code></li>
+</ul>
+<p><code>\d</code></p>
+<ul>
+<li>任意的数字 <code>[0-9]</code></li>
+</ul>
+<p><code>\D</code></p>
+<ul>
+<li>除了数字 <code>[^0-9]</code></li>
+</ul>
+<p><code>\s</code></p>
+<ul>
+<li>空格</li>
+</ul>
+<p><code>\S</code></p>
+<ul>
+<li>除了空格</li>
+</ul>
+<p><code>\b</code></p>
+<ul>
+<li>单词边界</li>
+</ul>
+<p>创建一个正则表达式检查一个字符串中是否含有单词child</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">reg = <span class="regexp">/child/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;hello children&quot;</span>));<span class="comment">//这也会返回true，但是明显children不等同于child。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//因此我们需要使用单词边界，标识一个独立的单词</span></span><br><span class="line">reg = <span class="regexp">/\bchild\b/</span>;</span><br><span class="line"><span class="built_in">console</span>.log(reg.test(<span class="string">&quot;hello children&quot;</span>));<span class="comment">//返回false</span></span><br></pre></td></tr></table></figure>
+<p><code>\B</code></p>
+<ul>
+<li>除了单词边界</li>
+</ul>
+<hr>
+<h1 id="去除空格"><a href="#去除空格" class="headerlink" title="去除空格"></a>去除空格</h1><p>去除掉字符串中的前后的空格<br>去除空格就是使用””来替换空格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;              he      llo                &quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//去除前后中间的空格</span></span><br><span class="line">str = str.replace(<span class="regexp">/\s/g</span> , <span class="string">&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//去除开头的空格</span></span><br><span class="line">str = str.replace(<span class="regexp">/^\s*/</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="comment">//去除结尾的空格</span></span><br><span class="line">str = str.replace(<span class="regexp">/\s*$/</span>, <span class="string">&quot;&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//整合一下</span></span><br><span class="line"><span class="comment">//  /^\s*|\s*$/g 匹配开头和结尾的空格</span></span><br><span class="line">str = str.replace(<span class="regexp">/^\s*|\s*$/g</span>,<span class="string">&quot;&quot;</span>);</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="电子邮件的正则"><a href="#电子邮件的正则" class="headerlink" title="电子邮件的正则"></a>电子邮件的正则</h1><p>明白规则，分块写好，再复制一串，把中间的空格去掉，即可。<br>常用的正则表达式，网络上都有，自己可以参考，但是用的时候要自己验证一下。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 电子邮件</span></span><br><span class="line"><span class="comment"> * 	hello  .nihao          @     abc  .com.cn</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 任意字母数字下划线    .任意字母数字下划线  @   任意字母数字     .任意字母（2-5位）   .任意字母（2-5位）</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * \w&#123;3,&#125;  (\.\w+)*  @  [A-z0-9]+  (\.[A-z]&#123;2,5&#125;)&#123;1,2&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">//^和$表示，这个字符串要是一个完整的电子邮件地址，不能有其他的东西。</span></span><br><span class="line"><span class="keyword">var</span> emailReg = <span class="regexp">/^\w&#123;3,&#125;(\.\w+)*@[A-z0-9]+(\.[A-z]&#123;2,5&#125;)&#123;1,2&#125;$/</span>;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> email = <span class="string">&quot;abc.hello@163.com&quot;</span>;</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(emailReg.test(email));</span><br></pre></td></tr></table></figure>
+<hr>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          黄兴祥
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://huangxingxiang17.github.io/2022/02/18/正则表达式语法/" title="正则表达式语法" target="_blank">http://huangxingxiang17.github.io/2022/02/18/正则表达式语法/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Position/" class="archive-article-date">
-        <time datetime="2022-02-03T11:45:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2022/02/18/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          常用正则表达式
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/18/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">字符串和正则相关的方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Position/" target="_blank">Position</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8F%E8%AF%8D"><span class="toc-number">1.</span> <span class="toc-text">量词</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%BC%80%E5%A4%B4"><span class="toc-number">2.</span> <span class="toc-text">^ 表示开头</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E7%BB%93%E5%B0%BE"><span class="toc-number">3.</span> <span class="toc-text">$ 表示结尾</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-number">4.</span> <span class="toc-text">练习</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="toc-number">5.</span> <span class="toc-text">转义字符</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%BB%E9%99%A4%E7%A9%BA%E6%A0%BC"><span class="toc-number">6.</span> <span class="toc-text">去除空格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6%E7%9A%84%E6%AD%A3%E5%88%99"><span class="toc-number">7.</span> <span class="toc-text">电子邮件的正则</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/" class="archive-article-date">
-        <time datetime="2022-02-03T02:21:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Markdown%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/" target="_blank">Markdown文档编写</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Vscode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-        <time datetime="2022-02-03T01:29:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Vscode%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" target="_blank">Vscode常用快捷键</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/03/Float/" class="archive-article-date">
-        <time datetime="2022-02-03T01:27:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-03</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/03/Float/" target="_blank">Float</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/02/GTAV%E4%BD%9C%E5%BC%8A%E7%A0%81/" class="archive-article-date">
-        <time datetime="2022-02-02T14:11:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/02/GTAV%E4%BD%9C%E5%BC%8A%E7%A0%81/" target="_blank">GTAV作弊码</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">游戏</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/02/Layout/" class="archive-article-date">
-        <time datetime="2022-02-02T06:41:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/02/Layout/" target="_blank">Layout</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/02/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E9%A2%9C%E8%89%B2/" class="archive-article-date">
-        <time datetime="2022-02-02T04:47:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-02</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/02/%E4%B8%AD%E5%9B%BD%E4%BC%A0%E7%BB%9F%E9%A2%9C%E8%89%B2/" target="_blank">中国传统颜色</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">颜色</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/01/28/CSS%E9%80%89%E6%8B%A9%E5%99%A8/" class="archive-article-date">
-        <time datetime="2022-01-28T09:22:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-28</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/01/28/CSS%E9%80%89%E6%8B%A9%E5%99%A8/" target="_blank">CSS选择器</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Html基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Html-CSS//" class="article-tag-list-link color4">Html+CSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/01/27/hello-world/" class="archive-article-date">
-        <time datetime="2022-01-27T12:22:20.934Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-27</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/01/27/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/6/">上一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="page-number" href="/archives/page/6/">6</a><span class="page-number current">7</span>
-    </nav>
-  
 
 
           </div>
@@ -777,8 +575,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
