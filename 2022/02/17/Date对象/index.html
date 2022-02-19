@@ -18,7 +18,7 @@
 <meta property="og:description" content="Date对象 在JS中使用Date对象来表示一个时间">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-17T09:20:30.000Z">
-<meta property="article:modified_time" content="2022-02-17T13:10:48.063Z">
+<meta property="article:modified_time" content="2022-02-19T01:11:32.579Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
@@ -241,7 +241,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">390字</span>
+      <span class="post-count">391字</span>
     </span>
   </span>
 
@@ -281,10 +281,11 @@
 <hr>
 <h2 id="getMonth"><a href="#getMonth" class="headerlink" title="getMonth()"></a>getMonth()</h2><ul>
 <li>获取当前时间对象的月份<ul>
-<li>会返回一个0-11的值<br>0 表示1月<br>1 表示2月<br>11 表示12月<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;12/18/2011 11:10:30&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> month = d2.getMonth();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;month = &quot;</span>+month);</span><br></pre></td></tr></table></figure></li>
+<li>会返回一个0-11的值<br>0 表示1月<br>1 表示2月<br>11 表示12月</li>
 </ul>
 </li>
 </ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">d2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&quot;12/18/2011 11:10:30&quot;</span>);</span><br><span class="line"><span class="keyword">var</span> month = d2.getMonth();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;month = &quot;</span>+month);</span><br></pre></td></tr></table></figure>
 <hr>
 <h2 id="getFullYear"><a href="#getFullYear" class="headerlink" title="getFullYear()"></a>getFullYear()</h2><ul>
 <li>获取当前日期对象的年份<br><code>var year = d2.getFullYear();</code></li>
@@ -294,9 +295,9 @@
 <li>获取当前日期对象的时间戳</li>
 <li>时间戳，指的是从格林威治标准时间的1970年1月1日，0时0分0秒<br>到当前日期所花费的<strong>毫秒数</strong>（1秒 = 1000毫秒）</li>
 <li>计算机底层在保存时间时使用都是时间戳</li>
-<li>利用时间戳来测试代码的执行的性能<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = d2.getTime();</span><br><span class="line"></span><br><span class="line"><span class="comment">//利用时间戳来测试代码的执行的性能</span></span><br><span class="line"><span class="comment">//获取当前的时间戳</span></span><br><span class="line"><span class="keyword">var</span> start = <span class="built_in">Date</span>.now();</span><br><span class="line">			</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span> ; i&lt;<span class="number">100</span> ; i++)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> end = <span class="built_in">Date</span>.now();			</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;执行了：&quot;</span>+(end - start)+<span class="string">&quot;毫秒&quot;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>利用时间戳来测试代码的执行的性能</li>
 </ul>
-
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> time = d2.getTime();</span><br><span class="line"></span><br><span class="line"><span class="comment">//利用时间戳来测试代码的执行的性能</span></span><br><span class="line"><span class="comment">//获取当前的时间戳</span></span><br><span class="line"><span class="keyword">var</span> start = <span class="built_in">Date</span>.now();</span><br><span class="line">			</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span> ; i&lt;<span class="number">100</span> ; i++)&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(i);</span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line"><span class="keyword">var</span> end = <span class="built_in">Date</span>.now();			</span><br><span class="line">			</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;执行了：&quot;</span>+(end - start)+<span class="string">&quot;毫秒&quot;</span>);</span><br></pre></td></tr></table></figure>
     
 
     
@@ -629,11 +630,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color3">JavaScript基础</a>
               </li>
              
               <li class="article-tag-list-item">
