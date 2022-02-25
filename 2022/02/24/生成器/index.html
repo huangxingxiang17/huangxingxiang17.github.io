@@ -6,16 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>Archives: 2022/2 | 黄兴祥的Blog</title>
+  <title>生成器 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄兴祥的Blog">
-<meta property="og:url" content="http://huangxingxiang17.github.io/archives/2022/02/page/5/index.html">
+  <meta name="description" content="简介生成器函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="生成器">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/24/%E7%94%9F%E6%88%90%E5%99%A8/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
+<meta property="og:description" content="简介生成器函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-02-24T11:13:51.000Z">
+<meta property="article:modified_time" content="2022-02-25T03:46:38.549Z">
 <meta property="article:author" content="黄兴祥">
+<meta property="article:tag" content="ES6">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
@@ -203,566 +208,306 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-生成器" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2022" class="archive-year">2022</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/19/JavaScript_basic/%E5%85%A8%E9%80%89%E7%BB%83%E4%B9%A0/" class="archive-article-date">
-        <time datetime="2022-02-19T07:43:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-19</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/19/JavaScript_basic/%E5%85%A8%E9%80%89%E7%BB%83%E4%B9%A0/" target="_blank">全选练习</a>
   
+    <h1 class="article-title" itemprop="name">
+      生成器
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/02/24/%E7%94%9F%E6%88%90%E5%99%A8/" class="archive-article-date">
+        <time datetime="2022-02-24T11:13:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-24</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">2k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">8分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>生成器函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同<span id="more"></span></p>
+<p>生成器其实就是一个特殊的函数</p>
+<p>之前异步编程，我们用的是纯回调函数。比如node fs  ajax mongodb</p>
+<p>认识生成器函数<br>特殊性</p>
+<ol>
+<li>声明时，要在函数名中间要补一个*，位置随意，偏左偏右中间都行</li>
+<li>执行时，必须调用next()方法才会执行</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&quot;hello generator&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//生成器函数的返回结果不是写完代码立即输出，它的返回结果其实是一个迭代器对象，里面有个next()方法。</span></span><br><span class="line"><span class="keyword">let</span> iterator = gen();</span><br><span class="line"><span class="comment">//借助iterator的next()方法，让生成器函数内部的代码运行</span></span><br><span class="line">iterator.next();</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>在生成器函数内，可以出现<code>yield语句</code><br>yield后边跟一个表达式或字面量<br>yield语句的作用：yield算作函数代码的分隔符，把函数代码切分成几块<br>3个分隔符把代码分成4块<br>如何执行呢？由next()方法执行<br>通过next方法控制生成器函数内的代码向下执行<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&#x27;一只没有耳朵&#x27;</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">222</span>);</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&#x27;一只没有尾巴&#x27;</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">333</span>);</span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&#x27;真奇怪&#x27;</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">444</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> iterator = gen();</span><br><span class="line">iterator.next();<span class="comment">//执行代码块里的第一块代码</span></span><br><span class="line">iterator.next();<span class="comment">//执行代码块里的第二块代码</span></span><br><span class="line">iterator.next();<span class="comment">//执行代码块里的第三块代码</span></span><br><span class="line">iterator.next();<span class="comment">//执行代码块里的第四块代码</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+既然生成器函数返回结果是一个迭代器对象，<br>所以我们可以使用<code>for...of</code>来遍历<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&#x27;一只没有耳朵&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&#x27;一只没有尾巴&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">yield</span> <span class="string">&#x27;真奇怪&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用一次next方法，执行一块代码，并返回结果</span></span><br><span class="line"><span class="comment">//返回的结果是yield后面的 表达式的结果 或 字面量的值</span></span><br><span class="line"><span class="keyword">let</span> iterator = gen();</span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());</span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());</span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());</span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="生成器函数参数"><a href="#生成器函数参数" class="headerlink" title="生成器函数参数"></a>生成器函数参数</h1><ol>
+<li>整体的gen()函数传参数没有问题</li>
+<li>next方法可以传入实参，而且这个实参将作为上一个yield语句的整体返回结果<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">gen</span>(<span class="params">arg</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arg)</span><br><span class="line">    <span class="keyword">let</span> one = <span class="keyword">yield</span> <span class="number">111</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(one);</span><br><span class="line">    <span class="keyword">let</span> two = <span class="keyword">yield</span> <span class="number">222</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(two);</span><br><span class="line">    <span class="keyword">let</span> three = <span class="keyword">yield</span> <span class="number">333</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(three);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> iterator = gen(<span class="string">&#x27;AAA&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(iterator.next());</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二次调用next方法，所传入的实参，将会作为第一个yield语句整体的返回结果</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next(<span class="string">&#x27;BBB&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//第三次调用next方法，所传入的实参，将会作为第二个yield语句整体的返回结果</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next(<span class="string">&#x27;CCC&#x27;</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">//第四次调用next方法，所传入的实参，将会作为第三个yield语句整体的返回结果</span></span><br><span class="line"><span class="built_in">console</span>.log(iterator.next(<span class="string">&#x27;DDD&#x27;</span>));</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="实例一"><a href="#实例一" class="headerlink" title="实例一"></a>实例一</h1><p>生成器函数是专门为了解决异步编程的一个新的解决方案。</p>
+<p>异步编程<br>整个JS是一个单线程的，异步单线程。<br>所以很多操作都是异步来完成的，<br>特别是IO这一块。比如文件操作 网络操作(ajax, request) 数据库操作</p>
+<p>因为定时器也是异步的，所以这次用一个定时器的案例，<br>来演示一下生成器函数在异步编程中的表现。</p>
+<p>需求：1s 后控制台输出 111  2s后输出 222  3s后输出 333<br>也就是整个代码的执行，需要6s。</p>
+<p><strong>之前</strong>的解决方案，是使用定时器层层回调</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">222</span>);</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">        &#125;, <span class="number">3000</span>)</span><br><span class="line">    &#125;, <span class="number">2000</span>)</span><br><span class="line">&#125;, <span class="number">1000</span>)</span><br></pre></td></tr></table></figure>
+<p>但是，如果以后我们有新的异步任务的话，那还要继续写一层。<br>那你会发现，代码会不断向前推进。如果异步任务特别多，那代码还可能超出编辑区。<br>阅读不方便，而且调试也不方便。<br>这被我们成为回调地狱。</p>
+<p><strong>现在</strong>的解决方案，是使用生成器函数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一步，声明3个函数，来分别完成3个异步任务。</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line"></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">222</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;,<span class="number">2000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">three</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">333</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;,<span class="number">3000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二步，用一个生成器函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//把3个函数的调用，放在了yield语句里面</span></span><br><span class="line">    <span class="keyword">yield</span> one();</span><br><span class="line">    <span class="keyword">yield</span> two();</span><br><span class="line">    <span class="keyword">yield</span> three();  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//第三步，调用生成器函数</span></span><br><span class="line"><span class="keyword">let</span> iterator = gen();</span><br><span class="line">iterator.next();</span><br><span class="line"><span class="comment">//第一次调用next方法，让生成器代码运行起来。执行一块代码，并返回结果</span></span><br><span class="line"><span class="comment">//遇到yield语句，就暂停执行后面的操作，</span></span><br><span class="line"><span class="comment">//并且紧跟在yield后面的结果。这里是one()函数，所以会执行one()函数</span></span><br></pre></td></tr></table></figure>
+<p>出来111以后呢，222不出来，<br>我们可以把<code>iterator.next();</code>放在one()里面。<br>同样的道理，我们把<code>iterator.next();</code>放在two()和three()里面。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">one</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">        iterator.next();</span><br><span class="line">        <span class="comment">//再次调用next方法时，生成器函数代码再继续往下执行，直到遇到下一个yield语句。</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">two</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">222</span>);</span><br><span class="line">        iterator.next();</span><br><span class="line">        <span class="comment">//再次调用next方法时，生成器函数代码再继续往下执行，直到遇到下一个yield语句。</span></span><br><span class="line">    &#125;,<span class="number">2000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">three</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">333</span>);</span><br><span class="line">        iterator.next();</span><br><span class="line">        </span><br><span class="line">    &#125;,<span class="number">3000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> one();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> two();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">yield</span> three(); </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> iterator = gen();</span><br><span class="line">iterator.next();</span><br></pre></td></tr></table></figure>
+<p>一开始不理解为什么three()里面还要再写一次next()？明明333已经可以输出来了。<br>但我们要这样想，333虽然输出来了，但生成器函数代码并没有完全结束。<br>因为yield语句相当于分隔符，3个yield语句是把生成器函数分成4份，最后一部分还没有执行<br>因此需要再次调用next方法，执行最后一段代码。<br>即使最后没有代码，也要执行。</p>
+<p>我们可以做一个小实验，在之前代码的基础上，做两处修改。<br>一，在生成器函数内部，在第四部分代码中加一句<code>console.log(&#39;我是生成器最后一部分代码&#39;);</code><br>二，在three()函数内，停止调用next()方法，即删除<code>iterator.next();</code><br>再次运行整个页面，会发现控制台并没有输出<code>我是生成器最后一部分代码</code>，<br>这就代表整个生成器函数并没有结束，只是停在了最后一个yield语句里面。</p>
+<p>总结：使用生成器函数解决异步编程，可以避免出现回调地狱的情况。</p>
+<h1 id="实例二"><a href="#实例二" class="headerlink" title="实例二"></a>实例二</h1><p>模拟获取  用户数据  订单数据  商品数据<br>注意：获取数据也是有先后顺序的，先获取用户数据，之后才能获取用户的订单数据，有订单数据后才能获取商品数据。<br>用定时器模拟这个异步行为。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUsers</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> data =<span class="string">&#x27;用户数据&#x27;</span>;</span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOrders</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> data =<span class="string">&#x27;订单数据&#x27;</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoods</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> data =<span class="string">&#x27;商品数据&#x27;</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line">        </span><br><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">yield</span> getUsers();</span><br><span class="line">    <span class="keyword">yield</span> getOrders();</span><br><span class="line">    <span class="keyword">yield</span> getgetGoods();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> iterator=gen();</span><br><span class="line">iterator.next();</span><br></pre></td></tr></table></figure>
+<p>这和之前差不多，但这次有一个问题。<br>每一个data都在各自的函数里面，我们在生成器函数内无法对data进行操作。</p>
+<p>我们可以这样做</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getUsers</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> data = <span class="string">&#x27;用户数据&#x27;</span>;</span><br><span class="line">        <span class="comment">//调用 next 方法, 并且将用户数据当作实参传入</span></span><br><span class="line">        iterator.next(data);</span><br><span class="line">        <span class="comment">//这是第二次调用next，所以next()的实参将作为第一个yield语句的返回结果。</span></span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getOrders</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> data = <span class="string">&#x27;订单数据&#x27;</span>;</span><br><span class="line">        iterator.next(data);</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getGoods</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> data = <span class="string">&#x27;商品数据&#x27;</span>;</span><br><span class="line">        iterator.next(data);</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">gen</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> users = <span class="keyword">yield</span> getUsers();</span><br><span class="line">    <span class="comment">//验证能不能获取用户数据</span></span><br><span class="line">    <span class="comment">//console.log(users);</span></span><br><span class="line">    <span class="keyword">let</span> orders = <span class="keyword">yield</span> getOrders();</span><br><span class="line">    <span class="keyword">let</span> goods = <span class="keyword">yield</span> getGoods();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//调用生成器函数</span></span><br><span class="line"><span class="keyword">let</span> iterator = gen();</span><br><span class="line">iterator.next();</span><br></pre></td></tr></table></figure>
+<p>这里生成器gen()代码看上去和同步代码非常像，只是多了一个yield。但实际代码运行却是异步的。<br>这就是生成器函数在异步任务上的表现，它成功解决了回调地狱的问题。</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          黄兴祥
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://huangxingxiang17.github.io/2022/02/24/生成器/" title="生成器" target="_blank">http://huangxingxiang17.github.io/2022/02/24/生成器/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+    
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/24/%E7%94%9F%E6%88%90%E5%99%A8/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/dom%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
-        <time datetime="2022-02-18T11:20:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/2022/02/25/Promise/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Promise
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/02/24/%E8%BF%AD%E4%BB%A3%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">迭代器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/dom%E6%9F%A5%E8%AF%A2/" target="_blank">dom查询</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%9F%E6%88%90%E5%99%A8%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">生成器函数参数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E4%B8%80"><span class="toc-number">3.</span> <span class="toc-text">实例一</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B%E4%BA%8C"><span class="toc-number">4.</span> <span class="toc-text">实例二</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E6%96%87%E6%A1%A3%E7%9A%84%E5%8A%A0%E8%BD%BD/" class="archive-article-date">
-        <time datetime="2022-02-18T10:58:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E6%96%87%E6%A1%A3%E7%9A%84%E5%8A%A0%E8%BD%BD/" target="_blank">文档的加载</a>
-  
-    </h1>
-  
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E4%BA%8B%E4%BB%B6/" class="archive-article-date">
-        <time datetime="2022-02-18T09:05:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E4%BA%8B%E4%BB%B6/" target="_blank">事件</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/DOM/" class="archive-article-date">
-        <time datetime="2022-02-18T08:25:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/DOM/" target="_blank">DOM</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2022-02-18T07:30:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E5%B8%B8%E7%94%A8%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" target="_blank">常用正则表达式</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-        <time datetime="2022-02-18T05:07:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E6%B3%95/" target="_blank">正则表达式语法</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95/" class="archive-article-date">
-        <time datetime="2022-02-18T03:05:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E7%9B%B8%E5%85%B3%E7%9A%84%E6%96%B9%E6%B3%95/" target="_blank">字符串和正则相关的方法</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2022-02-18T02:18:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" target="_blank">正则表达式</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2022/02/18/JavaScript_basic/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" class="archive-article-date">
-        <time datetime="2022-02-18T00:47:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-18</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2022/02/18/JavaScript_basic/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95/" target="_blank">字符串的相关方法</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2022/02/page/4/">上一页</a><a class="page-number" href="/archives/2022/02/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/02/page/3/">3</a><a class="page-number" href="/archives/2022/02/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/archives/2022/02/page/6/">6</a><a class="page-number" href="/archives/2022/02/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2022/02/page/12/">12</a><a class="extend next" rel="next" href="/archives/2022/02/page/6/">下一页</a>
-    </nav>
-  
 
 
           </div>
@@ -799,8 +544,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
