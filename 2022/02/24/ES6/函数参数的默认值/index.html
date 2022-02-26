@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>Promise | 黄兴祥的Blog</title>
+  <title>函数参数的默认值 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="简介Promise 是 ES6 引入的异步编程的新解决方案。语法上 Promise 是一个构造函数，用来封装异步操作并可以获取其成功或失败的结果。">
+  <meta name="description" content="ES6 允许给函数参数赋值初始值  形参初始值 具有默认值的参数, 一般位置要靠后(潜规则)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Promise">
-<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/25/Promise/index.html">
+<meta property="og:title" content="函数参数的默认值">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/24/ES6/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
-<meta property="og:description" content="简介Promise 是 ES6 引入的异步编程的新解决方案。语法上 Promise 是一个构造函数，用来封装异步操作并可以获取其成功或失败的结果。">
+<meta property="og:description" content="ES6 允许给函数参数赋值初始值  形参初始值 具有默认值的参数, 一般位置要靠后(潜规则)">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-25T04:55:33.000Z">
-<meta property="article:modified_time" content="2022-02-25T08:06:26.480Z">
+<meta property="article:published_time" content="2022-02-24T02:38:48.000Z">
+<meta property="article:modified_time" content="2022-02-24T03:02:40.220Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="ES6">
 <meta name="twitter:card" content="summary">
@@ -208,14 +208,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Promise" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES6/函数参数的默认值" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Promise
+      函数参数的默认值
     </h1>
   
 
@@ -227,8 +227,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/02/25/Promise/" class="archive-article-date">
-        <time datetime="2022-02-25T04:55:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
+<a href="/2022/02/24/ES6/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC/" class="archive-article-date">
+        <time datetime="2022-02-24T02:38:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-24</time>
 </a>
 
   
@@ -241,7 +241,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">1.1k字</span>
+      <span class="post-count">253字</span>
     </span>
   </span>
 
@@ -250,7 +250,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">4分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -261,33 +261,18 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Promise 是 ES6 引入的异步编程的新解决方案。<br>语法上 Promise 是一个构造函数，用来封装异步操作并可以获取其成功或失败的结果。<span id="more"></span></p>
-<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><p>实例化 Promise 对象<br>接收一个函数作为参数<br>这个函数有两个形参resolve,reject(潜规则)<br>在函数里面封装一个异步操作<br>这里用定时器做演示<br>在异步操作里可以得到一些数据。</p>
-<p>得到数据以后，我们可以调用resolve或reject函数，来改变Promise的对象 p 的状态<br>对象主要有3种状态：初始化、成功、失败  </p>
-<p>之后就可以调用 promise 对象的 then方法<br>then方法接收两个参数，两个参数都是函数类型的值<br>而且每个函数都有形参<br>成功的形参一般使用value<br>失败的形参一般使用reason  </p>
-<p>当我成功得到一些数据后，就可以调用resolve函数，将<code>得到的数据</code>作为参数传入。<br>Promise的对象 p 的状态就会变成成功。<br>p.then()方法就会执行<strong>第一个</strong>回调函数的代码。<code>value</code>可以存放<code>得到的数据</code><br>此时可以在控制台输出得到的数据<code>console.log(value);</code></p>
-<p>如果在数据读取时，发生错误，就可以调用reject函数，将<code>提示信息</code>作为参数传入。<br>Promise的对象 p 的状态就会变成失败。<br>p.then()方法就会执行<strong>第二个</strong>回调函数的代码。<code>reason</code>可以存放<code>提示信息</code><br>此时可以在控制台输出提示信息<code>console.error(reason);</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//成功</span></span><br><span class="line">        <span class="comment">//得到一些数据</span></span><br><span class="line">        <span class="comment">// let data = &#x27;数据库中的用户数据&#x27;;</span></span><br><span class="line">        <span class="comment">// resolve(data);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//如果在数据读取时，发生错误</span></span><br><span class="line">        <span class="keyword">let</span> err = <span class="string">&#x27;数据读取失败&#x27;</span>;</span><br><span class="line">        reject(err);</span><br><span class="line">        </span><br><span class="line">    &#125;,<span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">p.then(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123; </span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line"></span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">reason</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.error(reason);</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>注：跳过了尚硅谷ES6第25p、第26p和第28p的内容。因为nodejs与Ajax还没学。</p>
-<hr>
-<h2 id="Promise-then方法"><a href="#Promise-then方法" class="headerlink" title="Promise-then方法"></a>Promise-then方法</h2><p>调用 then 方法<br>then方法的返回结果是 Promise 对象, 对象状态由回调函数的执行结果决定  </p>
+    <p>ES6 允许给函数参数赋值初始值</p>
 <ol>
-<li>如果回调函数中返回的结果是 非 promise 类型的属性, 状态为成功, 返回值为对象的成功的值</li>
+<li>形参初始值 具有默认值的参数, 一般位置要靠后(潜规则)<span id="more"></span><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">a,b,c=<span class="number">10</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b + c;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> result = add(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure></li>
+<li>与解构赋值结合</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建 promise 对象</span></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        resolve(<span class="string">&#x27;用户数据&#x27;</span>);</span><br><span class="line">        <span class="comment">// reject(&#x27;出错啦&#x27;);</span></span><br><span class="line">        </span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> result=p.then(<span class="function"><span class="params">value</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(result);<span class="comment">//fulfilled(成功)</span></span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>如果回调函数中返回的结果是 promise 对象，<br>那内部的Promise对象的返回状态(成功/失败)就决定then方法返回那个Promise对象的状态(成功/失败)，值也是一样。</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建 promise 对象</span></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        resolve(<span class="string">&#x27;用户数据&#x27;</span>);</span><br><span class="line">        <span class="comment">// reject(&#x27;出错啦&#x27;);</span></span><br><span class="line">        </span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> result=p.then(<span class="function"><span class="params">value</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>)=&gt;</span>&#123;</span><br><span class="line">        resolve(<span class="string">&#x27;ok&#x27;</span>);<span class="comment">//我这状态成功 值为ok </span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(result);<span class="comment">//then方法返回那个Promise对象 状态也是成功，值也是ok。</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>抛出错误<br>then方法返回那个Promise对象的状态就是失败，值就是抛出来的值<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建 promise 对象</span></span><br><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        resolve(<span class="string">&#x27;用户数据&#x27;</span>);</span><br><span class="line">        <span class="comment">// reject(&#x27;出错啦&#x27;);</span></span><br><span class="line">        </span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">const</span> result=p.then(<span class="function"><span class="params">value</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">    <span class="keyword">throw</span> <span class="string">&#x27;出错了&#x27;</span>;</span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>既然then方法可以返回一个Promise对象，所以then方法可以链式调用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        resolve(<span class="string">&#x27;用户数据&#x27;</span>);</span><br><span class="line">        <span class="comment">// reject(&#x27;出错啦&#x27;);</span></span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//链式调用</span></span><br><span class="line">p.then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;&#125;).then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//展开</span></span><br><span class="line">p.then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//then方法在指定回调时可以只指定一个</span></span><br><span class="line">p.then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>可以在then方法的回调函数里面接着嵌套异步任务。<br>链式调用一形成，就可以杜绝回调地狱。</p>
-<hr>
-<h2 id="Promise-catch方法"><a href="#Promise-catch方法" class="headerlink" title="Promise-catch方法"></a>Promise-catch方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//设置 p 对象的状态为失败, 并设置失败的值</span></span><br><span class="line">        reject(<span class="string">&quot;出错啦!&quot;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以用then方法来指定成功或失败后的回调</span></span><br><span class="line">p.then(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>)</span>&#123;&#125;, <span class="function"><span class="keyword">function</span>(<span class="params">reason</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.error(reason);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//也可以用catch方法来指定 只需要指定一个回调</span></span><br><span class="line">p.catch(<span class="function"><span class="keyword">function</span>(<span class="params">reason</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>调用时传一个参数，该参数是一个对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">options</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//获取参数</span></span><br><span class="line">    <span class="keyword">let</span> host = options.host;</span><br><span class="line">    <span class="keyword">let</span> username = options.username;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">connect(&#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;atguigu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">username</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>我们发现，每次都要写options。</p>
+<p>我们可以将其与解构赋值结合<br>一，属性用起来更方便</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">&#123;host, username, password, port&#125;</span>)</span>&#123;   </span><br><span class="line">    <span class="built_in">console</span>.log(host)</span><br><span class="line">    <span class="built_in">console</span>.log(username)</span><br><span class="line">    <span class="built_in">console</span>.log(password)</span><br><span class="line">    <span class="built_in">console</span>.log(port)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">connect(&#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;atguigu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">username</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>二，我们还可以给属性赋初始值<br>没有传，用默认值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">&#123;host=<span class="string">&quot;127.0.0.1&quot;</span>, username,password, port&#125;</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(host)</span><br><span class="line">    <span class="built_in">console</span>.log(username)</span><br><span class="line">    <span class="built_in">console</span>.log(password)</span><br><span class="line">    <span class="built_in">console</span>.log(port)</span><br><span class="line">&#125;</span><br><span class="line">connect(&#123;</span><br><span class="line">    <span class="comment">//host: &#x27;atguigu.com&#x27;,</span></span><br><span class="line">    <span class="attr">username</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
     
 
     
@@ -333,7 +318,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://huangxingxiang17.github.io/2022/02/25/Promise/" title="Promise" target="_blank">http://huangxingxiang17.github.io/2022/02/25/Promise/</a>
+          <a href="http://huangxingxiang17.github.io/2022/02/24/ES6/函数参数的默认值/" title="函数参数的默认值" target="_blank">http://huangxingxiang17.github.io/2022/02/24/ES6/函数参数的默认值/</a>
         </li>
         
         <li>
@@ -422,7 +407,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/25/Promise/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/24/ES6/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -437,18 +422,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/02/25/Set/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/24/ES6/rest%E5%8F%82%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Set
+          rest参数
         
       </div>
     </a>
   
   
-    <a href="/2022/02/24/%E7%94%9F%E6%88%90%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">生成器</div>
+    <a href="/2022/02/24/ES6/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E4%BB%A5%E5%8F%8A%E5%A3%B0%E6%98%8E%E7%89%B9%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">箭头函数以及声明特点</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -475,7 +460,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise-then%E6%96%B9%E6%B3%95"><span class="toc-number">1.2.</span> <span class="toc-text">Promise-then方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Promise-catch%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.</span> <span class="toc-text">Promise-catch方法</span></a></li></ol></li></ol>
+                    目录，不存在的…
                     </div>
                 </span>
             </div>
@@ -620,11 +605,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">

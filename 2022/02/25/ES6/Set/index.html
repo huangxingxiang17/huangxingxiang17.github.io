@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>rest参数 | 黄兴祥的Blog</title>
+  <title>Set | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="ES6 引入 rest 参数，用于获取函数的实参，用来代替 arguments">
+  <meta name="description" content="Set（集合）ES6 提供了新的数据结构 Set（集合）。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rest参数">
-<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/24/rest%E5%8F%82%E6%95%B0/index.html">
+<meta property="og:title" content="Set">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/02/25/ES6/Set/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
-<meta property="og:description" content="ES6 引入 rest 参数，用于获取函数的实参，用来代替 arguments">
+<meta property="og:description" content="Set（集合）ES6 提供了新的数据结构 Set（集合）。">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-02-24T03:04:34.000Z">
-<meta property="article:modified_time" content="2022-02-24T03:15:29.128Z">
+<meta property="article:published_time" content="2022-02-25T08:08:07.000Z">
+<meta property="article:modified_time" content="2022-02-25T10:08:02.606Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="ES6">
 <meta name="twitter:card" content="summary">
@@ -208,14 +208,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-rest参数" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-ES6/Set" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      rest参数
+      Set
     </h1>
   
 
@@ -227,8 +227,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2022/02/24/rest%E5%8F%82%E6%95%B0/" class="archive-article-date">
-        <time datetime="2022-02-24T03:04:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-24</time>
+<a href="/2022/02/25/ES6/Set/" class="archive-article-date">
+        <time datetime="2022-02-25T08:08:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
 </a>
 
   
@@ -241,7 +241,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">229字</span>
+      <span class="post-count">537字</span>
     </span>
   </span>
 
@@ -250,7 +250,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -261,16 +261,33 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>ES6 引入 rest 参数，用于获取函数的实参，用来代替 arguments<span id="more"></span></p>
+    <h1 id="Set（集合）"><a href="#Set（集合）" class="headerlink" title="Set（集合）"></a>Set（集合）</h1><p>ES6 提供了新的数据结构 Set（集合）。<span id="more"></span><br>它类似于数组，但成员的值都是唯一的，集合实现了 iterator 接口，<br>所以可以使用『扩展运算符』和『for…of…』进行遍历，<br>集合的属性和方法：</p>
+<ul>
+<li>size 返回集合的元素个数</li>
+<li>add 增加一个新元素，返回当前集合</li>
+<li>delete 删除元素，返回 boolean 值</li>
+<li>has 检测集合中是否包含某个元素，返回 boolean 值</li>
+<li>clear 清空集合，返回 undefined</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明一个 set</span></span><br><span class="line"><span class="keyword">let</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>();</span><br><span class="line"><span class="comment">//console.log(s,typeof s)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//初始化一个集合，可以自动为我们去重</span></span><br><span class="line"><span class="keyword">let</span> s2 = <span class="keyword">new</span> <span class="built_in">Set</span>([<span class="string">&#x27;大事儿&#x27;</span>,<span class="string">&#x27;小事儿&#x27;</span>,<span class="string">&#x27;好事儿&#x27;</span>,<span class="string">&#x27;坏事儿&#x27;</span>,<span class="string">&#x27;小事儿&#x27;</span>])</span><br><span class="line"><span class="comment">//console.log(s2)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//元素个数</span></span><br><span class="line"><span class="comment">// console.log(s2.size);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//添加新的元素</span></span><br><span class="line"><span class="comment">// s2.add(&#x27;喜事儿&#x27;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//删除元素</span></span><br><span class="line"><span class="comment">// s2.delete(&#x27;坏事儿&#x27;);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//检测(有返回true，没有返回false)</span></span><br><span class="line"><span class="comment">// console.log(s2.has(&#x27;糟心事&#x27;));</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//清空</span></span><br><span class="line"><span class="comment">// s2.clear();</span></span><br><span class="line"><span class="comment">// console.log(s2);</span></span><br><span class="line">        </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> v <span class="keyword">of</span> s2)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
-<p>ES5 获取实参的方式</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">date</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">arguments</span>);</span><br><span class="line">&#125;</span><br><span class="line">date(<span class="string">&#x27;白芷&#x27;</span>,<span class="string">&#x27;阿娇&#x27;</span>,<span class="string">&#x27;思慧&#x27;</span>);</span><br><span class="line"><span class="comment">//控制台输出的结果是一个对象</span></span><br></pre></td></tr></table></figure>
-<hr>
-<p>rest 参数</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">date</span>(<span class="params">...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line">date(<span class="string">&#x27;阿娇&#x27;</span>,<span class="string">&#x27;柏芝&#x27;</span>,<span class="string">&#x27;思慧&#x27;</span>);</span><br><span class="line"><span class="comment">//控制台输出的结果是一个数组</span></span><br></pre></td></tr></table></figure>
-<p>输出的结果是一个数组的话，我们就可以使用数组的API方法，比如<code>filter</code> <code>some</code> <code>every</code> <code>map</code>等等</p>
-<p>注意，如果你的参数有多个，而且有rest参数，那么 <strong>rest 参数必须要放到参数最后</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正确写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a,b,...args</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="built_in">console</span>.log(b);</span><br><span class="line">    <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//错误写法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">a,...args,b</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a);</span><br><span class="line">    <span class="built_in">console</span>.log(b);</span><br><span class="line">    <span class="built_in">console</span>.log(args);</span><br><span class="line">&#125;</span><br><span class="line">fn(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>);</span><br><span class="line"><span class="comment">//控制台报错：Rest parameter must be last formal parameter</span></span><br></pre></td></tr></table></figure>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><ol>
+<li>数组去重</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"><span class="comment">//把数组构建成集合</span></span><br><span class="line"><span class="keyword">let</span> result = <span class="keyword">new</span> <span class="built_in">Set</span>(arr);</span><br><span class="line"><span class="comment">//把集合变成数组，通过扩展运算符把它展开</span></span><br><span class="line"><span class="keyword">let</span> result = [...new <span class="built_in">Set</span>(arr)];</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>交集</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="comment">// let result = [...new Set(arr)].filter(item=&gt;&#123;</span></span><br><span class="line"><span class="comment">//     let s2 = new Set(arr2);</span></span><br><span class="line"><span class="comment">//     if(s2.has(item))&#123;</span></span><br><span class="line"><span class="comment">//         return true;</span></span><br><span class="line"><span class="comment">//     &#125;else&#123;</span></span><br><span class="line"><span class="comment">//         return false;</span></span><br><span class="line"><span class="comment">//     &#125;</span></span><br><span class="line"><span class="comment">// &#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//简化一下</span></span><br><span class="line"><span class="keyword">let</span> result = [...new <span class="built_in">Set</span>(arr)].filter(<span class="function"><span class="params">item</span> =&gt;</span><span class="keyword">new</span> <span class="built_in">Set</span>(arr2).has(item));</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>并集</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="comment">//先合并两个数组</span></span><br><span class="line"><span class="keyword">let</span> union = [...arr,...arr2];</span><br><span class="line"><span class="comment">//再通过集合去重</span></span><br><span class="line"><span class="keyword">let</span> union = <span class="keyword">new</span> <span class="built_in">Set</span>([...arr,...arr2]);</span><br><span class="line"><span class="comment">//最后转化为一个数组</span></span><br><span class="line"><span class="keyword">let</span> union =[...new <span class="built_in">Set</span>([...arr,...arr2])];</span><br><span class="line"><span class="built_in">console</span>.log(union);</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>差集<br>差集就是交集的逆运算。<br>比如arr[1,2,3]、arr2[3,4,5]<br>arr和arr2求差集，就是arr里有<code>arr2里面</code>没有的，也就是1，2<br>arr2和arr求差集，就是arr2里有<code>arr里面</code>没有的，也就是4，5</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="keyword">let</span> diff = [...new <span class="built_in">Set</span>(arr)].filter(<span class="function"><span class="params">item</span> =&gt;</span> !(<span class="keyword">new</span> <span class="built_in">Set</span>(arr2).has(item)));</span><br><span class="line"><span class="built_in">console</span>.log(diff);</span><br></pre></td></tr></table></figure>
     
 
     
@@ -316,7 +333,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="http://huangxingxiang17.github.io/2022/02/24/rest参数/" title="rest参数" target="_blank">http://huangxingxiang17.github.io/2022/02/24/rest参数/</a>
+          <a href="http://huangxingxiang17.github.io/2022/02/25/ES6/Set/" title="Set" target="_blank">http://huangxingxiang17.github.io/2022/02/25/ES6/Set/</a>
         </li>
         
         <li>
@@ -405,7 +422,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/24/rest%E5%8F%82%E6%95%B0/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/02/25/ES6/Set/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -420,18 +437,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2022/02/24/%E6%89%A9%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2022/02/25/ES6/Map/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          扩展运算符
+          Map
         
       </div>
     </a>
   
   
-    <a href="/2022/02/24/%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">函数参数的默认值</div>
+    <a href="/2022/02/25/ES6/Promise/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Promise</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -458,7 +475,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Set%EF%BC%88%E9%9B%86%E5%90%88%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">Set（集合）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0"><span class="toc-number">2.</span> <span class="toc-text">练习</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -603,11 +620,11 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
