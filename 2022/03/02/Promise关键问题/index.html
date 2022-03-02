@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://huangxingxiang17.github.io">
-  <title>黄兴祥的Blog</title>
+  <title>Promise关键问题 | 黄兴祥的Blog</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="黄兴祥的Blog">
-<meta property="og:url" content="http://huangxingxiang17.github.io/page/6/index.html">
+  <meta name="description" content="Promise 7个关键问题如何改变 promise 的状态? resolve(value): 如果当前是 pending 就会变为 resolved reject(reason): 如果当前是 pending 就会变为 rejected 抛出异常: 如果当前是 pending 就会变为 rejected">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Promise关键问题">
+<meta property="og:url" content="http://huangxingxiang17.github.io/2022/03/02/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
+<meta property="og:description" content="Promise 7个关键问题如何改变 promise 的状态? resolve(value): 如果当前是 pending 就会变为 resolved reject(reason): 如果当前是 pending 就会变为 rejected 抛出异常: 如果当前是 pending 就会变为 rejected">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-02T00:31:55.000Z">
+<meta property="article:modified_time" content="2022-03-02T01:56:31.667Z">
 <meta property="article:author" content="黄兴祥">
+<meta property="article:tag" content="Promise">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
@@ -208,45 +209,179 @@
           </div>
           <div id="js-content" class="content-ll">
             
-
-  
-    <article id="post-JavaScript_basic/键盘事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-Promise关键问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/21/JavaScript_basic/%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/" target="_blank">键盘事件</a>
-  
+    <h1 class="article-title" itemprop="name">
+      Promise关键问题
     </h1>
   
 
 
   
   
-<a href="/2022/02/21/JavaScript_basic/%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/" class="archive-article-date">
-        <time datetime="2022-02-21T06:48:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-21</time>
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2022/03/02/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2022-03-02T00:31:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
 </a>
 
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.3k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">5分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h1><p>键盘事件一般都会绑定给一些可以获取到焦点的对象或者是document
-    
-    <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/#more">more >></a>
-    
+    <h1 id="Promise-7个关键问题"><a href="#Promise-7个关键问题" class="headerlink" title="Promise 7个关键问题"></a>Promise 7个关键问题</h1><h2 id="如何改变-promise-的状态"><a href="#如何改变-promise-的状态" class="headerlink" title="如何改变 promise 的状态?"></a>如何改变 promise 的状态?</h2><ul>
+<li>resolve(value): 如果当前是 pending 就会变为 resolved</li>
+<li>reject(reason): 如果当前是 pending 就会变为 rejected</li>
+<li>抛出异常: 如果当前是 pending 就会变为 rejected<span id="more"></span></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//1. resolve 函数</span></span><br><span class="line">    <span class="comment">// resolve(&#x27;ok&#x27;); // pending   =&gt; fulfilled (resolved)</span></span><br><span class="line">    <span class="comment">//2. reject 函数</span></span><br><span class="line">    <span class="comment">// reject(&quot;error&quot;);// pending  =&gt;  rejected </span></span><br><span class="line">    <span class="comment">//3. 抛出错误</span></span><br><span class="line">    <span class="comment">// throw &#x27;出问题了&#x27;;</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(p);</span><br><span class="line"><span class="comment">//如果报错：Uncaught (in promise)，</span></span><br><span class="line"><span class="comment">//不用管它，这主要是因为没有指定失败回调导致的</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="能否执行多个回调？"><a href="#能否执行多个回调？" class="headerlink" title="能否执行多个回调？"></a>能否执行多个回调？</h2><p>一个 promise 指定多个成功/失败回调函数, 都会调用吗?<br>题目意思为：如果我们使用then方法，为一个promise对象指定多个回调，这些回调是不是都会执行？</p>
+<p>当 promise 改变为对应状态时都会调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="string">&#x27;OK&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">///指定回调 - 1</span></span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//指定回调 - 2</span></span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    alert(value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="改变状态与指定回调顺序问题"><a href="#改变状态与指定回调顺序问题" class="headerlink" title="改变状态与指定回调顺序问题"></a>改变状态与指定回调顺序问题</h2><p>改变 promise 状态和指定回调函数谁先谁后(谁先执行，谁后执行)?</p>
+<ul>
+<li>都有可能, 正常情况下是先指定回调再改变状态(<strong>异步任务</strong>), 但也可以先改状态再指定回调</li>
+<li>如何先改状态再指定回调? <ul>
+<li>在执行器中直接调用 <code>resolve()/reject()</code>(<strong>同步任务</strong>)</li>
+<li>延迟更长时间才调用 <code>then()</code></li>
+</ul>
+</li>
+<li>什么时候才能得到数据(即：回调函数什么时候执行)?<ul>
+<li>如果先指定的回调, 那当状态发生改变时, 回调函数就会调用, 得到数据</li>
+<li>如果先改变的状态, 那当指定回调时, 回调函数就会调用, 得到数据</li>
+</ul>
+</li>
+</ul>
+<p>当执行器函数内部是一个同步任务时，即直接调用<code>resolve()/reject()</code>，<br>这种情况下，先改变状态，再执行回调，得到数据</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="string">&#x27;OK&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);<span class="comment">//直接输出 OK</span></span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<p>实际使用中，异步任务的情况居多。</p>
+<p>当执行器函数内部是一个异步任务时，也就是说，我改变状态呢，需要等待一段时间。<br>这种情况下，then方法<strong>先</strong>执行(即先指定回调)，改变状态<strong>后</strong>执行。改变状态<strong>以后</strong>，<strong>再</strong>去调用成功或失败的结果。<br>注意：这是在封装中，非常重要的一个环节。</p>
+<p>在代码中，就是先指定回调方法then，再调用resolve()来改变状态，最后执行<code>value=&gt;&#123;&#125;</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        resolve(<span class="string">&#x27;OK&#x27;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);<span class="comment">//等一秒，输出 OK</span></span><br><span class="line">&#125;,<span class="function"><span class="params">reason</span>=&gt;</span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="then方法的返回结果状态由什么决定？"><a href="#then方法的返回结果状态由什么决定？" class="headerlink" title="then方法的返回结果状态由什么决定？"></a>then方法的返回结果状态由什么决定？</h2><p>promise.then()返回的新 promise 的结果状态由什么决定?</p>
+<ul>
+<li>简单表达: 由 then()指定的回调函数执行的结果决定</li>
+<li>详细表达: <ul>
+<li>如果抛出异常, 新 promise 变为 rejected, reason 为抛出的异常</li>
+<li>如果返回的是非 promise 的任意值, 新 promise 变为 resolved, value 为返回的值</li>
+<li>如果返回的是另一个新 promise, 此 promise 的结果就会成为新 promise 的结果</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    resolve(<span class="string">&#x27;ok&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//执行 then 方法</span></span><br><span class="line"><span class="keyword">let</span> result = p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(value);</span></span><br><span class="line">    <span class="comment">//1. 抛出错误</span></span><br><span class="line">    <span class="comment">// throw &#x27;出了问题&#x27;;</span></span><br><span class="line">    <span class="comment">//2. 返回结果是非 Promise 类型的对象</span></span><br><span class="line">    <span class="comment">// return 521;</span></span><br><span class="line">    <span class="comment">//3. 返回结果是 Promise 对象</span></span><br><span class="line">    <span class="comment">// return new Promise((resolve, reject) =&gt; &#123;</span></span><br><span class="line">    <span class="comment">//     // resolve(&#x27;success&#x27;);</span></span><br><span class="line">    <span class="comment">//     reject(&#x27;error&#x27;);</span></span><br><span class="line">    <span class="comment">// &#125;);</span></span><br><span class="line">&#125;, <span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="promise-如何串连多个操作任务"><a href="#promise-如何串连多个操作任务" class="headerlink" title="promise 如何串连多个操作任务?"></a>promise 如何串连多个操作任务?</h2><ul>
+<li>promise 的 then()返回一个新的 promise, 可以开成 then()的链式调用</li>
+<li>通过 then 的链式调用串连多个同步/异步任务</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        resolve(<span class="string">&#x27;OK&#x27;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        resolve(<span class="string">&quot;success&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);<span class="comment">//success</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value);<span class="comment">//undefined</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="异常穿透现象是怎么回事？"><a href="#异常穿透现象是怎么回事？" class="headerlink" title="异常穿透现象是怎么回事？"></a>异常穿透现象是怎么回事？</h2><p>promise 异常传透?</p>
+<ul>
+<li>当使用 promise 的 then 链式调用时, 可以在最后指定失败的回调</li>
+<li>前面任何操作出了异常, 都会传到最后失败的回调中处理</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        resolve(<span class="string">&#x27;OK&#x27;</span>);</span><br><span class="line">        <span class="comment">// reject(&#x27;Err&#x27;);</span></span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// console.log(111);</span></span><br><span class="line">    <span class="keyword">throw</span> <span class="string">&#x27;失败啦!&#x27;</span>;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">222</span>);</span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">333</span>);</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="如何中断Promise链条？"><a href="#如何中断Promise链条？" class="headerlink" title="如何中断Promise链条？"></a>如何中断Promise链条？</h2><p>中断 promise 链?</p>
+<ul>
+<li>当使用 promise 的 then 链式调用时, 在中间中断, 不再调用后面的回调函数</li>
+<li>办法: 在回调函数中返回一个 pendding 状态的 promise 对象</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        resolve(<span class="string">&#x27;OK&#x27;</span>);</span><br><span class="line">    &#125;, <span class="number">1000</span>);</span><br><span class="line">&#125;);</span><br><span class="line">p.then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">111</span>);</span><br><span class="line">    <span class="comment">//有且只有一个方式</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">() =&gt;</span> &#123;&#125;);</span><br><span class="line">    <span class="comment">//状态改为pending，后续的then方法便无法执行。</span></span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">222</span>);</span><br><span class="line">&#125;).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">333</span>);</span><br><span class="line">&#125;).catch(<span class="function"><span class="params">reason</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.warn(reason);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/wechatpay.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          黄兴祥
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://huangxingxiang17.github.io/2022/03/02/Promise关键问题/" title="Promise关键问题" target="_blank">http://huangxingxiang17.github.io/2022/03/02/Promise关键问题/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -258,7 +393,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -270,7 +405,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -278,16 +413,76 @@
 
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://huangxingxiang17.github.io/2022/03/02/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2022/03/01/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何使用Promise</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -302,936 +497,34 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/滚轮事件" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/21/JavaScript_basic/%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6/" target="_blank">滚轮事件</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/21/JavaScript_basic/%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6/" class="archive-article-date">
-        <time datetime="2022-02-21T05:01:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="功能要求"><a href="#功能要求" class="headerlink" title="功能要求"></a>功能要求</h1><p>当鼠标滚轮向下滚动时，box1变长
-    
-    <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/兼容//" class="article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E6%BB%9A%E8%BD%AE%E4%BA%8B%E4%BB%B6/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Promise-7%E4%B8%AA%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">Promise 7个关键问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E6%94%B9%E5%8F%98-promise-%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-number">1.1.</span> <span class="toc-text">如何改变 promise 的状态?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%BD%E5%90%A6%E6%89%A7%E8%A1%8C%E5%A4%9A%E4%B8%AA%E5%9B%9E%E8%B0%83%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">能否执行多个回调？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81%E4%B8%8E%E6%8C%87%E5%AE%9A%E5%9B%9E%E8%B0%83%E9%A1%BA%E5%BA%8F%E9%97%AE%E9%A2%98"><span class="toc-number">1.3.</span> <span class="toc-text">改变状态与指定回调顺序问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#then%E6%96%B9%E6%B3%95%E7%9A%84%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E7%8A%B6%E6%80%81%E7%94%B1%E4%BB%80%E4%B9%88%E5%86%B3%E5%AE%9A%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">then方法的返回结果状态由什么决定？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#promise-%E5%A6%82%E4%BD%95%E4%B8%B2%E8%BF%9E%E5%A4%9A%E4%B8%AA%E6%93%8D%E4%BD%9C%E4%BB%BB%E5%8A%A1"><span class="toc-number">1.5.</span> <span class="toc-text">promise 如何串连多个操作任务?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%B8%B8%E7%A9%BF%E9%80%8F%E7%8E%B0%E8%B1%A1%E6%98%AF%E6%80%8E%E4%B9%88%E5%9B%9E%E4%BA%8B%EF%BC%9F"><span class="toc-number">1.6.</span> <span class="toc-text">异常穿透现象是怎么回事？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%B8%AD%E6%96%ADPromise%E9%93%BE%E6%9D%A1%EF%BC%9F"><span class="toc-number">1.7.</span> <span class="toc-text">如何中断Promise链条？</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-JavaScript_basic/拖拽" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/21/JavaScript_basic/%E6%8B%96%E6%8B%BD/" target="_blank">拖拽</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2022/02/21/JavaScript_basic/%E6%8B%96%E6%8B%BD/" class="archive-article-date">
-        <time datetime="2022-02-21T01:53:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-21</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="拖拽box1元素"><a href="#拖拽box1元素" class="headerlink" title="拖拽box1元素"></a>拖拽box1元素
-    
-    <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E6%8B%96%E6%8B%BD/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/兼容//" class="article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E6%8B%96%E6%8B%BD/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/事件的传播" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%BC%A0%E6%92%AD/" target="_blank">事件的传播</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%BC%A0%E6%92%AD/" class="archive-article-date">
-        <time datetime="2022-02-21T01:21:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="事件的传播"><a href="#事件的传播" class="headerlink" title="事件的传播"></a>事件的传播
-    
-    <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%BC%A0%E6%92%AD/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E4%BC%A0%E6%92%AD/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/事件的绑定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%91%E5%AE%9A/" target="_blank">事件的绑定</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%91%E5%AE%9A/" class="archive-article-date">
-        <time datetime="2022-02-21T00:37:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-21</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="事件的绑定"><a href="#事件的绑定" class="headerlink" title="事件的绑定"></a>事件的绑定
-    
-    <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%91%E5%AE%9A/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/兼容//" class="article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/21/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E7%BB%91%E5%AE%9A/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/事件的委派" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%A7%94%E6%B4%BE/" target="_blank">事件的委派</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%A7%94%E6%B4%BE/" class="archive-article-date">
-        <time datetime="2022-02-20T13:07:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="事件的委派"><a href="#事件的委派" class="headerlink" title="事件的委派"></a>事件的委派</h1><ul>
-<li>指将事件统一绑定给元素的共同的祖先元素，这样当后代元素上的事件触发时，会一直冒泡到祖先元素<br>从而通过祖先元素的响应函数来处理事件。
-    
-    <a class="article-more-a" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%A7%94%E6%B4%BE/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/兼容//" class="article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%A7%94%E6%B4%BE/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/事件的冒泡（Bubble）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%86%92%E6%B3%A1%EF%BC%88Bubble%EF%BC%89/" target="_blank">事件的冒泡（Bubble）</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%86%92%E6%B3%A1%EF%BC%88Bubble%EF%BC%89/" class="archive-article-date">
-        <time datetime="2022-02-20T10:31:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="事件的冒泡（Bubble）"><a href="#事件的冒泡（Bubble）" class="headerlink" title="事件的冒泡（Bubble）"></a>事件的冒泡（Bubble）</h1><ul>
-<li>所谓的冒泡指的就是事件的<strong>向上传导</strong>，当后代元素上的事件被触发时，其祖先元素的<strong>相同事件</strong>也会被触发</li>
-<li>在开发中大部分情况冒泡都是有用的，如果不希望发生事件冒泡可以通过事件对象来取消冒泡
-    
-    <a class="article-more-a" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%86%92%E6%B3%A1%EF%BC%88Bubble%EF%BC%89/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E7%9A%84%E5%86%92%E6%B3%A1%EF%BC%88Bubble%EF%BC%89/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/div跟随鼠标移动" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/20/JavaScript_basic/div%E8%B7%9F%E9%9A%8F%E9%BC%A0%E6%A0%87%E7%A7%BB%E5%8A%A8/" target="_blank">div跟随鼠标移动</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/20/JavaScript_basic/div%E8%B7%9F%E9%9A%8F%E9%BC%A0%E6%A0%87%E7%A7%BB%E5%8A%A8/" class="archive-article-date">
-        <time datetime="2022-02-20T09:04:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>使div可以跟随鼠标移动
-    
-    <a class="article-more-a" href="/2022/02/20/JavaScript_basic/div%E8%B7%9F%E9%9A%8F%E9%BC%A0%E6%A0%87%E7%A7%BB%E5%8A%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/兼容//" class="article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/20/JavaScript_basic/div%E8%B7%9F%E9%9A%8F%E9%BC%A0%E6%A0%87%E7%A7%BB%E5%8A%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JavaScript_basic/事件对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/" target="_blank">事件对象</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/" class="archive-article-date">
-        <time datetime="2022-02-20T08:18:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="事件对象"><a href="#事件对象" class="headerlink" title="事件对象"></a>事件对象</h1><p>当事件的响应函数被触发时，浏览器每次都会将一个事件对象作为实参传递进响应函数,<br>在事件对象中封装了当前事件相关的一切信息，比如：鼠标的坐标  键盘哪个按键被按下  鼠标滚轮滚动的方向。。。
-    
-    <a class="article-more-a" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaScript基础</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript/兼容//" class="article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/20/JavaScript_basic/%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Other/浏览器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/20/Other/%E6%B5%8F%E8%A7%88%E5%99%A8/" target="_blank">浏览器</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/20/Other/%E6%B5%8F%E8%A7%88%E5%99%A8/" class="archive-article-date">
-        <time datetime="2022-02-20T07:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-20</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键
-    
-    <a class="article-more-a" href="/2022/02/20/Other/%E6%B5%8F%E8%A7%88%E5%99%A8/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/20/Other/%E6%B5%8F%E8%A7%88%E5%99%A8/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/14/">14</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
-    </nav>
-  
 
 
           </div>
@@ -1267,8 +560,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
