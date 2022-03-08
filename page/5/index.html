@@ -210,7 +210,7 @@
             
 
   
-    <article id="post-AJAX/AJAX-POST-请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/自定义Promise5-状态只能修改一次" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -218,7 +218,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/27/AJAX/AJAX-POST-%E8%AF%B7%E6%B1%82/" target="_blank">AJAX POST 请求</a>
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise5-%E7%8A%B6%E6%80%81%E5%8F%AA%E8%83%BD%E4%BF%AE%E6%94%B9%E4%B8%80%E6%AC%A1/" target="_blank">自定义Promise5-状态只能修改一次</a>
   
     </h1>
   
@@ -226,8 +226,8 @@
 
   
   
-<a href="/2022/02/27/AJAX/AJAX-POST-%E8%AF%B7%E6%B1%82/" class="archive-article-date">
-        <time datetime="2022-02-27T02:50:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-27</time>
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise5-%E7%8A%B6%E6%80%81%E5%8F%AA%E8%83%BD%E4%BF%AE%E6%94%B9%E4%B8%80%E6%AC%A1/" class="archive-article-date">
+        <time datetime="2022-03-03T13:28:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
 </a>
 
   
@@ -239,9 +239,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>需求：鼠标移入div，向服务端发POST请求。回来结果，将响应体在div中显示。
+    <h1 id="状态只能修改一次"><a href="#状态只能修改一次" class="headerlink" title="状态只能修改一次"></a>状态只能修改一次</h1><p>从resolve函数和reject函数入手，在改变状态之前，我们需要先判断一下，这个<code>promiseState</code>有没有被改过。<br>如果说被改过，我们就没有必要去改了。
     
-    <a class="article-more-a" href="/2022/02/27/AJAX/AJAX-POST-%E8%AF%B7%E6%B1%82/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise5-%E7%8A%B6%E6%80%81%E5%8F%AA%E8%83%BD%E4%BF%AE%E6%94%B9%E4%B8%80%E6%AC%A1/#more">more >></a>
     
     
 
@@ -258,7 +258,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -270,7 +270,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -279,7 +279,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/27/AJAX/AJAX-POST-%E8%AF%B7%E6%B1%82/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise5-%E7%8A%B6%E6%80%81%E5%8F%AA%E8%83%BD%E4%BF%AE%E6%94%B9%E4%B8%80%E6%AC%A1/">展开全文 >></a>
     </p>
     
 
@@ -309,7 +309,7 @@
 
 
   
-    <article id="post-AJAX/AJAX-GET-请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/自定义Promise4-throw抛出错误并改变状态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -317,7 +317,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/27/AJAX/AJAX-GET-%E8%AF%B7%E6%B1%82/" target="_blank">AJAX GET 请求</a>
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise4-throw%E6%8A%9B%E5%87%BA%E9%94%99%E8%AF%AF%E5%B9%B6%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81/" target="_blank">自定义Promise4-throw抛出错误并改变状态</a>
   
     </h1>
   
@@ -325,8 +325,8 @@
 
   
   
-<a href="/2022/02/27/AJAX/AJAX-GET-%E8%AF%B7%E6%B1%82/" class="archive-article-date">
-        <time datetime="2022-02-27T01:02:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-27</time>
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise4-throw%E6%8A%9B%E5%87%BA%E9%94%99%E8%AF%AF%E5%B9%B6%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81/" class="archive-article-date">
+        <time datetime="2022-03-03T13:26:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
 </a>
 
   
@@ -338,9 +338,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="AJAX请求发送前的准备"><a href="#AJAX请求发送前的准备" class="headerlink" title="AJAX请求发送前的准备"></a>AJAX请求发送前的准备
+    <h1 id="throw抛出错误并改变状态"><a href="#throw抛出错误并改变状态" class="headerlink" title="throw抛出错误并改变状态"></a>throw抛出错误并改变状态</h1><p>在<code>index.html</code>文件中，增加throw代码<code>throw &quot;error&quot;;</code><br>直接运行会发现，该行代码出错，下面的代码直接不执行。<br>抛错只能在同步任务中抛，在异步任务中不能抛错
     
-    <a class="article-more-a" href="/2022/02/27/AJAX/AJAX-GET-%E8%AF%B7%E6%B1%82/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise4-throw%E6%8A%9B%E5%87%BA%E9%94%99%E8%AF%AF%E5%B9%B6%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81/#more">more >></a>
     
     
 
@@ -357,7 +357,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -369,7 +369,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -378,7 +378,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/27/AJAX/AJAX-GET-%E8%AF%B7%E6%B1%82/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise4-throw%E6%8A%9B%E5%87%BA%E9%94%99%E8%AF%AF%E5%B9%B6%E6%94%B9%E5%8F%98%E7%8A%B6%E6%80%81/">展开全文 >></a>
     </p>
     
 
@@ -408,7 +408,7 @@
 
 
   
-    <article id="post-AJAX/AJAX" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/自定义Promise3-resolve与reject函数实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -416,7 +416,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/26/AJAX/AJAX/" target="_blank">AJAX</a>
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise3-resolve%E4%B8%8Ereject%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/" target="_blank">自定义Promise3-resolve与reject函数实现</a>
   
     </h1>
   
@@ -424,8 +424,8 @@
 
   
   
-<a href="/2022/02/26/AJAX/AJAX/" class="archive-article-date">
-        <time datetime="2022-02-26T07:27:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise3-resolve%E4%B8%8Ereject%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+        <time datetime="2022-03-03T13:23:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
 </a>
 
   
@@ -437,9 +437,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="原生AJAX"><a href="#原生AJAX" class="headerlink" title="原生AJAX"></a>原生AJAX</h1><h2 id="AJAX-简介"><a href="#AJAX-简介" class="headerlink" title="AJAX 简介"></a>AJAX 简介</h2><p>AJAX 全称为 Asynchronous JavaScript And XML，就是异步的 JS 和 XML。
+    <h1 id="resolve与reject函数实现"><a href="#resolve与reject函数实现" class="headerlink" title="resolve与reject函数实现"></a>resolve与reject函数实现</h1><p>我们再看<code>index.html</code>文件
     
-    <a class="article-more-a" href="/2022/02/26/AJAX/AJAX/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise3-resolve%E4%B8%8Ereject%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/#more">more >></a>
     
     
 
@@ -456,7 +456,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -468,7 +468,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -477,7 +477,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/26/AJAX/AJAX/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise3-resolve%E4%B8%8Ereject%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
     </p>
     
 
@@ -507,7 +507,7 @@
 
 
   
-    <article id="post-Other/学习进度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/自定义Promise2-resolve与reject结构搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -515,7 +515,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/26/Other/%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6/" target="_blank">学习进度</a>
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise2-resolve%E4%B8%8Ereject%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/" target="_blank">自定义Promise2-resolve与reject结构搭建</a>
   
     </h1>
   
@@ -523,8 +523,8 @@
 
   
   
-<a href="/2022/02/26/Other/%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6/" class="archive-article-date">
-        <time datetime="2022-02-26T05:01:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise2-resolve%E4%B8%8Ereject%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+        <time datetime="2022-03-03T13:20:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
 </a>
 
   
@@ -536,8 +536,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>尚硅谷ES6教程，P25、P26、P28、P46、P47还没学。<br><a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1BM_OKMXXAGxMNqaBN_7tRg">尚硅谷配套资料（提取码：afyt）</a></p>
-
+    <h1 id="resolve与reject结构搭建"><a href="#resolve与reject结构搭建" class="headerlink" title="resolve与reject结构搭建"></a>resolve与reject结构搭建</h1><p>首先，我们在执行Promise函数时，执行器函数是可以同步调用的。<br>所以在声明Promise构造函数的内部，需要加上<code>executor();</code>
+    
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise2-resolve%E4%B8%8Ereject%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/#more">more >></a>
+    
     
 
     
@@ -553,7 +555,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">备忘录</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -565,11 +567,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/其他//" class="article-tag-list-link color3">其他</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/其他/学习进度//" class="article-tag-list-link color5">学习进度</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -578,7 +576,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/26/Other/%E5%AD%A6%E4%B9%A0%E8%BF%9B%E5%BA%A6/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise2-resolve%E4%B8%8Ereject%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
     </p>
     
 
@@ -608,7 +606,7 @@
 
 
   
-    <article id="post-ES6/模块化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/自定义Promise1-初始结构搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -616,7 +614,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/26/ES6/%E6%A8%A1%E5%9D%97%E5%8C%96/" target="_blank">模块化</a>
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise1-%E5%88%9D%E5%A7%8B%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/" target="_blank">自定义Promise1-初始结构搭建</a>
   
     </h1>
   
@@ -624,8 +622,8 @@
 
   
   
-<a href="/2022/02/26/ES6/%E6%A8%A1%E5%9D%97%E5%8C%96/" class="archive-article-date">
-        <time datetime="2022-02-26T02:19:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise1-%E5%88%9D%E5%A7%8B%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+        <time datetime="2022-03-03T13:15:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
 </a>
 
   
@@ -637,9 +635,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>模块化是指将一个大的程序文件，拆分成许多小的文件，然后将小文件组合起来。
+    <h1 id="初始结构搭建"><a href="#初始结构搭建" class="headerlink" title="初始结构搭建"></a>初始结构搭建</h1><p>开始之前，我们先用全局的Promise对象，实例化一个 p 对象，<br>使用全局Promise对象的then方法，输出结果。
     
-    <a class="article-more-a" href="/2022/02/26/ES6/%E6%A8%A1%E5%9D%97%E5%8C%96/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise1-%E5%88%9D%E5%A7%8B%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/#more">more >></a>
     
     
 
@@ -656,7 +654,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -668,7 +666,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -677,7 +675,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/26/ES6/%E6%A8%A1%E5%9D%97%E5%8C%96/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise1-%E5%88%9D%E5%A7%8B%E7%BB%93%E6%9E%84%E6%90%AD%E5%BB%BA/">展开全文 >></a>
     </p>
     
 
@@ -707,7 +705,7 @@
 
 
   
-    <article id="post-ES6/对象方法扩展" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/Promise关键问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -715,7 +713,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/26/ES6/%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E6%89%A9%E5%B1%95/" target="_blank">对象方法扩展</a>
+	  <a class="article-title" href="/2022/03/02/Promise/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/" target="_blank">Promise关键问题</a>
   
     </h1>
   
@@ -723,8 +721,8 @@
 
   
   
-<a href="/2022/02/26/ES6/%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E6%89%A9%E5%B1%95/" class="archive-article-date">
-        <time datetime="2022-02-26T01:45:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
+<a href="/2022/03/02/Promise/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2022-03-02T00:31:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-02</time>
 </a>
 
   
@@ -736,9 +734,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>ES6 新增了一些 Object 对象的方法
+    <h1 id="Promise-7个关键问题"><a href="#Promise-7个关键问题" class="headerlink" title="Promise 7个关键问题"></a>Promise 7个关键问题</h1><h2 id="如何改变-promise-的状态"><a href="#如何改变-promise-的状态" class="headerlink" title="如何改变 promise 的状态?"></a>如何改变 promise 的状态?</h2><ul>
+<li>resolve(value): 如果当前是 pending 就会变为 resolved</li>
+<li>reject(reason): 如果当前是 pending 就会变为 rejected</li>
+<li>抛出异常: 如果当前是 pending 就会变为 rejected
     
-    <a class="article-more-a" href="/2022/02/26/ES6/%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E6%89%A9%E5%B1%95/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/02/Promise/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/#more">more >></a>
     
     
 
@@ -755,7 +756,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -767,7 +768,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -776,7 +777,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/26/ES6/%E5%AF%B9%E8%B1%A1%E6%96%B9%E6%B3%95%E6%89%A9%E5%B1%95/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/02/Promise/Promise%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98/">展开全文 >></a>
     </p>
     
 
@@ -806,7 +807,7 @@
 
 
   
-    <article id="post-ES6/数值扩展" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/如何使用Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -814,7 +815,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/26/ES6/%E6%95%B0%E5%80%BC%E6%89%A9%E5%B1%95/" target="_blank">数值扩展</a>
+	  <a class="article-title" href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/" target="_blank">如何使用Promise</a>
   
     </h1>
   
@@ -822,8 +823,8 @@
 
   
   
-<a href="/2022/02/26/ES6/%E6%95%B0%E5%80%BC%E6%89%A9%E5%B1%95/" class="archive-article-date">
-        <time datetime="2022-02-26T01:18:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-26</time>
+<a href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/" class="archive-article-date">
+        <time datetime="2022-03-01T13:16:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
 </a>
 
   
@@ -835,10 +836,13 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="数值扩展"><a href="#数值扩展" class="headerlink" title="数值扩展"></a>数值扩展</h1><ol start="0">
-<li>Number.EPSILON 是 JavaScript 表示的最小精度
+    <h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><ol>
+<li>Promise 构造函数: <code>Promise (excutor) &#123;&#125;</code><ul>
+<li>executor 函数: 执行器 <code>(resolve, reject) =&gt; &#123;&#125;</code> </li>
+<li>resolve 函数: 内部定义成功时我们调用的函数 <code>value =&gt; &#123;&#125;</code></li>
+<li>reject 函数: 内部定义失败时我们调用的函数 <code>reason =&gt; &#123;&#125;</code><br>说明: executor 会在 Promise 内部立即<strong>同步</strong>调用,异步操作在执行器中执行
     
-    <a class="article-more-a" href="/2022/02/26/ES6/%E6%95%B0%E5%80%BC%E6%89%A9%E5%B1%95/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/#more">more >></a>
     
     
 
@@ -855,7 +859,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -867,7 +871,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -876,7 +880,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/26/ES6/%E6%95%B0%E5%80%BC%E6%89%A9%E5%B1%95/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/">展开全文 >></a>
     </p>
     
 
@@ -906,7 +910,7 @@
 
 
   
-    <article id="post-ES6/class-类" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/Promise状态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -914,7 +918,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/25/ES6/class-%E7%B1%BB/" target="_blank">class 类</a>
+	  <a class="article-title" href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/" target="_blank">Promise的状态 &amp; Promise 对象的值 &amp; promise工作流程</a>
   
     </h1>
   
@@ -922,8 +926,8 @@
 
   
   
-<a href="/2022/02/25/ES6/class-%E7%B1%BB/" class="archive-article-date">
-        <time datetime="2022-02-25T10:00:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
+<a href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/" class="archive-article-date">
+        <time datetime="2022-03-01T09:05:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
 </a>
 
   
@@ -935,9 +939,13 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>ES6 提供了更接近传统语言的写法，引入了 Class（类）这个概念，作为对象的模板。<br>通过 class 关键字，可以定义类。基本上，ES6 的 class 可以看作只是一个语法糖，<br>它的绝大部分功能，ES5 都可以做到，新的 class 写法只是让对象原型的写法更加清晰、<br>更像面向对象编程的语法而已。
+    <h1 id="Promise-的状态"><a href="#Promise-的状态" class="headerlink" title="Promise 的状态"></a>Promise 的状态</h1><p>实例对象中的一个属性 <code>PromiseState</code></p>
+<ul>
+<li>pending  未决定的</li>
+<li>resolved / fullfilled  成功</li>
+<li>rejected  失败
     
-    <a class="article-more-a" href="/2022/02/25/ES6/class-%E7%B1%BB/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/#more">more >></a>
     
     
 
@@ -954,7 +962,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -966,7 +974,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -975,7 +983,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/25/ES6/class-%E7%B1%BB/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/">展开全文 >></a>
     </p>
     
 
@@ -1005,7 +1013,7 @@
 
 
   
-    <article id="post-ES6/Map" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/Promise封装AJAX请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1013,7 +1021,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/25/ES6/Map/" target="_blank">Map</a>
+	  <a class="article-title" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/" target="_blank">Promise封装AJAX请求</a>
   
     </h1>
   
@@ -1021,8 +1029,8 @@
 
   
   
-<a href="/2022/02/25/ES6/Map/" class="archive-article-date">
-        <time datetime="2022-02-25T09:17:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
+<a href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/" class="archive-article-date">
+        <time datetime="2022-03-01T08:49:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
 </a>
 
   
@@ -1034,9 +1042,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Map介绍与API"><a href="#Map介绍与API" class="headerlink" title="Map介绍与API"></a>Map介绍与API</h1><p>ES6 提供了 Map 数据结构。它类似于对象，也是键值对的集合。
+    <h1 id="Promise封装AJAX请求"><a href="#Promise封装AJAX请求" class="headerlink" title="Promise封装AJAX请求"></a>Promise封装AJAX请求</h1><p>要求：<br>封装一个函数 sendAJAX 发送 GET AJAX 请求<br>参数 URL<br>返回结果 Promise 对象
     
-    <a class="article-more-a" href="/2022/02/25/ES6/Map/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/#more">more >></a>
     
     
 
@@ -1053,7 +1061,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -1065,7 +1073,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -1074,7 +1082,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/25/ES6/Map/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/">展开全文 >></a>
     </p>
     
 
@@ -1104,7 +1112,7 @@
 
 
   
-    <article id="post-ES6/Set" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Promise/Promise封装fs读取文件操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1112,7 +1120,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/02/25/ES6/Set/" target="_blank">Set</a>
+	  <a class="article-title" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" target="_blank">Promise封装fs读取文件操作 &amp; util.promisify 方法</a>
   
     </h1>
   
@@ -1120,8 +1128,8 @@
 
   
   
-<a href="/2022/02/25/ES6/Set/" class="archive-article-date">
-        <time datetime="2022-02-25T08:08:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-25</time>
+<a href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+        <time datetime="2022-03-01T08:25:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
 </a>
 
   
@@ -1133,9 +1141,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Set（集合）"><a href="#Set（集合）" class="headerlink" title="Set（集合）"></a>Set（集合）</h1><p>ES6 提供了新的数据结构 Set（集合）。
+    <h1 id="Promise封装fs读取文件操作"><a href="#Promise封装fs读取文件操作" class="headerlink" title="Promise封装fs读取文件操作"></a>Promise封装fs读取文件操作</h1><p>封装一个函数 mineReadFile 读取文件内容
     
-    <a class="article-more-a" href="/2022/02/25/ES6/Set/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/#more">more >></a>
     
     
 
@@ -1152,7 +1160,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -1164,7 +1172,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/ES6//" class="article-tag-list-link color4">ES6</a>
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
         		</li>
       		
 		</ul>
@@ -1173,7 +1181,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/25/ES6/Set/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">展开全文 >></a>
     </p>
     
 
@@ -1205,7 +1213,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
+      <a class="extend prev" rel="prev" href="/page/4/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/6/">下一页</a>
     </nav>
   
 
@@ -1332,11 +1340,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1369,6 +1381,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">React</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">axios</a>
               </li>
             
             <div class="clearfix"></div>
