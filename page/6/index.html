@@ -210,6 +210,410 @@
             
 
   
+    <article id="post-Promise/如何使用Promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/" target="_blank">如何使用Promise</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/" class="archive-article-date">
+        <time datetime="2022-03-01T13:16:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><ol>
+<li>Promise 构造函数: <code>Promise (excutor) &#123;&#125;</code><ul>
+<li>executor 函数: 执行器 <code>(resolve, reject) =&gt; &#123;&#125;</code> </li>
+<li>resolve 函数: 内部定义成功时我们调用的函数 <code>value =&gt; &#123;&#125;</code></li>
+<li>reject 函数: 内部定义失败时我们调用的函数 <code>reason =&gt; &#123;&#125;</code><br>说明: executor 会在 Promise 内部立即<strong>同步</strong>调用,异步操作在执行器中执行
+    
+    <a class="article-more-a" href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/01/Promise/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Promise/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Promise/Promise状态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/" target="_blank">Promise的状态 &amp; Promise 对象的值 &amp; promise工作流程</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/" class="archive-article-date">
+        <time datetime="2022-03-01T09:05:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Promise-的状态"><a href="#Promise-的状态" class="headerlink" title="Promise 的状态"></a>Promise 的状态</h1><p>实例对象中的一个属性 <code>PromiseState</code></p>
+<ul>
+<li>pending  未决定的</li>
+<li>resolved / fullfilled  成功</li>
+<li>rejected  失败
+    
+    <a class="article-more-a" href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/01/Promise/Promise%E7%8A%B6%E6%80%81/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Promise/Promise封装AJAX请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/" target="_blank">Promise封装AJAX请求</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/" class="archive-article-date">
+        <time datetime="2022-03-01T08:49:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Promise封装AJAX请求"><a href="#Promise封装AJAX请求" class="headerlink" title="Promise封装AJAX请求"></a>Promise封装AJAX请求</h1><p>要求：<br>封装一个函数 sendAJAX 发送 GET AJAX 请求<br>参数 URL<br>返回结果 Promise 对象
+    
+    <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85AJAX%E8%AF%B7%E6%B1%82/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Promise/Promise封装fs读取文件操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" target="_blank">Promise封装fs读取文件操作 &amp; util.promisify 方法</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+        <time datetime="2022-03-01T08:25:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-01</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="Promise封装fs读取文件操作"><a href="#Promise封装fs读取文件操作" class="headerlink" title="Promise封装fs读取文件操作"></a>Promise封装fs读取文件操作</h1><p>封装一个函数 mineReadFile 读取文件内容
+    
+    <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/01/Promise/Promise%E5%B0%81%E8%A3%85fs%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Promise/Promise练习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -807,402 +1211,6 @@
 
 
   
-    <article id="post-AJAX/请求重复发送问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/27/AJAX/%E8%AF%B7%E6%B1%82%E9%87%8D%E5%A4%8D%E5%8F%91%E9%80%81%E9%97%AE%E9%A2%98/" target="_blank">请求重复发送问题</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/27/AJAX/%E8%AF%B7%E6%B1%82%E9%87%8D%E5%A4%8D%E5%8F%91%E9%80%81%E9%97%AE%E9%A2%98/" class="archive-article-date">
-        <time datetime="2022-02-27T10:59:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p>如果用户重复发送请求，那么服务器要频繁去处理。这样对服务器的压力很大。<br>我们可以这样解决，当用户点击发送请求时，我们可以看一下之前有没有发送相同请求。<br>如果有，那我们就把之前的取消掉，发送一个新的。
-    
-    <a class="article-more-a" href="/2022/02/27/AJAX/%E8%AF%B7%E6%B1%82%E9%87%8D%E5%A4%8D%E5%8F%91%E9%80%81%E9%97%AE%E9%A2%98/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/27/AJAX/%E8%AF%B7%E6%B1%82%E9%87%8D%E5%A4%8D%E5%8F%91%E9%80%81%E9%97%AE%E9%A2%98/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX/取消请求" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/27/AJAX/%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82/" target="_blank">取消请求</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/27/AJAX/%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82/" class="archive-article-date">
-        <time datetime="2022-02-27T10:38:14.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><p>在请求过程当中，结果还没出来之前，我们可以通过代码，将请求手动取消。<br>之前的超时，是时间到了之后，它自动把请求取消了。
-    
-    <a class="article-more-a" href="/2022/02/27/AJAX/%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/27/AJAX/%E5%8F%96%E6%B6%88%E8%AF%B7%E6%B1%82/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX/AJAX请求超时与网络异常处理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/27/AJAX/AJAX%E8%AF%B7%E6%B1%82%E8%B6%85%E6%97%B6%E4%B8%8E%E7%BD%91%E7%BB%9C%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" target="_blank">AJAX请求超时与网络异常处理</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/27/AJAX/AJAX%E8%AF%B7%E6%B1%82%E8%B6%85%E6%97%B6%E4%B8%8E%E7%BD%91%E7%BB%9C%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="archive-article-date">
-        <time datetime="2022-02-27T09:52:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1><p>我们的项目上线后，在运行过程当中，一定会出现网络请求超时的情况。<br>我们不可能保证服务端及时快速响应，这个时候，我们可以通过给AJAX一些超时的设置，<br>给用户一些提醒。并且在网络异常时，也给用户一些提醒。
-    
-    <a class="article-more-a" href="/2022/02/27/AJAX/AJAX%E8%AF%B7%E6%B1%82%E8%B6%85%E6%97%B6%E4%B8%8E%E7%BD%91%E7%BB%9C%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/27/AJAX/AJAX%E8%AF%B7%E6%B1%82%E8%B6%85%E6%97%B6%E4%B8%8E%E7%BD%91%E7%BB%9C%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-AJAX/AJAX-IE缓存问题解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/02/27/AJAX/AJAX-IE%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" target="_blank">AJAX IE缓存问题解决</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/02/27/AJAX/AJAX-IE%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/" class="archive-article-date">
-        <time datetime="2022-02-27T09:12:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-27</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="IE缓存问题"><a href="#IE缓存问题" class="headerlink" title="IE缓存问题"></a>IE缓存问题</h1><p>IE浏览器会对AJAX请求结果做一个缓存。这会导致一个问题，下一次再发送请求时，<br>IE浏览器走的是本地的缓存，而不是服务器返回的最新数据。<br>这对于时效性比较强的场景，AJAX缓存会影响结果。
-    
-    <a class="article-more-a" href="/2022/02/27/AJAX/AJAX-IE%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/AJAX//" class="article-tag-list-link color5">AJAX</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/02/27/AJAX/AJAX-IE%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/5/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/7/">下一页</a>
@@ -1336,7 +1344,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1344,7 +1352,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">

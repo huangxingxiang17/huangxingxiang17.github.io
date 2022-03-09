@@ -210,6 +210,402 @@
             
 
   
+    <article id="post-Promise/自定义Promise19-class版本封装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/04/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise19-class%E7%89%88%E6%9C%AC%E5%B0%81%E8%A3%85/" target="_blank">自定义Promise19-class版本封装</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/04/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise19-class%E7%89%88%E6%9C%AC%E5%B0%81%E8%A3%85/" class="archive-article-date">
+        <time datetime="2022-03-04T00:52:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-04</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="class版本封装"><a href="#class版本封装" class="headerlink" title="class版本封装"></a>class版本封装</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GA411x7z1?p=42&share_source=copy_web">视频教程</a><br>注意：如果是Promise构造函数的方法，需要加上<code>static</code>关键字来声明。<br>表明这个方法属于静态成员，它属于类，而不属于实例对象。
+    
+    <a class="article-more-a" href="/2022/03/04/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise19-class%E7%89%88%E6%9C%AC%E5%B0%81%E8%A3%85/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/04/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise19-class%E7%89%88%E6%9C%AC%E5%B0%81%E8%A3%85/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Promise/自定义Promise18-实现-回调函数是异步执行的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise18-%E5%AE%9E%E7%8E%B0-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%98%AF%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E7%9A%84/" target="_blank">自定义Promise18-实现:回调函数是异步执行的</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise18-%E5%AE%9E%E7%8E%B0-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%98%AF%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E7%9A%84/" class="archive-article-date">
+        <time datetime="2022-03-03T14:01:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="实现-回调函数是异步执行的"><a href="#实现-回调函数是异步执行的" class="headerlink" title="实现:回调函数是异步执行的"></a>实现:回调函数是异步执行的</h1><p>回调函数是指then方法指定的回调函数。
+    
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise18-%E5%AE%9E%E7%8E%B0-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%98%AF%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E7%9A%84/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise18-%E5%AE%9E%E7%8E%B0-%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0%E6%98%AF%E5%BC%82%E6%AD%A5%E6%89%A7%E8%A1%8C%E7%9A%84/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Promise/自定义Promise17-封装Promise-race" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise17-%E5%B0%81%E8%A3%85Promise-race/" target="_blank">自定义Promise17-封装Promise.race</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise17-%E5%B0%81%E8%A3%85Promise-race/" class="archive-article-date">
+        <time datetime="2022-03-03T13:59:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="封装Promise-race"><a href="#封装Promise-race" class="headerlink" title="封装Promise.race"></a>封装Promise.race</h1><p>返回一个新的 promise, 第一个完成的 promise 的结果状态就是最终的结果状态
+    
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise17-%E5%B0%81%E8%A3%85Promise-race/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise17-%E5%B0%81%E8%A3%85Promise-race/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Promise/自定义Promise16-封装Promise-all" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise16-%E5%B0%81%E8%A3%85Promise-all/" target="_blank">自定义Promise16-封装Promise.all</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise16-%E5%B0%81%E8%A3%85Promise-all/" class="archive-article-date">
+        <time datetime="2022-03-03T13:58:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="封装Promise-all"><a href="#封装Promise-all" class="headerlink" title="封装Promise.all"></a>封装Promise.all</h1><p>说明: 返回一个新的 promise, 只有所有的 promise 都成功才成功, 只要有一个失败了就直接失败<br>成功的结果是每个 promise 成功结果组成的数组。<br>失败的结果是 在整个promise数组中，失败的那个Promise对象，它失败的结果
+    
+    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise16-%E5%B0%81%E8%A3%85Promise-all/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise16-%E5%B0%81%E8%A3%85Promise-all/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Promise/自定义Promise15-封装Promise-reject" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -806,406 +1202,6 @@
 
 
   
-    <article id="post-Promise/自定义Promise9-同步任务下，then方法返回结果实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise9-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8B%EF%BC%8Cthen%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%AE%9E%E7%8E%B0/" target="_blank">自定义Promise9-同步任务下，then方法返回结果实现</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise9-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8B%EF%BC%8Cthen%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-        <time datetime="2022-03-03T13:38:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="同步任务下，then方法返回结果实现"><a href="#同步任务下，then方法返回结果实现" class="headerlink" title="同步任务下，then方法返回结果实现"></a>同步任务下，then方法返回结果实现</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GA411x7z1?p=33&share_source=copy_web">视频教程</a></p>
-    
-    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise9-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8B%EF%BC%8Cthen%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%AE%9E%E7%8E%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise9-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1%E4%B8%8B%EF%BC%8Cthen%E6%96%B9%E6%B3%95%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Promise/自定义Promise8-指定多个回调" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise8-%E6%8C%87%E5%AE%9A%E5%A4%9A%E4%B8%AA%E5%9B%9E%E8%B0%83/" target="_blank">自定义Promise8-指定多个回调</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise8-%E6%8C%87%E5%AE%9A%E5%A4%9A%E4%B8%AA%E5%9B%9E%E8%B0%83/" class="archive-article-date">
-        <time datetime="2022-03-03T13:36:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="指定多个回调"><a href="#指定多个回调" class="headerlink" title="指定多个回调"></a>指定多个回调</h1><blockquote>
-<p>index.html</p>
-</blockquote>
-    
-    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise8-%E6%8C%87%E5%AE%9A%E5%A4%9A%E4%B8%AA%E5%9B%9E%E8%B0%83/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise8-%E6%8C%87%E5%AE%9A%E5%A4%9A%E4%B8%AA%E5%9B%9E%E8%B0%83/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Promise/自定义Promise7-异步任务then方法执行回调" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise7-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/" target="_blank">自定义Promise7-异步任务then方法执行回调</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise7-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/" class="archive-article-date">
-        <time datetime="2022-03-03T13:33:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="异步任务then方法执行回调"><a href="#异步任务then方法执行回调" class="headerlink" title="异步任务then方法执行回调"></a>异步任务then方法执行回调</h1><blockquote>
-<p>index.html</p>
-</blockquote>
-    
-    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise7-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise7-%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Promise/自定义Promise6-同步任务then方法执行回调" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise6-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/" target="_blank">自定义Promise6-同步任务then方法执行回调</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise6-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/" class="archive-article-date">
-        <time datetime="2022-03-03T13:32:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-03</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="同步任务then方法执行回调"><a href="#同步任务then方法执行回调" class="headerlink" title="同步任务then方法执行回调"></a>同步任务then方法执行回调</h1><p>我们在<code>index.html</code>文件中，尝试调用Promise对象的then方法。
-    
-    <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise6-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Promise//" class="article-tag-list-link color3">Promise</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/03/Promise/%E8%87%AA%E5%AE%9A%E4%B9%89Promise6-%E5%90%8C%E6%AD%A5%E4%BB%BB%E5%8A%A1then%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%9B%9E%E8%B0%83/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <a class="extend prev" rel="prev" href="/page/3/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/5/">下一页</a>
@@ -1339,7 +1335,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1347,7 +1343,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
