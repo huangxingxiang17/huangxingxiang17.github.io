@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="使div可以跟随鼠标移动">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-20T09:04:57.000Z">
-<meta property="article:modified_time" content="2022-02-21T06:38:24.493Z">
+<meta property="article:modified_time" content="2022-03-10T07:40:34.474Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -273,6 +275,8 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#box1</span>&#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: red;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/*开启box1的绝对定位*/</span></span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>JS代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//为整个文档绑定鼠标移动事件</span></span><br><span class="line">	<span class="built_in">document</span>.onmousemove = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//解决兼容问题</span></span><br><span class="line">		event = event || <span class="built_in">window</span>.event;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//获取滚动条滚动的距离</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * chrome,火狐等浏览器认为浏览器的滚动条是html的。</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">var</span> st = <span class="built_in">document</span>.documentElement.scrollTop;</span><br><span class="line">		<span class="keyword">var</span> sl = <span class="built_in">document</span>.documentElement.scrollLeft;</span><br><span class="line">		</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//获取到鼠标的坐标</span></span><br><span class="line">		<span class="comment">/*</span></span><br><span class="line"><span class="comment">		 * clientX和clientY</span></span><br><span class="line"><span class="comment">		 * 用于获取鼠标在当前的可见窗口的坐标</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * div的偏移量，是相对于整个页面的</span></span><br><span class="line"><span class="comment">		 * </span></span><br><span class="line"><span class="comment">		 * pageX和pageY可以获取鼠标相对于当前页面的坐标</span></span><br><span class="line"><span class="comment">		 * 但是这个两个属性在IE8中不支持，所以如果需要兼容IE8，则不要使用</span></span><br><span class="line"><span class="comment">		 */</span></span><br><span class="line">		<span class="keyword">var</span> left = event.clientX;</span><br><span class="line">		<span class="keyword">var</span>　top = event.clientY;</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//设置div的偏移量</span></span><br><span class="line">		<span class="comment">//div的(0,0)点一直是整个网页的左上角，而鼠标的(0,0)点是当前视口的左上角。</span></span><br><span class="line">		<span class="comment">//当网页出现垂直滚动条时，用滚轮移动网页时，视口也随着移动。（水平滚动条同理）</span></span><br><span class="line">		<span class="comment">//导致鼠标的(0,0)点与div的(0,0)点分离，出现一段距离。</span></span><br><span class="line">		<span class="comment">//这段距离就等于滚动条滚动的距离</span></span><br><span class="line">		<span class="comment">//因此，只需要让div的偏移量加上滚动条滚动的距离即可。</span></span><br><span class="line">		box1.style.left = left + sl + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">		box1.style.top = top + st + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">		</span><br><span class="line">	&#125;;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">&#125;;</span><br><span class="line">			</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
+
     
 
     
@@ -613,7 +617,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -621,7 +625,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -645,11 +649,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

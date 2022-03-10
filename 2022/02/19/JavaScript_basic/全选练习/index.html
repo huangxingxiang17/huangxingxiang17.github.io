@@ -18,8 +18,9 @@
 <meta property="og:description" content="首先，我们看一下题目。">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/20220219162837.png">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-19T07:43:06.000Z">
-<meta property="article:modified_time" content="2022-02-19T14:18:00.694Z">
+<meta property="article:modified_time" content="2022-03-10T07:35:49.317Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
@@ -312,6 +313,8 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> checkedAllBtn = <span class="built_in">document</span>.getElementById(<span class="string">&quot;checkedAllBtn&quot;</span>);</span><br><span class="line">checkedAllBtn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</span><br><span class="line">        items[i].checked = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//将全选/全不选设置为选中</span></span><br><span class="line">    checkedAllBox.checked = <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> checkedNoBtn = <span class="built_in">document</span>.getElementById(<span class="string">&quot;checkedNoBtn&quot;</span>);</span><br><span class="line">checkedNoBtn.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; items.length; i++) &#123;</span><br><span class="line">        items[i].checked = <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//将全选/全不选设置为不选中</span></span><br><span class="line">    checkedAllBox.checked = <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h3 id="小问题2"><a href="#小问题2" class="headerlink" title="小问题2"></a>小问题2</h3><p>反选按钮的改进<br>如果我没有全选，只选了几个，那我点反选没有问题。<br>但我点击全选后，checkedAllBox的属性为true。<br>我再点反选，四个多选框全部取消，但checkedAllBox的属性还是为true。<br>也就是说，<br>在反选时也需要判断四个多选框是否全都选中，<br>如果没有全选中，那要取消“全选/全不选多选框”。<br>我们把之前的判断四个是否全选的代码，复制到反选的函数里面，<br>将两个for循环合并。要注意删除break语句。  </p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> checkedRevBtn = <span class="built_in">document</span>.getElementById(<span class="string">&quot;checkedRevBtn&quot;</span>);</span><br><span class="line">checkedRevBtn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//将checkedAllBox设置为选中状态</span></span><br><span class="line">	checkedAllBox.checked = <span class="literal">true</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;items.length ; i++)&#123;</span><br><span class="line">	</span><br><span class="line">		items[i].checked = !items[i].checked;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">if</span>(!items[i].checked)&#123;</span><br><span class="line">			checkedAllBox.checked = <span class="literal">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
+
     
 
     
@@ -648,7 +651,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,7 +659,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -680,11 +683,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

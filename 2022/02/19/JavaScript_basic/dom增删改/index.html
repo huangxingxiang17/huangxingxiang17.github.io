@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="dom增删改html代码如下，完善下列按钮功能。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-19T12:51:19.000Z">
-<meta property="article:modified_time" content="2022-02-20T01:06:14.358Z">
+<meta property="article:modified_time" content="2022-03-10T07:41:21.910Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -299,6 +301,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//向city中添加广州</span></span><br><span class="line"><span class="keyword">var</span> city = <span class="built_in">document</span>.getElementById(<span class="string">&quot;city&quot;</span>);</span><br><span class="line">city.innerHTML += <span class="string">&quot;&lt;li&gt;广州&lt;/li&gt;&quot;</span>;</span><br></pre></td></tr></table></figure>
 <p>但是，使用innerHTML是把原来的删除，再重新加进来。动作太大了。<br>一般我们会两种方式结合使用</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">myClick(<span class="string">&quot;btn07&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//向city中添加广州</span></span><br><span class="line">	<span class="keyword">var</span> city = <span class="built_in">document</span>.getElementById(<span class="string">&quot;city&quot;</span>);</span><br><span class="line">	<span class="comment">//创建一个li</span></span><br><span class="line">	<span class="keyword">var</span> li = <span class="built_in">document</span>.createElement(<span class="string">&quot;li&quot;</span>);</span><br><span class="line">	<span class="comment">//向li中设置文本</span></span><br><span class="line">	li.innerHTML = <span class="string">&quot;广州&quot;</span>;</span><br><span class="line">	<span class="comment">//将li添加到city中</span></span><br><span class="line">	city.appendChild(li);</span><br><span class="line">	</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
 
     
 
@@ -636,7 +639,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -644,7 +647,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,11 +671,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

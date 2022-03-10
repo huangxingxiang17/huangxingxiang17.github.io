@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="async与await结合实践准备新建一个resource文件夹，在里面有3个html文件，分别是1.html，2.html，3.html">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-03-04T01:56:44.000Z">
-<meta property="article:modified_time" content="2022-03-04T02:44:59.979Z">
+<meta property="article:modified_time" content="2022-03-10T07:45:56.806Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Promise">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -281,7 +283,7 @@
 <hr>
 <h2 id="async-与-await"><a href="#async-与-await" class="headerlink" title="async 与 await"></a>async 与 await</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&#x27;util&#x27;</span>);<span class="comment">//引入util模块</span></span><br><span class="line"><span class="keyword">const</span> mineReadFile = util.promisify(fs.readFile);<span class="comment">//转化API为promise风格的</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">let</span> data1 = <span class="keyword">await</span> mineReadFile(<span class="string">&#x27;./resource/1.html&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> data2 = <span class="keyword">await</span> mineReadFile(<span class="string">&#x27;./resource/2.html&#x27;</span>);</span><br><span class="line">        <span class="keyword">let</span> data3 = <span class="keyword">await</span> mineReadFile(<span class="string">&#x27;./resource/3.html&#x27;</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(data1 + data2 + data3);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">main();</span><br></pre></td></tr></table></figure>
 <p>写完之后，直接按向上方向键，复制上一条命令，运行代码。</p>
-<p>可以发现，在这个async 与 await结合实践中，我们看不到回调函数，非常像同步操作<br>但内部却是异步的。同时，处理异常也非常方便。</p>
+<p>可以发现，在这个async 与 await结合实践中，我们看不到回调函数，非常像同步操作<br>但内部却是异步的。同时，处理异常也非常方便。<br><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
 
     
 
@@ -619,7 +621,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -627,7 +629,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,11 +653,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

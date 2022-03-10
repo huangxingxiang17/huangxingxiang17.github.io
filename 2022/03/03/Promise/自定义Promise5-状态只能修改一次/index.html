@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="状态只能修改一次从resolve函数和reject函数入手，在改变状态之前，我们需要先判断一下，这个promiseState有没有被改过。如果说被改过，我们就没有必要去改了。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-03-03T13:28:43.000Z">
-<meta property="article:modified_time" content="2022-03-04T02:39:49.759Z">
+<meta property="article:modified_time" content="2022-03-10T07:43:54.033Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Promise">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -265,6 +267,8 @@
     <h1 id="状态只能修改一次"><a href="#状态只能修改一次" class="headerlink" title="状态只能修改一次"></a>状态只能修改一次</h1><p>从resolve函数和reject函数入手，在改变状态之前，我们需要先判断一下，这个<code>promiseState</code>有没有被改过。<br>如果说被改过，我们就没有必要去改了。<span id="more"></span></p>
 <p>所以在resolve函数和reject函数内部，在修改对象状态之前，加一个判断即可<br><code>if(self.PromiseState !== &#39;pending&#39;) return;</code></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//声明构造函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Promise</span>(<span class="params">executor</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//添加属性</span></span><br><span class="line">    <span class="built_in">this</span>.PromiseState = <span class="string">&#x27;pending&#x27;</span>;</span><br><span class="line">    <span class="built_in">this</span>.PromiseResult = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">//保存实例对象的 this 的值</span></span><br><span class="line">    <span class="keyword">const</span> self = <span class="built_in">this</span>;<span class="comment">// self _this that</span></span><br><span class="line">    <span class="comment">//resolve 函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//判断状态</span></span><br><span class="line">        <span class="keyword">if</span>(self.PromiseState !== <span class="string">&#x27;pending&#x27;</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">//1. 修改对象的状态 (promiseState)</span></span><br><span class="line">        self.PromiseState = <span class="string">&#x27;fulfilled&#x27;</span>;<span class="comment">// resolved</span></span><br><span class="line">        <span class="comment">//2. 设置对象结果值 (promiseResult)</span></span><br><span class="line">        self.PromiseResult = data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//reject 函数</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">reject</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//判断状态</span></span><br><span class="line">        <span class="keyword">if</span>(self.PromiseState !== <span class="string">&#x27;pending&#x27;</span>) <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">//1. 修改对象的状态 (promiseState)</span></span><br><span class="line">        self.PromiseState = <span class="string">&#x27;rejected&#x27;</span>;<span class="comment">// </span></span><br><span class="line">        <span class="comment">//2. 设置对象结果值 (promiseResult)</span></span><br><span class="line">        self.PromiseResult = data;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">try</span>&#123;</span><br><span class="line">        <span class="comment">//同步调用『执行器函数』</span></span><br><span class="line">        executor(resolve, reject);</span><br><span class="line">    &#125;<span class="keyword">catch</span>(e)&#123;</span><br><span class="line">        <span class="comment">//修改 promise 对象状态为『失败』</span></span><br><span class="line">        reject(e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
+
     
 
     
@@ -601,7 +605,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -609,7 +613,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -633,11 +637,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

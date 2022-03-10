@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="arguments参数列表">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-17T08:34:29.000Z">
-<meta property="article:modified_time" content="2022-02-17T08:47:43.839Z">
+<meta property="article:modified_time" content="2022-03-10T07:40:00.716Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -270,7 +272,8 @@
 <li>在调用函数时，我们所传递的实参都会在arguments中保存</li>
 <li>arguments.length可以用来获取实参的长度（数量）</li>
 <li>我们即使不定义形参，也可以通过arguments来使用实参，<br>只不过比较麻烦<br>arguments[0] 表示第一个实参<br>arguments[1] 表示第二个实参 。。。</li>
-<li>它里边有一个属性叫做callee，<br>这个属性对应一个函数对象，就是当前正在指向的函数的对象<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//console.log(arguments instanceof Array);</span></span><br><span class="line">	<span class="comment">//console.log(Array.isArray(arguments));</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//console.log(arguments[1]);</span></span><br><span class="line">	<span class="comment">//console.log(arguments.length);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//console.log(arguments.callee == fun);</span></span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line">fun(<span class="string">&quot;hello&quot;</span>,<span class="literal">true</span>);</span><br></pre></td></tr></table></figure></li>
+<li>它里边有一个属性叫做callee，<br>这个属性对应一个函数对象，就是当前正在指向的函数的对象<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params">a,b</span>)</span>&#123;</span><br><span class="line">	<span class="comment">//console.log(arguments instanceof Array);</span></span><br><span class="line">	<span class="comment">//console.log(Array.isArray(arguments));</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//console.log(arguments[1]);</span></span><br><span class="line">	<span class="comment">//console.log(arguments.length);</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//console.log(arguments.callee == fun);</span></span><br><span class="line">&#125;</span><br><span class="line">			</span><br><span class="line">fun(<span class="string">&quot;hello&quot;</span>,<span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+<img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></li>
 </ul>
 </li>
 </ol>
@@ -611,7 +614,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -619,7 +622,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -643,11 +646,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

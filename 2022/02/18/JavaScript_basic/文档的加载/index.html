@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="文档的加载浏览器在加载一个页面时，是按照自上向下的顺序加载的，">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-18T10:58:40.000Z">
-<meta property="article:modified_time" content="2022-02-18T11:18:47.224Z">
+<meta property="article:modified_time" content="2022-03-10T07:38:36.196Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JavaScript基础">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -265,7 +267,7 @@
     <h1 id="文档的加载"><a href="#文档的加载" class="headerlink" title="文档的加载"></a>文档的加载</h1><p>浏览器在加载一个页面时，是按照自上向下的顺序加载的，<span id="more"></span><br>读取到一行就运行一行,如果将script标签写到页面的上边，<br>在代码执行时，页面还没有加载，页面没有加载，DOM对象也没有加载<br>会导致无法获取到DOM对象</p>
 <p>onload事件会在整个页面加载完成之后才触发<br>为window绑定一个onload事件<br>该事件对应的响应函数将会在页面加载完成之后执行，<br>这样可以确保我们的代码执行时所有的DOM对象已经加载完毕了。</p>
 <p>所以如果想把script标签放在head标签里，<br>那我们就把要执行的代码统一放到window.onload()函数里<br>这样就能确保代码在页面加载完成后执行。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JS代码写下面，理论上运行速度更快；<br>JS代码写上面，就要绑定window.onload()函数。<br>最好还是写上边，代码修改更方便。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>JS代码写下面，理论上运行速度更快；<br>JS代码写上面，就要绑定window.onload()函数。<br>最好还是写上边，代码修改更方便。<br><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
 
     
 
@@ -603,7 +605,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -611,7 +613,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -635,11 +637,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

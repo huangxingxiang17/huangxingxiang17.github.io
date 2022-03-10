@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="Promise封装fs读取文件操作封装一个函数 mineReadFile 读取文件内容">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-03-01T08:25:35.000Z">
-<meta property="article:modified_time" content="2022-03-01T10:26:31.105Z">
+<meta property="article:modified_time" content="2022-03-10T07:46:37.618Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Promise">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -267,6 +269,8 @@
 <p>当我们封装完毕，以后想要读取文件，我们就可以直接使用。<br>而不需要在原始的ReadFile后面再写回调函数了。<br>我们可以在mineReadFile的后边then方法内直接指定回调。</p>
 <h1 id="util-promisify-方法"><a href="#util-promisify-方法" class="headerlink" title="util.promisify 方法"></a>util.promisify 方法</h1><p>先参考<a target="_blank" rel="noopener" href="http://nodejs.cn/api/util.html#utilpromisifyoriginal">util.promisify文档</a><br>对于以后使用Promise，我们不需要对每一个方法都进行封装。而是借助util.promisify方法，<br>将回调函数风格的方法，转变为Promise风格的函数。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//引入 util 模块</span></span><br><span class="line"><span class="keyword">const</span> util = <span class="built_in">require</span>(<span class="string">&#x27;util&#x27;</span>);</span><br><span class="line"><span class="comment">//引入 fs 模块</span></span><br><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="comment">//返回一个新的函数</span></span><br><span class="line"><span class="keyword">let</span> mineReadFile = util.promisify(fs.readFile);</span><br><span class="line"></span><br><span class="line">mineReadFile(<span class="string">&#x27;./resource/content.txt&#x27;</span>).then(<span class="function"><span class="params">value</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(value.toString());</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
+
     
 
     
@@ -603,7 +607,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -611,7 +615,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -635,11 +639,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

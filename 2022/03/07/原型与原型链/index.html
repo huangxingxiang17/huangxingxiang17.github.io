@@ -25,8 +25,9 @@
 <meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E5%8E%9F%E5%9E%8B%E9%93%BE%E8%A1%A5%E5%85%85.png">
 <meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%8E%A2%E7%A9%B6instanof%E6%A1%88%E4%BE%8B1.png">
 <meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%8E%A2%E7%A9%B6instanof%E6%A1%88%E4%BE%8B2.png">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-03-07T03:12:24.000Z">
-<meta property="article:modified_time" content="2022-03-08T05:47:48.169Z">
+<meta property="article:modified_time" content="2022-03-10T07:17:04.371Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JS高级">
 <meta name="twitter:card" content="summary">
@@ -359,6 +360,8 @@
 </ol>
 <h1 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h1><h2 id="测试1"><a href="#测试1" class="headerlink" title="测试1"></a>测试1</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line">A.prototype.n = <span class="number">1</span><span class="comment">//给原型对象添加属性，会影响之前和之后创建的实例对象</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> A()</span><br><span class="line">A.prototype = &#123;<span class="comment">//改变原型对象，不会影响之前创建的实例，但会影响之后创建的实例</span></span><br><span class="line">  <span class="attr">n</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">m</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> A()</span><br><span class="line"><span class="built_in">console</span>.log(b.n, b.m, c.n, c.m)<span class="comment">//1 undefined 2 3</span></span><br></pre></td></tr></table></figure>
 <h2 id="测试2"><a href="#测试2" class="headerlink" title="测试2"></a>测试2</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">F</span> (<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line"><span class="built_in">Object</span>.prototype.a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;a()&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Function</span>.prototype.b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">&#x27;b()&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F()</span><br><span class="line">f.a()</span><br><span class="line"><span class="comment">//f.b() // 无法调用</span></span><br><span class="line">F.a()</span><br><span class="line">F.b()</span><br><span class="line"><span class="built_in">console</span>.log(f)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype)</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Function</span>.prototype)</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
+
     
 
     
@@ -695,7 +698,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -703,7 +706,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -727,11 +730,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

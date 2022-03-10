@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="ES6 新增了一些 Object 对象的方法">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-26T01:45:05.000Z">
-<meta property="article:modified_time" content="2022-02-26T05:09:03.726Z">
+<meta property="article:modified_time" content="2022-03-10T07:24:28.778Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="ES6">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -266,7 +268,8 @@
 <ol>
 <li>Object.is<br>比较两个值是否严格相等，与『===』行为基本一致（除了NaN）<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.is(<span class="number">120</span>, <span class="number">120</span>));<span class="comment">// === </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.is(<span class="literal">NaN</span>, <span class="literal">NaN</span>));<span class="comment">//true </span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">NaN</span> === <span class="literal">NaN</span>);<span class="comment">//false </span></span><br></pre></td></tr></table></figure></li>
 <li>Object.assign<br>对象的合并，将源对象的所有可枚举属性，复制到目标对象<br>这用在配置的合并非常合适<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> config1 = &#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">pass</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">test</span>: <span class="string">&#x27;test&#x27;</span><span class="comment">//前面对象有后面对象没有的属性，则该属性不会覆盖</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">const</span> config2 = &#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;http://atguigu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">33060</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;atguigu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">pass</span>: <span class="string">&#x27;iloveyou&#x27;</span>,</span><br><span class="line">    <span class="attr">test2</span>: <span class="string">&#x27;test2&#x27;</span><span class="comment">//后面对象有前面对象没有的属性，则该属性不会覆盖</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.assign(config1, config2));<span class="comment">//后面的覆盖前面的</span></span><br></pre></td></tr></table></figure></li>
-<li>Object.setPrototypeOf<br>可以直接设置对象的原型<br>虽然有这个方法，但不建议这样做<br>正确的做法是：通过Object.create。在创建对象时，就把原型对象设置上<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> school = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;尚硅谷&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> cities = &#123;</span><br><span class="line">    <span class="attr">xiaoqu</span>: [<span class="string">&#x27;北京&#x27;</span>,<span class="string">&#x27;上海&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(school, cities);<span class="comment">//前面的把后面的设置为原型</span></span><br><span class="line"><span class="built_in">console</span>.log(school);</span><br></pre></td></tr></table></figure></li>
+<li>Object.setPrototypeOf<br>可以直接设置对象的原型<br>虽然有这个方法，但不建议这样做<br>正确的做法是：通过Object.create。在创建对象时，就把原型对象设置上<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> school = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&#x27;尚硅谷&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> cities = &#123;</span><br><span class="line">    <span class="attr">xiaoqu</span>: [<span class="string">&#x27;北京&#x27;</span>,<span class="string">&#x27;上海&#x27;</span>,<span class="string">&#x27;深圳&#x27;</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(school, cities);<span class="comment">//前面的把后面的设置为原型</span></span><br><span class="line"><span class="built_in">console</span>.log(school);</span><br></pre></td></tr></table></figure>
+<img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></li>
 </ol>
 
     
@@ -605,7 +608,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -613,7 +616,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -637,11 +640,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">

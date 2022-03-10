@@ -17,11 +17,13 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="分类   基本(值)类型 String: 任意字符串 Number: 任意的数字 boolean: true&#x2F;false">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-03-06T01:17:17.000Z">
-<meta property="article:modified_time" content="2022-03-06T01:34:54.523Z">
+<meta property="article:modified_time" content="2022-03-10T07:16:38.238Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JS高级">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -303,6 +305,8 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a</span><br><span class="line"><span class="built_in">console</span>.log(a, <span class="keyword">typeof</span> a, <span class="keyword">typeof</span> a===<span class="string">&#x27;undefined&#x27;</span>,a===<span class="literal">undefined</span> )  <span class="comment">// undefined &#x27;undefined&#x27; true true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span>===<span class="string">&#x27;undefined&#x27;</span>)<span class="comment">//false</span></span><br><span class="line">a = <span class="number">4</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a===<span class="string">&#x27;number&#x27;</span>)</span><br><span class="line">a = <span class="string">&#x27;atguigu&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a===<span class="string">&#x27;string&#x27;</span>,<span class="keyword">typeof</span> a===<span class="string">&#x27;String&#x27;</span>)<span class="comment">//true false</span></span><br><span class="line">a = <span class="literal">true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a===<span class="string">&#x27;boolean&#x27;</span>)</span><br><span class="line">a = <span class="literal">null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a, a===<span class="literal">null</span>) <span class="comment">// &#x27;object&#x27;</span></span><br></pre></td></tr></table></figure>
 <p>instanceof可以判断对象的具体类型<br>instance 实例<br>of 的<br>A instanceof B<br>A是不是B的实例</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b1 = &#123;</span><br><span class="line">  <span class="attr">b2</span>: [<span class="number">1</span>, <span class="string">&#x27;abc&#x27;</span>, <span class="built_in">console</span>.log],</span><br><span class="line">  <span class="attr">b3</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;b3&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&#x27;xfzhang&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(b1 <span class="keyword">instanceof</span> <span class="built_in">Object</span>, b1 <span class="keyword">instanceof</span> <span class="built_in">Array</span>) <span class="comment">// true  false</span></span><br><span class="line"><span class="built_in">console</span>.log(b1.b2 <span class="keyword">instanceof</span> <span class="built_in">Array</span>, b1.b2 <span class="keyword">instanceof</span> <span class="built_in">Object</span>) <span class="comment">// true true</span></span><br><span class="line"><span class="built_in">console</span>.log(b1.b3 <span class="keyword">instanceof</span> <span class="built_in">Function</span>, b1.b3 <span class="keyword">instanceof</span> <span class="built_in">Object</span>) <span class="comment">// true true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断b3是不是函数</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b1.b3===<span class="string">&#x27;function&#x27;</span>) <span class="comment">// true</span></span><br><span class="line"><span class="comment">//判断b2数组的第三个元素是不是函数</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b1.b2[<span class="number">2</span>]===<span class="string">&#x27;function&#x27;</span>)<span class="comment">//true</span></span><br><span class="line"><span class="comment">//调用该函数</span></span><br><span class="line">b1.b2[<span class="number">2</span>](<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(b1.b3()())<span class="comment">//输出xfzhang</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
+
     
 
     
@@ -639,7 +643,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -647,7 +651,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -671,11 +675,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">
