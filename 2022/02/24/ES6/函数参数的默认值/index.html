@@ -17,13 +17,11 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="ES6 允许给函数参数赋值初始值  形参初始值 具有默认值的参数, 一般位置要靠后(潜规则)">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-24T02:38:48.000Z">
-<meta property="article:modified_time" content="2022-03-10T07:24:35.097Z">
+<meta property="article:modified_time" content="2022-03-10T23:31:05.510Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="ES6">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -276,7 +274,6 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">&#123;host, username, password, port&#125;</span>)</span>&#123;   </span><br><span class="line">    <span class="built_in">console</span>.log(host)</span><br><span class="line">    <span class="built_in">console</span>.log(username)</span><br><span class="line">    <span class="built_in">console</span>.log(password)</span><br><span class="line">    <span class="built_in">console</span>.log(port)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">connect(&#123;</span><br><span class="line">    <span class="attr">host</span>: <span class="string">&#x27;atguigu.com&#x27;</span>,</span><br><span class="line">    <span class="attr">username</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>二，我们还可以给属性赋初始值<br>没有传，用默认值</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">connect</span>(<span class="params">&#123;host=<span class="string">&quot;127.0.0.1&quot;</span>, username,password, port&#125;</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(host)</span><br><span class="line">    <span class="built_in">console</span>.log(username)</span><br><span class="line">    <span class="built_in">console</span>.log(password)</span><br><span class="line">    <span class="built_in">console</span>.log(port)</span><br><span class="line">&#125;</span><br><span class="line">connect(&#123;</span><br><span class="line">    <span class="comment">//host: &#x27;atguigu.com&#x27;,</span></span><br><span class="line">    <span class="attr">username</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">password</span>: <span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">    <span class="attr">port</span>: <span class="number">3306</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
 
     
 
@@ -610,10 +607,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
@@ -623,6 +616,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -646,11 +643,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">

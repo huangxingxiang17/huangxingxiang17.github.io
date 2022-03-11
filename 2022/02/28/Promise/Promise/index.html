@@ -17,13 +17,11 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="介绍Promise 是什么? 抽象表达:  Promise 是一门新的技术(ES6 规范) Promise 是 JS 中进行异步编程的新解决方案">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-28T12:31:44.000Z">
-<meta property="article:modified_time" content="2022-03-10T07:46:27.626Z">
+<meta property="article:modified_time" content="2022-03-10T23:40:34.161Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="Promise">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -295,7 +293,6 @@
 <h2 id="完善"><a href="#完善" class="headerlink" title="完善"></a>完善</h2><p>弹出信息中添加抽奖号码。</p>
 <p>Promise函数的作用，除了封装异步操作之外，还可以获取异步任务中，成功或失败的结果值。<br>首先，我们直接把随机数 n 作为结果值。<br>其次，把 n 作为resolve函数和reject函数实参，<br>然后，我们在调用then方法时，就能拿到成功或失败的结果。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//生成随机数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">rand</span>(<span class="params">m, n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.random() * (n - m + <span class="number">1</span>)) + m - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取元素对象</span></span><br><span class="line"><span class="keyword">const</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#btn&#x27;</span>);</span><br><span class="line"><span class="comment">//绑定单击事件</span></span><br><span class="line">btn.addEventListener(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> p = <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">let</span> n = rand(<span class="number">1</span>, <span class="number">100</span>);</span><br><span class="line">            <span class="keyword">if</span> (n &lt;= <span class="number">30</span>) &#123;</span><br><span class="line">                resolve(n);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                reject(n);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//调用 then 方法</span></span><br><span class="line">    <span class="comment">//value 值  </span></span><br><span class="line">    <span class="comment">//reason 理由</span></span><br><span class="line">    p.then(<span class="function">(<span class="params">value</span>)=&gt;</span>&#123;</span><br><span class="line">        alert(<span class="string">`恭喜恭喜, 奖品为 10万 RMB 劳斯莱斯优惠券，中奖号码为`</span>+value);</span><br><span class="line">    &#125;,<span class="function">(<span class="params">reason</span>)=&gt;</span>&#123;</span><br><span class="line">        alert(<span class="string">`再接再厉，你的数字为`</span>+reason);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
 
     
 
@@ -629,10 +626,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
@@ -642,6 +635,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -665,11 +662,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">

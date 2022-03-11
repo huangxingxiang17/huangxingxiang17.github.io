@@ -17,13 +17,11 @@
 <meta property="og:site_name" content="黄兴祥的Blog">
 <meta property="og:description" content="axios文档">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
 <meta property="article:published_time" content="2022-02-28T01:43:29.000Z">
-<meta property="article:modified_time" content="2022-03-10T07:22:09.785Z">
+<meta property="article:modified_time" content="2022-03-10T23:28:28.961Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="AJAX">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -281,7 +279,6 @@
 <li>axios 通用方式发请求</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">btns[<span class="number">2</span>].onclick =<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    axios(&#123;</span><br><span class="line">        <span class="comment">//请求方法</span></span><br><span class="line">        <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">        <span class="comment">//url</span></span><br><span class="line">        <span class="attr">url</span>:<span class="string">&#x27;/axios-server&#x27;</span>,</span><br><span class="line">        <span class="comment">//url参数</span></span><br><span class="line">        <span class="attr">params</span>: &#123;</span><br><span class="line">            <span class="attr">vip</span>:<span class="number">10</span>,</span><br><span class="line">            <span class="attr">level</span>:<span class="number">30</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">//头信息</span></span><br><span class="line">        <span class="attr">headers</span>:&#123;</span><br><span class="line">            <span class="attr">a</span>:<span class="number">100</span>,</span><br><span class="line">            <span class="attr">b</span>:<span class="number">200</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="comment">//请求体参数</span></span><br><span class="line">        <span class="attr">data</span>:&#123;</span><br><span class="line">            <span class="attr">username</span>: <span class="string">&#x27;admin&#x27;</span>,</span><br><span class="line">            <span class="attr">password</span>: <span class="string">&#x27;admin&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;).then(<span class="function"><span class="params">response</span>=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">//响应状态码</span></span><br><span class="line">        <span class="built_in">console</span>.log(response.status);</span><br><span class="line">        <span class="comment">//响应状态字符串</span></span><br><span class="line">        <span class="built_in">console</span>.log(response.statusText);</span><br><span class="line">        <span class="comment">//响应头信息</span></span><br><span class="line">        <span class="built_in">console</span>.log(response.headers);</span><br><span class="line">        <span class="comment">//响应体</span></span><br><span class="line">        <span class="built_in">console</span>.log(response.data);</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%90%9C%E7%B4%A2%E6%A1%86%E4%BC%A0%E6%92%AD%E6%A0%B7%E5%BC%8F-%E7%99%BD%E8%89%B2%E7%89%88.jpg"></p>
 
     
 
@@ -615,10 +612,6 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
@@ -628,6 +621,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Html基础</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">JS高级</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -651,11 +648,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">React</a>
+                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Promise</a>
+                <a href="javascript:void(0)" class="js-tag color1">React</a>
               </li>
              
               <li class="article-tag-list-item">
