@@ -10,18 +10,20 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="什么是对象? 多个数据的封装体 用来保存多个数据的容器 一个对象代表现实中的一个事物">
+  <meta name="description" content="对象 什么是对象? 多个数据的封装体 用来保存多个数据的容器 一个对象代表现实中的一个事物">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对象">
 <meta property="og:url" content="http://huangxingxiang17.github.io/2022/03/06/JS_advance/%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
-<meta property="og:description" content="什么是对象? 多个数据的封装体 用来保存多个数据的容器 一个对象代表现实中的一个事物">
+<meta property="og:description" content="对象 什么是对象? 多个数据的封装体 用来保存多个数据的容器 一个对象代表现实中的一个事物">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E5%AF%B9%E8%B1%A1.png">
 <meta property="article:published_time" content="2022-03-06T07:55:28.000Z">
-<meta property="article:modified_time" content="2022-03-10T23:23:29.666Z">
+<meta property="article:modified_time" content="2022-03-14T11:31:08.276Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JS高级">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E5%AF%B9%E8%B1%A1.png">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -242,7 +244,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">270字</span>
+      <span class="post-count">276字</span>
     </span>
   </span>
 
@@ -262,7 +264,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <ol>
+    <p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E5%AF%B9%E8%B1%A1.png"></p>
+<hr>
+<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><ol>
 <li>什么是对象?<ul>
 <li>多个数据的封装体</li>
 <li>用来保存多个数据的容器</li>
@@ -280,13 +284,13 @@
 </li>
 <li>如何访问对象内部数据?<ul>
 <li><code>.属性名</code>: 编码简单, 有时不能用</li>
-<li>[‘属性名’]: 编码麻烦, 能通用</li>
+<li><code>[&#39;属性名&#39;]</code>: 编码麻烦, 能通用</li>
 </ul>
 </li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> p = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;Tom&#x27;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">12</span>,</span><br><span class="line">  <span class="attr">setName</span>: <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.name = name</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">setAge</span>: <span class="function"><span class="keyword">function</span> (<span class="params">age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.age = age</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">p.setName(<span class="string">&#x27;Bob&#x27;</span>)</span><br><span class="line">p[<span class="string">&#x27;setAge&#x27;</span>](<span class="number">23</span>)</span><br><span class="line"><span class="built_in">console</span>.log(p.name, p[<span class="string">&#x27;age&#x27;</span>])</span><br></pre></td></tr></table></figure>
 <hr>
-<p>问题: 什么时候必须使用[‘属性名’]的方式?</p>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>什么时候必须使用<code>[&#39;属性名&#39;]</code>的方式?</p>
 <ol>
 <li>属性名包含特殊字符: - 空格</li>
 <li>属性名不确定</li>
@@ -480,7 +484,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.</span> <span class="toc-text">对象</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AE%E9%A2%98"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -625,11 +629,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">

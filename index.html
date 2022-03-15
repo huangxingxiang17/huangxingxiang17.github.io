@@ -210,7 +210,7 @@
             
 
   
-    <article id="post-JS_advance/H5-Web-Workers多线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-非单文件组件-VueComponent" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -218,7 +218,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/10/JS_advance/H5-Web-Workers%E5%A4%9A%E7%BA%BF%E7%A8%8B/" target="_blank">H5-Web-Workers多线程</a>
+	  <a class="article-title" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-VueComponent/" target="_blank">VueComponent</a>
   
     </h1>
   
@@ -226,8 +226,8 @@
 
   
   
-<a href="/2022/03/10/JS_advance/H5-Web-Workers%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2022-03-10T14:19:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
+<a href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-VueComponent/" class="archive-article-date">
+        <time datetime="2022-03-15T06:57:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -239,9 +239,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="Web-Workers"><a href="#Web-Workers" class="headerlink" title="Web Workers"></a>Web Workers</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Web Workers 是 HTML5 提供的一个javascript多线程解决方案<br>我们可以将一些大计算量的代码交由web Worker运行而不冻结用户界面<br>但是子线程完全受主线程控制，且不得操作DOM。<br>所以，这个新标准并没有改变JavaScript单线程的本质
+    <h1 id="VueComponent"><a href="#VueComponent" class="headerlink" title="VueComponent"></a>VueComponent</h1><ol>
+<li>school组件本质是一个名为VueComponent的构造函数，且不是程序员定义的，是Vue.extend生成的。</li>
+<li>我们只需要写<code>&lt;school/&gt;</code>或<code>&lt;school&gt;&lt;/school&gt;</code>，Vue解析时会帮我们创建school组件的实例对象，<br>即Vue帮我们执行的：new VueComponent(options)。</li>
+<li><strong>特别注意：每次调用Vue.extend，返回的都是一个全新的VueComponent！！！！</strong>
     
-    <a class="article-more-a" href="/2022/03/10/JS_advance/H5-Web-Workers%E5%A4%9A%E7%BA%BF%E7%A8%8B/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-VueComponent/#more">more >></a>
     
     
 
@@ -258,7 +261,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -270,7 +273,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -279,7 +282,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/10/JS_advance/H5-Web-Workers%E5%A4%9A%E7%BA%BF%E7%A8%8B/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-VueComponent/">展开全文 >></a>
     </p>
     
 
@@ -309,7 +312,7 @@
 
 
   
-    <article id="post-JS_advance/事件循环模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-非单文件组件-组件嵌套" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -317,7 +320,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/10/JS_advance/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%A8%A1%E5%9E%8B/" target="_blank">事件循环模型</a>
+	  <a class="article-title" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E7%BB%84%E4%BB%B6%E5%B5%8C%E5%A5%97/" target="_blank">非单文件组件-组件嵌套</a>
   
     </h1>
   
@@ -325,8 +328,8 @@
 
   
   
-<a href="/2022/03/10/JS_advance/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-        <time datetime="2022-03-10T11:01:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
+<a href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E7%BB%84%E4%BB%B6%E5%B5%8C%E5%A5%97/" class="archive-article-date">
+        <time datetime="2022-03-15T06:42:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -338,9 +341,11 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="模型原理图"><a href="#模型原理图" class="headerlink" title="模型原理图"></a>模型原理图
+    <h1 id="组件嵌套"><a href="#组件嵌套" class="headerlink" title="组件嵌套"></a>组件嵌套</h1><ol>
+<li>如果A组件包含B组件，<br>那么B组件在A组件之前定义，<br>在A组件的<code>components</code>配置项中注册，<br>在A组件的<code>template</code>配置项中编写组件标签。</li>
+<li>app组件一人之下，万人之上。即app组件只接受vm直接管理，并管理其他组件。
     
-    <a class="article-more-a" href="/2022/03/10/JS_advance/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%A8%A1%E5%9E%8B/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E7%BB%84%E4%BB%B6%E5%B5%8C%E5%A5%97/#more">more >></a>
     
     
 
@@ -357,7 +362,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -369,7 +374,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -378,7 +383,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/10/JS_advance/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E7%BB%84%E4%BB%B6%E5%B5%8C%E5%A5%97/">展开全文 >></a>
     </p>
     
 
@@ -408,7 +413,7 @@
 
 
   
-    <article id="post-JS_advance/JS是单线程的" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-非单文件组件-几个注意点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -416,7 +421,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/10/JS_advance/JS%E6%98%AF%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84/" target="_blank">JS是单线程的</a>
+	  <a class="article-title" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%87%A0%E4%B8%AA%E6%B3%A8%E6%84%8F%E7%82%B9/" target="_blank">非单文件组件-几个注意点</a>
   
     </h1>
   
@@ -424,8 +429,8 @@
 
   
   
-<a href="/2022/03/10/JS_advance/JS%E6%98%AF%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84/" class="archive-article-date">
-        <time datetime="2022-03-10T10:35:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
+<a href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%87%A0%E4%B8%AA%E6%B3%A8%E6%84%8F%E7%82%B9/" class="archive-article-date">
+        <time datetime="2022-03-15T06:30:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -437,225 +442,24 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <ol>
-<li><p>如何证明js执行是单线程的?</p>
-<ul>
-<li>setTimeout()的回调函数是在主线程执行的</li>
-<li>定时器回调函数只有在运行栈中的代码全部执行完后才有可能执行
-    
-    <a class="article-more-a" href="/2022/03/10/JS_advance/JS%E6%98%AF%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/10/JS_advance/JS%E6%98%AF%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS_advance/定时器引发的思考" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/10/JS_advance/%E5%AE%9A%E6%97%B6%E5%99%A8%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/" target="_blank">定时器引发的思考</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/10/JS_advance/%E5%AE%9A%E6%97%B6%E5%99%A8%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/" class="archive-article-date">
-        <time datetime="2022-03-10T09:45:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li>定时器真是定时执行的吗?</li>
-</ol>
-<ul>
-<li>定时器并不能保证真正定时执行</li>
-<li>一般会延迟一丁点(可以接受), 也有可能延迟很长时间(不能接受)
-    
-    <a class="article-more-a" href="/2022/03/10/JS_advance/%E5%AE%9A%E6%97%B6%E5%99%A8%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/10/JS_advance/%E5%AE%9A%E6%97%B6%E5%99%A8%E5%BC%95%E5%8F%91%E7%9A%84%E6%80%9D%E8%80%83/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JS_advance/浏览器内核" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2022/03/10/JS_advance/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" target="_blank">浏览器内核</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2022/03/10/JS_advance/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/" class="archive-article-date">
-        <time datetime="2022-03-10T09:41:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h1><ol>
-<li>什么是浏览器内核?<ul>
-<li>支持浏览器运行的最核心的程序</li>
+    <h1 id="几个注意点"><a href="#几个注意点" class="headerlink" title="几个注意点"></a>几个注意点</h1><h2 id="关于组件名"><a href="#关于组件名" class="headerlink" title="关于组件名"></a>关于组件名</h2><ol>
+<li>一个单词组成：<ul>
+<li>第一种写法(首字母小写)：<code>school</code></li>
+<li>第二种写法(首字母大写)：<code>School</code></li>
 </ul>
 </li>
-<li>不同的浏览器可能不太一样<ul>
-<li>Chrome, Safari: webkit</li>
-<li>firefox: Gecko</li>
-<li>IE: Trident</li>
-<li>360,搜狗等国内浏览器: Trident + webkit
+<li>多个单词组成：<ul>
+<li>第一种写法(kebab-case命名)：<code>my-school</code></li>
+<li>第二种写法(CamelCase命名)：<code>MySchool</code> (需要Vue脚手架支持)</li>
+</ul>
+</li>
+</ol>
+<p>备注：</p>
+<ol>
+<li>组件名尽可能回避HTML中已有的元素名称，例如：h2、H2都不行。</li>
+<li>可以使用name配置项指定组件在开发者工具中呈现的名字。
     
-    <a class="article-more-a" href="/2022/03/10/JS_advance/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%87%A0%E4%B8%AA%E6%B3%A8%E6%84%8F%E7%82%B9/#more">more >></a>
     
     
 
@@ -672,7 +476,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -684,7 +488,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -693,7 +497,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/10/JS_advance/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%86%85%E6%A0%B8/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%87%A0%E4%B8%AA%E6%B3%A8%E6%84%8F%E7%82%B9/">展开全文 >></a>
     </p>
     
 
@@ -723,7 +527,7 @@
 
 
   
-    <article id="post-JS_advance/进程与线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-非单文件组件-基本使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -731,7 +535,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/10/JS_advance/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" target="_blank">进程与线程</a>
+	  <a class="article-title" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" target="_blank">非单文件组件-基本使用</a>
   
     </h1>
   
@@ -739,8 +543,8 @@
 
   
   
-<a href="/2022/03/10/JS_advance/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/" class="archive-article-date">
-        <time datetime="2022-03-10T08:49:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-10</time>
+<a href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+        <time datetime="2022-03-15T06:19:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -752,9 +556,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="进程-process"><a href="#进程-process" class="headerlink" title="进程(process)"></a>进程(process)</h1><p>程序的一次执行, 它占有一片独有的内存空间<br>可以通过windows任务管理器查看进程
+    <h1 id="Vue中使用组件的三大步骤："><a href="#Vue中使用组件的三大步骤：" class="headerlink" title="Vue中使用组件的三大步骤："></a>Vue中使用组件的三大步骤：</h1><ol>
+<li>定义组件(创建组件)  </li>
+<li>注册组件</li>
+<li>使用组件(写组件标签)
     
-    <a class="article-more-a" href="/2022/03/10/JS_advance/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/#more">more >></a>
     
     
 
@@ -771,7 +578,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -783,7 +590,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -792,7 +599,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/10/JS_advance/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E9%9D%9E%E5%8D%95%E6%96%87%E4%BB%B6%E7%BB%84%E4%BB%B6-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">展开全文 >></a>
     </p>
     
 
@@ -822,7 +629,7 @@
 
 
   
-    <article id="post-JS_advance/继承模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-对组件的理解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -830,7 +637,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/09/JS_advance/%E7%BB%A7%E6%89%BF%E6%A8%A1%E5%BC%8F/" target="_blank">继承模式</a>
+	  <a class="article-title" href="/2022/03/15/%E5%AF%B9%E7%BB%84%E4%BB%B6%E7%9A%84%E7%90%86%E8%A7%A3/" target="_blank">对组件的理解</a>
   
     </h1>
   
@@ -838,8 +645,8 @@
 
   
   
-<a href="/2022/03/09/JS_advance/%E7%BB%A7%E6%89%BF%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2022-03-09T10:25:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-09</time>
+<a href="/2022/03/15/%E5%AF%B9%E7%BB%84%E4%BB%B6%E7%9A%84%E7%90%86%E8%A7%A3/" class="archive-article-date">
+        <time datetime="2022-03-15T06:04:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -851,14 +658,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="原型链继承"><a href="#原型链继承" class="headerlink" title="原型链继承"></a>原型链继承</h1><ol>
-<li>套路<ol>
-<li>定义父类型构造函数</li>
-<li>给父类型的原型添加方法</li>
-<li>定义子类型的构造函数</li>
-<li>创建父类型的对象赋值给子类型的原型
+    <h1 id="对组件的理解"><a href="#对组件的理解" class="headerlink" title="对组件的理解"></a>对组件的理解</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>传统方式编写应用<br>存在的问题：</p>
+<ol>
+<li>依赖关系混乱，不好维护</li>
+<li>代码复用率不高。
     
-    <a class="article-more-a" href="/2022/03/09/JS_advance/%E7%BB%A7%E6%89%BF%E6%A8%A1%E5%BC%8F/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E5%AF%B9%E7%BB%84%E4%BB%B6%E7%9A%84%E7%90%86%E8%A7%A3/#more">more >></a>
     
     
 
@@ -875,7 +680,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -887,7 +692,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -896,7 +701,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/09/JS_advance/%E7%BB%A7%E6%89%BF%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E5%AF%B9%E7%BB%84%E4%BB%B6%E7%9A%84%E7%90%86%E8%A7%A3/">展开全文 >></a>
     </p>
     
 
@@ -926,7 +731,7 @@
 
 
   
-    <article id="post-JS_advance/对象创建模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-分析生命周期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -934,7 +739,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/09/JS_advance/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F/" target="_blank">对象创建模式</a>
+	  <a class="article-title" href="/2022/03/15/%E5%88%86%E6%9E%90%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_blank">分析生命周期</a>
   
     </h1>
   
@@ -942,8 +747,8 @@
 
   
   
-<a href="/2022/03/09/JS_advance/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F/" class="archive-article-date">
-        <time datetime="2022-03-09T10:01:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-09</time>
+<a href="/2022/03/15/%E5%88%86%E6%9E%90%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="archive-article-date">
+        <time datetime="2022-03-15T03:34:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -955,14 +760,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><ol>
-<li>Object构造函数模式</li>
-<li>对象字面量模式</li>
-<li>工厂模式</li>
-<li>自定义构造函数模式</li>
-<li>构造函数+原型的组合模式
+    <h1 id="分析生命周期"><a href="#分析生命周期" class="headerlink" title="分析生命周期"></a>分析生命周期</h1><p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png"></p>
+<p>一共有4对生命周期钩子。<br>beforeCreate与created（注意：创建之前，指的是数据监测与数据代理创建之前。）<br>beforeMount与mounted<br>beforeUpdate与updated<br>beforeDestroy与destroyed<br>注意点：在beforeUpdate生命周期钩子中，页面尚未和数据保持同步
     
-    <a class="article-more-a" href="/2022/03/09/JS_advance/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E5%88%86%E6%9E%90%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/#more">more >></a>
     
     
 
@@ -979,7 +780,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -991,7 +792,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -1000,7 +801,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/09/JS_advance/%E5%AF%B9%E8%B1%A1%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%BC%8F/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E5%88%86%E6%9E%90%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">展开全文 >></a>
     </p>
     
 
@@ -1030,7 +831,7 @@
 
 
   
-    <article id="post-JS_advance/思维导图合集" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-引出生命周期" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1038,7 +839,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/09/JS_advance/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%90%88%E9%9B%86/" target="_blank">思维导图合集</a>
+	  <a class="article-title" href="/2022/03/15/%E5%BC%95%E5%87%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" target="_blank">引出生命周期</a>
   
     </h1>
   
@@ -1046,8 +847,8 @@
 
   
   
-<a href="/2022/03/09/JS_advance/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%90%88%E9%9B%86/" class="archive-article-date">
-        <time datetime="2022-03-09T05:11:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-09</time>
+<a href="/2022/03/15/%E5%BC%95%E5%87%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" class="archive-article-date">
+        <time datetime="2022-03-15T03:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -1059,6 +860,13 @@
   
   <div class="article-entry" itemprop="articleBody">
     
+    <h1 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h1><ol>
+<li>又名：生命周期回调函数、生命周期函数、生命周期钩子。</li>
+<li>是什么：Vue在关键时刻帮我们调用的一些特殊名称的函数。</li>
+<li>生命周期函数的名字不可更改，但函数的具体内容是程序员根据需求编写的。</li>
+<li>生命周期函数中的this指向是vm 或 组件实例对象。
+    
+    <a class="article-more-a" href="/2022/03/15/%E5%BC%95%E5%87%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/#more">more >></a>
     
     
 
@@ -1070,11 +878,33 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/09/JS_advance/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%90%88%E9%9B%86/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E5%BC%95%E5%87%BA%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">展开全文 >></a>
     </p>
     
 
@@ -1104,7 +934,7 @@
 
 
   
-    <article id="post-JS_advance/闭包面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-自定义指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -1112,7 +942,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2022/03/09/JS_advance/%E9%97%AD%E5%8C%85%E9%9D%A2%E8%AF%95%E9%A2%98/" target="_blank">闭包面试题</a>
+	  <a class="article-title" href="/2022/03/15/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" target="_blank">自定义指令</a>
   
     </h1>
   
@@ -1120,8 +950,8 @@
 
   
   
-<a href="/2022/03/09/JS_advance/%E9%97%AD%E5%8C%85%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
-        <time datetime="2022-03-09T03:38:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-09</time>
+<a href="/2022/03/15/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/" class="archive-article-date">
+        <time datetime="2022-03-15T01:42:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-15</time>
 </a>
 
   
@@ -1133,9 +963,9 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h1 id="面试题1"><a href="#面试题1" class="headerlink" title="面试题1"></a>面试题1</h1><p>请问以下两个代码片段分别输出什么？
+    <h1 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h1><h2 id="定义语法"><a href="#定义语法" class="headerlink" title="定义语法"></a>定义语法</h2><h3 id="局部指令"><a href="#局部指令" class="headerlink" title="局部指令"></a>局部指令
     
-    <a class="article-more-a" href="/2022/03/09/JS_advance/%E9%97%AD%E5%8C%85%E9%9D%A2%E8%AF%95%E9%A2%98/#more">more >></a>
+    <a class="article-more-a" href="/2022/03/15/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/#more">more >></a>
     
     
 
@@ -1152,7 +982,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">JS高级</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -1164,7 +994,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
         		</li>
       		
 		</ul>
@@ -1173,7 +1003,205 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2022/03/09/JS_advance/%E9%97%AD%E5%8C%85%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
+      <a class="article-more-a" href="/2022/03/15/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8C%87%E4%BB%A4/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-内置指令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/14/%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/" target="_blank">内置指令</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/14/%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/" class="archive-article-date">
+        <time datetime="2022-03-14T02:31:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="复习"><a href="#复习" class="headerlink" title="复习"></a>复习</h1><p>我们学过的指令：<br><code>v-bind</code><br>单向绑定解析表达式, 可简写为 :xxx<br><code>v-model</code><br>双向数据绑定
+    
+    <a class="article-more-a" href="/2022/03/14/%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/14/%E5%86%85%E7%BD%AE%E6%8C%87%E4%BB%A4/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-过滤器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2022/03/14/%E8%BF%87%E6%BB%A4%E5%99%A8/" target="_blank">过滤器</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2022/03/14/%E8%BF%87%E6%BB%A4%E5%99%A8/" class="archive-article-date">
+        <time datetime="2022-03-14T02:27:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h1><p>定义：对要显示的数据进行特定格式化后再显示（适用于一些简单逻辑的处理）。
+    
+    <a class="article-more-a" href="/2022/03/14/%E8%BF%87%E6%BB%A4%E5%99%A8/#more">more >></a>
+    
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2022/03/14/%E8%BF%87%E6%BB%A4%E5%99%A8/">展开全文 >></a>
     </p>
     
 
@@ -1205,7 +1233,7 @@
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
     </nav>
   
 
@@ -1332,11 +1360,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">

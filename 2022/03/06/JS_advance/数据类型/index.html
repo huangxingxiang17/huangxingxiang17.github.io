@@ -10,18 +10,20 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="分类   基本(值)类型 String: 任意字符串 Number: 任意的数字 boolean: true&#x2F;false">
+  <meta name="description" content="分类 基本(值)类型 String: 任意字符串 Number: 任意的数字 boolean: true&#x2F;false">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据类型">
 <meta property="og:url" content="http://huangxingxiang17.github.io/2022/03/06/JS_advance/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="黄兴祥的Blog">
-<meta property="og:description" content="分类   基本(值)类型 String: 任意字符串 Number: 任意的数字 boolean: true&#x2F;false">
+<meta property="og:description" content="分类 基本(值)类型 String: 任意字符串 Number: 任意的数字 boolean: true&#x2F;false">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png">
 <meta property="article:published_time" content="2022-03-06T01:17:17.000Z">
-<meta property="article:modified_time" content="2022-03-10T23:25:14.396Z">
+<meta property="article:modified_time" content="2022-03-12T11:14:23.641Z">
 <meta property="article:author" content="黄兴祥">
 <meta property="article:tag" content="JS高级">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png">
   
     <link rel="alternative" href="/atom.xml" title="黄兴祥的Blog" type="application/atom+xml">
   
@@ -262,10 +264,8 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <ol>
-<li>分类</li>
-</ol>
-<ul>
+    <p><img src="https://gitee.com/huangxingxiang/image/raw/master/img/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png"></p>
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><ul>
 <li>基本(值)类型<ul>
 <li>String: 任意字符串</li>
 <li>Number: 任意的数字</li>
@@ -281,28 +281,27 @@
 </ul>
 </li>
 </ul>
-<ol start="2">
-<li>判断</li>
-</ol>
-<ul>
-<li>typeof:<ul>
+<hr>
+<h1 id="判断"><a href="#判断" class="headerlink" title="判断"></a>判断</h1><ul>
+<li><code>typeof</code>:<ul>
 <li>可以判断: undefined/ 数值 / 字符串 / 布尔值 / function</li>
 <li><strong>不能判断</strong>: null与object  object与array</li>
 </ul>
 </li>
-<li>instanceof:<ul>
+<li><code>instanceof</code>:<ul>
 <li>判断对象的具体类型</li>
 </ul>
 </li>
-<li>===<ul>
+<li><code>===</code><ul>
 <li>可以判断: undefined, null</li>
 </ul>
 </li>
 </ul>
-<p>typeof返回数据类型的字符串表达</p>
+<p><code>typeof</code>返回数据类型的字符串表达</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a</span><br><span class="line"><span class="built_in">console</span>.log(a, <span class="keyword">typeof</span> a, <span class="keyword">typeof</span> a===<span class="string">&#x27;undefined&#x27;</span>,a===<span class="literal">undefined</span> )  <span class="comment">// undefined &#x27;undefined&#x27; true true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span>===<span class="string">&#x27;undefined&#x27;</span>)<span class="comment">//false</span></span><br><span class="line">a = <span class="number">4</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a===<span class="string">&#x27;number&#x27;</span>)</span><br><span class="line">a = <span class="string">&#x27;atguigu&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a===<span class="string">&#x27;string&#x27;</span>,<span class="keyword">typeof</span> a===<span class="string">&#x27;String&#x27;</span>)<span class="comment">//true false</span></span><br><span class="line">a = <span class="literal">true</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a===<span class="string">&#x27;boolean&#x27;</span>)</span><br><span class="line">a = <span class="literal">null</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a, a===<span class="literal">null</span>) <span class="comment">// &#x27;object&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>instanceof可以判断对象的具体类型<br>instance 实例<br>of 的<br>A instanceof B<br>A是不是B的实例</p>
+<p><code>instanceof</code>可以判断对象的具体类型<br>instance 实例<br>of 的<br>A instanceof B<br>A是不是B的实例?</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b1 = &#123;</span><br><span class="line">  <span class="attr">b2</span>: [<span class="number">1</span>, <span class="string">&#x27;abc&#x27;</span>, <span class="built_in">console</span>.log],</span><br><span class="line">  <span class="attr">b3</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;b3&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="string">&#x27;xfzhang&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(b1 <span class="keyword">instanceof</span> <span class="built_in">Object</span>, b1 <span class="keyword">instanceof</span> <span class="built_in">Array</span>) <span class="comment">// true  false</span></span><br><span class="line"><span class="built_in">console</span>.log(b1.b2 <span class="keyword">instanceof</span> <span class="built_in">Array</span>, b1.b2 <span class="keyword">instanceof</span> <span class="built_in">Object</span>) <span class="comment">// true true</span></span><br><span class="line"><span class="built_in">console</span>.log(b1.b3 <span class="keyword">instanceof</span> <span class="built_in">Function</span>, b1.b3 <span class="keyword">instanceof</span> <span class="built_in">Object</span>) <span class="comment">// true true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//判断b3是不是函数</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b1.b3===<span class="string">&#x27;function&#x27;</span>) <span class="comment">// true</span></span><br><span class="line"><span class="comment">//判断b2数组的第三个元素是不是函数</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b1.b2[<span class="number">2</span>]===<span class="string">&#x27;function&#x27;</span>)<span class="comment">//true</span></span><br><span class="line"><span class="comment">//调用该函数</span></span><br><span class="line">b1.b2[<span class="number">2</span>](<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(b1.b3()())<span class="comment">//输出xfzhang</span></span><br></pre></td></tr></table></figure>
+
 
     
 
@@ -491,7 +490,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A4%E6%96%AD"><span class="toc-number">2.</span> <span class="toc-text">判断</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -636,11 +635,15 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">AJAX</a>
               </li>
              
               <li class="article-tag-list-item">
